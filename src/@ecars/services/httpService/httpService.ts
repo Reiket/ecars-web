@@ -1,6 +1,6 @@
 import axios, {AxiosHeaders, AxiosInstance, AxiosResponse, InternalAxiosRequestConfig} from 'axios';
 import {getJwt, writeJwt} from '../jwtService/jwtService';
-import {REQUEST_HEADER_AUTH_TOKEN_FIELD} from '@btrfly/services/httpService/constants';
+import {REQUEST_HEADER_AUTH_TOKEN_FIELD} from '@ecars/services/httpService/constants';
 
 export const httpService: AxiosInstance = axios.create({
   baseURL: process.env.REACT_APP_SERVER_URL,
@@ -19,12 +19,12 @@ httpService.interceptors.request.use(
   },
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 httpService.interceptors.response.use(
   (response: AxiosResponse): AxiosResponse => {
-    const newToken = response.headers["REQUEST_HEADER_AUTH_TOKEN_FIELD"];
+    const newToken = response.headers['REQUEST_HEADER_AUTH_TOKEN_FIELD'];
     if (newToken) {
       writeJwt(newToken);
     }
@@ -36,5 +36,5 @@ httpService.interceptors.response.use(
       console.log('An unexpected error occurred.');
     }
     return Promise.reject(error);
-  }
+  },
 );

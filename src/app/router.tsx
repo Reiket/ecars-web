@@ -1,5 +1,5 @@
 import {createBrowserRouter} from 'react-router-dom';
-import {PageUrls} from "@ecars/constants/page-urls";
+import {PageUrls} from '@ecars/constants/page-urls';
 
 export const router = createBrowserRouter([
   {
