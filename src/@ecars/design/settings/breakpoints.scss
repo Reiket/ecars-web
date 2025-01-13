@@ -1,0 +1,20 @@
+// Min width page
+$minWidth: 320;
+// Max width page
+$maxWidth: 1440;
+// Container Width
+$maxWidthContainer: 1047;
+
+// Container Padding
+$containerPadding: 30;
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Adaptive Type:
+$responsiveType: 1;
+
+//BreakPoints
+$pc: em($containerWidth); // PC, laptop, some tablet in horizontal position
+$tablet: em(991.98); // Tablet and some mobile in horizontal position
+$mobile: em(767.98); // Phone L
+$mobileSmall: em(479.98); // Phone S

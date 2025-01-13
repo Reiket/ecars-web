@@ -1,0 +1,20 @@
+@use "sass:math";
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  > main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  > * {
+    min-width: 0;
+  }
+}
+
