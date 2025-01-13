@@ -1,10 +1,10 @@
 {
-  "name": "btrfly-students-web-client",
+  "name": "ecars-web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start": "bunx --bun vite",
     "build": "tsc && vite build",
     "build:dev": "tsc && vite build --mode development",
     "preview": "vite preview",
