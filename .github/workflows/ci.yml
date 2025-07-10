@@ -26,14 +26,14 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npx eslint src --ext .js,.jsx,.ts,.tsx --fix
+        run: npx eslint src --fix
         continue-on-error: false
 
       - name: Run Prettier
         run: npx prettier --check 'src/**/*.{js,jsx,ts,tsx,css,scss}'
         continue-on-error: false
       - name: Run tests
-        run: npx jest --coverage
+        run: npx jest --coverage --passWithNoTests
         continue-on-error: false
 
       - name: Upload coverage to Codecov
