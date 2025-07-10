@@ -1,7 +1,7 @@
-import React from 'react';
 import {Button} from 'ecars-web-lib';
+import type {FC} from 'react';
 
-const Layout = () => {
+const Layout: FC = () => {
   return (
     <div>
       {
