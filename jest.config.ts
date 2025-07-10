@@ -14,7 +14,7 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
-  preset: 'ts-jest/presets/js-with-ts',
+  preset: 'ts-jest',
   modulePaths: ['<rootDir>/src'],
   moduleDirectories: ['node_modules'],
   moduleNameMapper: {
