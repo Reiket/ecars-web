@@ -95,8 +95,8 @@ export default tseslint.config(
       'import/first': 'error',
       'import/newline-after-import': 'error',
       'import/no-absolute-path': 'error',
-      'import/no-default-export': 'error',
       'import/no-duplicates': 'error',
+      'import/no-default-export': ['error', { ignoreExportDefaultForModules: ['vite.config.ts'] }],
       'import/no-extraneous-dependencies': ['error', {
         devDependencies: true,
         peerDependencies: true,
