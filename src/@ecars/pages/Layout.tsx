@@ -9,7 +9,7 @@ const Layout: FC = () => {
           size={'small'}
           color={'gray'}
         >
-          This is button
+          This is butto
         </Button>
       }
       <p>Hello</p>
