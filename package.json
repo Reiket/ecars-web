@@ -8,8 +8,6 @@
     "start": "bunx --bun vite",
     "build": "tsc --p ./tsconfig-build.json && vite build",
     "build:dev": "tsc && vite build --mode development",
-    "predeploy": "tsc --p ./tsconfig-build.json && vite build",
-    "deploy": "gh-pages -d dist",
     "lint": "eslint src",
     "test": "jest",
     "lint:fix": "eslint src --fix",
