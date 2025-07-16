@@ -1,0 +1,11 @@
+.ui-kit {
+  &__title {
+    h1 {
+      font-size: 2rem;
+      line-height: 1.1;
+      &:not(:last-child) {
+        margin: 1rem 0;
+      }
+    }
+  }
+}

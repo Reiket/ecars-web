@@ -1,2 +1,8 @@
 //Connection tools
-@import "tools";
+@forward "tools";
+
+//Connection components
+@forward "components";
+
+//Connection pages
+@forward "pages";
