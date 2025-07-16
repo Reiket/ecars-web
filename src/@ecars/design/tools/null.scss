@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../settings";
+@use "../settings" as s;
 
 * {
   padding: 0;
@@ -22,13 +22,13 @@ a:active {
 html,
 body {
   height: 100%;
-  min-width: $minWidth + px;
+  min-width: s.$minWidth + px;
 }
 body {
-  color: $mainColor;
-  line-height: math.div(19.36, $fontSize);
-  font-family: $fontFamily;
-  font-size: rem($fontSize);
+  color: s.$mainColor;
+  line-height: math.div(19.36, s.$fontSize);
+  font-family: s.$fontFamily;
+  font-size: s.rem(s.$fontSize);
   //text-rendering: optimizeLegibility;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -39,7 +39,7 @@ body {
 input,
 button,
 textarea {
-  font-family: $fontFamily;
+  font-family: s.$fontFamily;
   font-size: inherit;
 }
 button {
