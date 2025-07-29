@@ -1,11 +1,16 @@
 .ui-kit {
   &__title {
-    h1 {
-      font-size: 2rem;
-      line-height: 1.1;
-      &:not(:last-child) {
-        margin: 1rem 0;
-      }
+    font-size: 2rem;
+    line-height: 1.1;
+    &:not(:last-child) {
+      margin: 1rem 0;
     }
   }
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 392px;
 }
