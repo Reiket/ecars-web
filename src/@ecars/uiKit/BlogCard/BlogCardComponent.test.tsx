@@ -12,7 +12,7 @@ const defaultProps = {
 describe('Blog Card Component', () => {
   const cardDirection = Object.values(BLOG_CARD_DIRECTION);
   cardDirection.forEach((direction) => {
-    test(`renders correctly with ${direction} direction`, () => {
+    test(`renders correctly with ${direction} direction, category, title`, () => {
       const {container} = render(
         <BlogCard
           direction={direction}
