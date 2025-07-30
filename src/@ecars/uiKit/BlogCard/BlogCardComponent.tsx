@@ -5,7 +5,7 @@ import {BLOG_CARD_TEST_ID} from '@ecars/uiKit/BlogCard/constants';
 import type {ElementProps} from 'ecars-web-lib';
 import {cn} from 'ecars-web-lib';
 
-interface Props extends BlogCardContentProps, BlogCardImageProps, ElementProps {
+export interface Props extends BlogCardContentProps, BlogCardImageProps, ElementProps {
   direction: BlogCardDirectionType;
 }
 
