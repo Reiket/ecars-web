@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Blog Card Component renders correctly with column direction 1`] = `
+exports[`Blog Card Component renders correctly with column direction, category, title 1`] = `
 <div>
   <article
     class="blog-card blog-card--column"
@@ -30,7 +30,7 @@ exports[`Blog Card Component renders correctly with column direction 1`] = `
 </div>
 `;
 
-exports[`Blog Card Component renders correctly with row direction 1`] = `
+exports[`Blog Card Component renders correctly with row direction, category, title 1`] = `
 <div>
   <article
     class="blog-card blog-card--row"
@@ -86,7 +86,7 @@ exports[`Blog Card Component renders with description 1`] = `
         title
       </h3>
       <p
-        class="post-blog__description"
+        class="blog-card__description"
       >
         Description
       </p>
@@ -121,7 +121,7 @@ exports[`Blog Card Component renders with description 2`] = `
         title
       </h3>
       <p
-        class="post-blog__description"
+        class="blog-card__description"
       >
         Description
       </p>
