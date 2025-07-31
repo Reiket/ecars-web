@@ -1,0 +1,46 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.blog-card {
+  background: s.get-color(s.$blogCardColors, "background");
+  box-shadow: 0 s.rem(8) s.rem(16) 0 s.get-color(s.$blogCardColors, "shadow");
+  border-radius: s.rem(10);
+  transition: border 0.2s linear;
+  border-bottom: s.rem(2) solid transparent;
+  display: flex;
+  &--column {
+    flex-direction: column;
+    .blog-card__image {
+      border-radius: s.rem(8) s.rem(8) 0 0;
+    }
+  }
+  &--row {
+    flex-direction: row;
+    .blog-card__image {
+      width: 30%;
+      border-radius: s.rem(8) 0 0 s.rem(8);
+    }
+  }
+  &__image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  &__content {
+    padding: s.rem(16);
+  }
+  &__title {
+    padding-top: s.rem(12);
+    &:not(:last-child) {
+      margin-bottom: s.em(12, 18);
+    }
+  }
+  &__description {
+    color: s.get-color(s.$blogCardColors, "color-text");
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      border-bottom: s.rem(2) solid s.get-color(s.$blogCardColors, "hover-border");
+    }
+  }
+}

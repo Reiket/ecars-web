@@ -1,0 +1,7 @@
+@use "sass:math";
+@use "../settings" as s;
+.title-blog-card {
+  font-weight: 600;
+  font-size: s.rem(16);
+  line-height: 120%;
+}

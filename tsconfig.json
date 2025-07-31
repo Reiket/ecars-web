@@ -21,7 +21,6 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "strictBindCallApply": true,
-    "exactOptionalPropertyTypes": true,
     "baseUrl": ".",
     "paths": {
       "@ecars/*": ["src/@ecars/*"],
