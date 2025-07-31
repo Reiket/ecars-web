@@ -14,7 +14,7 @@ describe('Blog Card Component', () => {
   const descriptionOptions = ['Description', undefined];
   cardDirection.forEach((direction) => {
     descriptionOptions.forEach((option) => {
-      const hasDescription = option ? "has a description" : "";
+      const hasDescription = option ? 'has a description' : '';
       test(`renders correctly with ${direction} direction, category, title ${hasDescription}`, () => {
         const {container} = render(
           <BlogCard
@@ -33,6 +33,6 @@ describe('Blog Card Component', () => {
         expect(element).toHaveClass(`blog-card--${direction}`);
         expect(container).toMatchSnapshot();
       });
-    })
+    });
   });
 });
