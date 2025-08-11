@@ -23,11 +23,9 @@
     "noImplicitReturns": true,
     "strictBindCallApply": true,
     "baseUrl": ".",
+    "types": ["vitest/globals"],
     "paths": {
-      "@ecars/*": ["src/@ecars/*"],
-    },
-    "compilerOptions": {
-      "types": ["vitest/globals"]
+      "@ecars/*": ["src/@ecars/*"]
     }
   },
   "include": [
