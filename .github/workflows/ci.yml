@@ -29,7 +29,7 @@ jobs:
         run: bunx prettier --check 'src/**/*.{js,jsx,ts,tsx,css,scss}'
 
       - name: Run tests
-        run: bunx jest --coverage --passWithNoTests
+        run: bunx vitest --run --coverage --reporter=default --reporter=junit
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
