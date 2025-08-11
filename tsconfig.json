@@ -28,11 +28,4 @@
       "@ecars/*": ["src/@ecars/*"]
     }
   },
-  "include": [
-    "src",
-    "src/declaration.d.ts",
-    "jest.setup.js",
-    "vite.config.ts",
-    "node_modules/vitest/globals.d.ts"
-  ]
 }

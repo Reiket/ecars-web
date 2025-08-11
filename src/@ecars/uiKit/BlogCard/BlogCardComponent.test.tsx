@@ -2,7 +2,6 @@ import {render, screen} from '@testing-library/react';
 import {BLOG_CARD_DIRECTION, BLOG_CARD_TEST_ID} from '@ecars/uiKit/BlogCard/constants';
 import {BlogCard} from '@ecars/uiKit/BlogCard';
 import {capitalizeFirstLetter, CATEGORIES_LIST} from 'ecars-web-lib';
-import {expect, describe, test} from 'vitest';
 
 const defaultProps = {
   title: 'title',
