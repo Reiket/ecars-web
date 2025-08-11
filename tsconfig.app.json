@@ -20,9 +20,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
+    "types": ["vitest/globals"],
     "paths": {
       "@ecars/*": ["src/@ecars/*"]
-    }
+    },
   },
   "include": ["src"]
 }

@@ -10,6 +10,7 @@
     "incremental": true,
     "sourceMap": true,
     "moduleResolution": "Node",
+
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -22,9 +23,16 @@
     "noImplicitReturns": true,
     "strictBindCallApply": true,
     "baseUrl": ".",
+    "types": ["vitest/globals"],
     "paths": {
-      "@ecars/*": ["src/@ecars/*"],
+      "@ecars/*": ["src/@ecars/*"]
     }
   },
-  "include": ["src", "src/declaration.d.ts", "jest.setup.js", "vite.config.ts"]
+  "include": [
+    "src",
+    "src/declaration.d.ts",
+    "jest.setup.js",
+    "vite.config.ts",
+    "node_modules/vitest/globals.d.ts"
+  ]
 }
