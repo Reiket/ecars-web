@@ -22,6 +22,9 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@ecars/*": ["src/@ecars/*"]
+    },
+    "compilerOptions": {
+      "types": ["vitest/globals"]
     }
   },
   "include": ["src"]
