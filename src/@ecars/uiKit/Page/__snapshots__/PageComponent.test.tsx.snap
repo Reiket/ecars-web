@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Page Component > render component 1`] = `
+<div>
+  <section
+    class="test__section section"
+  >
+    <div
+      class="test__container container container--default"
+    >
+      1
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Page Component > render component 2`] = `
+<div>
+  <section
+    class="test__section section"
+  >
+    <div
+      class="test__container container container--full"
+    >
+      1
+    </div>
+  </section>
+</div>
+`;

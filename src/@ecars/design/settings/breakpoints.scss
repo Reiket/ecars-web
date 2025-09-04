@@ -1,9 +1,14 @@
+@use "sass:math";
+
 // Min width page
 $minWidth: 320;
 // Max width page
 $maxWidth: 1440;
 // Container Width
 $maxWidthContainer: 1047;
+$lgWidthContainer: 1224;
+$mdWidthContainer: 1088;
+$smWidthContainer: 808;
 
 // Container Padding
 $containerPadding: 30;
@@ -14,7 +19,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 $responsiveType: 1;
 
 //BreakPoints
-$pc: em($containerWidth); // PC, laptop, some tablet in horizontal position
-$tablet: em(991.98); // Tablet and some mobile in horizontal position
-$mobile: em(767.98); // Phone L
-$mobileSmall: em(479.98); // Phone S
+$pc: math.div($containerWidth, 16) + em; // PC, laptops, some tablets in horizontal position
+$tablet: math.div(991.98, 16) + em; // Tablets, some phones in horizontal position
+$mobile: math.div(767.98, 16) + em; // Phones L
+$mobileSmall: math.div(479.98, 16) + em; // Phones S
