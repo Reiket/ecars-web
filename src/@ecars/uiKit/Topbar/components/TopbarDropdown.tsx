@@ -4,7 +4,7 @@ import {Dropdown} from 'ecars-web-lib';
 import {useDropdown} from '@ecars/services/hooks/useDropdown';
 import type {DropdownOption} from '@ecars/uiKit/Topbar/constants';
 
-interface Props extends ElementProps {
+export interface Props extends ElementProps {
   label: string;
   options: DropdownOption[];
 }
