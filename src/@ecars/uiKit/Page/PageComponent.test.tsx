@@ -1,5 +1,5 @@
 import {PAGE_CONTAINER_SIZE} from '@ecars/uiKit/Page/constants';
-import {Page} from '@ecars/uiKit/Page/index';
+import {Page} from '@ecars/uiKit/Page';
 import {render} from '@testing-library/react';
 
 describe('Page Component', () => {

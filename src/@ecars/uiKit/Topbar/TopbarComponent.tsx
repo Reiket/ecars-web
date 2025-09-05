@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Topbar} from '@ecars/uiKit/Topbar/index';
+import {Topbar} from '@ecars/uiKit/Topbar';
 import {TOPBAR_TEST_ID} from '@ecars/uiKit/Topbar/constants';
 
 export const TopbarComponent: FC = () => (

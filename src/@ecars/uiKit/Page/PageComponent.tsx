@@ -1,7 +1,6 @@
 import type {FC, ReactNode} from 'react';
 import {Page} from '@ecars/uiKit/Page';
 import type {PageContainerSize} from '@ecars/uiKit/Page/constants';
-import {PAGE_CONTAINER_SIZE} from '@ecars/uiKit/Page/constants';
 import type {ElementProps} from 'ecars-web-lib';
 
 interface Props extends ElementProps {
@@ -9,7 +8,7 @@ interface Props extends ElementProps {
   containerSize?: PageContainerSize;
 }
 
-export const PageComponent: FC<Props> = ({block, children, containerSize = PAGE_CONTAINER_SIZE.DEFAULT}) => (
+export const PageComponent: FC<Props> = ({block, children, containerSize}) => (
   <Page.Section block={block}>
     <Page.Container
       block={block}

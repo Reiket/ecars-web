@@ -5,7 +5,7 @@ import {socialLinks} from '@ecars/uiKit/Topbar/constants';
 
 export const TopbarSocial: FC<ElementProps> = ({block}) => (
   <ul className="topbar__social">
-    {socialLinks.map(({href, icon, leftIcon, label}) => (
+    {socialLinks.map(({href, icon, LeftIcon, label}) => (
       <li
         key={label}
         className="topbar__item"
@@ -13,7 +13,7 @@ export const TopbarSocial: FC<ElementProps> = ({block}) => (
         <LinkWithIcon
           block={block}
           href={href}
-          LeftIcon={leftIcon}
+          LeftIcon={LeftIcon}
           color="lightgray"
         >
           {icon ?? label}

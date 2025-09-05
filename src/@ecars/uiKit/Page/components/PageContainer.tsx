@@ -6,7 +6,7 @@ import {PAGE_CONTAINER_SIZE} from '@ecars/uiKit/Page/constants';
 
 interface Props extends ElementProps {
   children: ReactNode;
-  size: PageContainerSize;
+  size?: PageContainerSize;
 }
 
 export const PageContainer: FC<Props> = ({block, children, size = PAGE_CONTAINER_SIZE.LG}) => (
