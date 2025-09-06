@@ -3,10 +3,8 @@
 // Container ======================================================================================================================================================================================================================
 
 @if (s.$responsiveType == 1) {
-  // Responsive
   [class*="__container"] {
     @if (s.$maxWidthContainer > 0) {
-      max-width: s.rem(s.$maxWidthContainer);
       box-sizing: content-box;
       margin: 0 auto;
     }
@@ -14,29 +12,16 @@
       padding: 0 s.rem(math.div(s.$containerPadding, 2));
     }
   }
-} @else {
-  // By breakpoints
-  [class*="__container"] {
-    margin: 0 auto;
-    @if (s.$maxWidthContainer > 0) {
-      max-width: s.rem(s.$maxWidthContainer);
-      box-sizing: content-box;
-    } @else {
-      @if (s.$containerPadding > 0) {
-        padding: 0 s.rem(math.div(s.$containerPadding, 2));
-      }
-    }
-    @media (max-width: s.$pc) {
-      max-width: s.rem(970);
-    }
-    @media (max-width: s.$tablet) {
-      max-width: s.rem(750);
-    }
-    @media (max-width: s.$mobile) {
-      max-width: none;
-      @if (s.$containerPadding > 0 and s.$maxWidthContainer > 0) {
-        padding: 0 s.rem(math.div(s.$containerPadding, 2));
-      }
-    }
+}
+
+.container {
+  &--lg {
+    max-width: s.rem(s.$lgWidthContainer);
+  }
+  &--md {
+    max-width: s.rem(s.$mdWidthContainer);
+  }
+  &--sm {
+    max-width: s.rem(s.$smWidthContainer);
   }
 }

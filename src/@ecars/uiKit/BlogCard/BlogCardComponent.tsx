@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {BlogCard} from '@ecars/uiKit/BlogCard/index';
+import {BlogCard} from '@ecars/uiKit/BlogCard';
 import type {BlogCardContentProps, BlogCardDirectionType, BlogCardImageProps} from '@ecars/uiKit/BlogCard/constants';
 import {BLOG_CARD_TEST_ID} from '@ecars/uiKit/BlogCard/constants';
 import type {ElementProps} from 'ecars-web-lib';

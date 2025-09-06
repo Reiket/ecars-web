@@ -42,7 +42,7 @@ export default tseslint.config(
     ignores: [
       '.nx/', '.yarn/', '**/node_modules/**', '**/dist/**', '**/coverage/**',
       '**/__snapshots__/**', '**/build/**', 'packages/*/generated',
-      'packages/website/src/vendor/',
+      'packages/website/src/vendor/', 'vite.config.ts', 'vitest.setup.ts',
     ],
   },
   eslint.configs.recommended,
