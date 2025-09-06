@@ -1,8 +1,6 @@
 import type {FC} from 'react';
-import type {ElementProps} from 'ecars-web-lib';
-import {Dropdown} from 'ecars-web-lib';
-import {useDropdown} from '@ecars/services/hooks/useDropdown';
-import type {DropdownOption} from '@ecars/uiKit/Topbar/constants';
+import type {DropdownOption, ElementProps} from 'ecars-web-lib';
+import {useDropdown, Dropdown} from 'ecars-web-lib';
 
 export interface Props extends ElementProps {
   label: string;

@@ -1,14 +1,10 @@
 import {TopbarWrapper} from '@ecars/uiKit/Topbar/components/TopbarWrapper';
+import type {DropdownOption} from 'ecars-web-lib';
 import {Icons, withBlockClass} from 'ecars-web-lib';
 import type {ComponentType, ReactNode} from 'react';
 
 export const TopbarWrapperHOC = withBlockClass(TopbarWrapper, 'topbar');
 export const TOPBAR_TEST_ID = 'topbarTestId';
-export interface DropdownOption {
-  value: string;
-  label?: ReactNode;
-  name: string;
-}
 
 interface TopbarDropdownsConfig {
   label: string;
