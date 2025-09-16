@@ -19,6 +19,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
     "clsx": "^2.1.1",
