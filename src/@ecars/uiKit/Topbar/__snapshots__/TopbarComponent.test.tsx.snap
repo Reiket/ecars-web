@@ -17,10 +17,10 @@ exports[`Topbar Component > component renders correctly 1`] = `
           class="topbar__body"
         >
           <ul
-            class="topbar__social"
+            class="topbar__social social"
           >
             <li
-              class="topbar__item"
+              class="social__item"
             >
               <a
                 class="topbar__link link link--lightgray link--icon"
@@ -45,7 +45,7 @@ exports[`Topbar Component > component renders correctly 1`] = `
               </a>
             </li>
             <li
-              class="topbar__item"
+              class="social__item"
             >
               <a
                 class="topbar__link link link--lightgray link--icon"
@@ -70,7 +70,7 @@ exports[`Topbar Component > component renders correctly 1`] = `
               </a>
             </li>
             <li
-              class="topbar__item"
+              class="social__item"
             >
               <a
                 class="topbar__link link link--lightgray link--icon"
@@ -95,7 +95,7 @@ exports[`Topbar Component > component renders correctly 1`] = `
               </a>
             </li>
             <li
-              class="topbar__item"
+              class="social__item"
             >
               <a
                 class="topbar__link link link--lightgray link--icon"
@@ -120,7 +120,7 @@ exports[`Topbar Component > component renders correctly 1`] = `
               </a>
             </li>
             <li
-              class="topbar__item"
+              class="social__item"
             >
               <a
                 class="topbar__link link link--lightgray link--icon"
@@ -147,7 +147,7 @@ exports[`Topbar Component > component renders correctly 1`] = `
               </a>
             </li>
             <li
-              class="topbar__item"
+              class="social__item"
             >
               <a
                 class="topbar__link link link--lightgray link--icon"
@@ -182,10 +182,10 @@ exports[`Topbar Component > component renders correctly 1`] = `
             class="topbar__tools"
           >
             <div
-              class="topbar__dropdown dropdown-topbar"
+              class="topbar__dropdown-field dropdown-field"
             >
               <p
-                class="dropdown-topbar__label"
+                class="dropdown-field__label"
               >
                 Ship to:
               </p>
@@ -264,10 +264,10 @@ exports[`Topbar Component > component renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="topbar__dropdown dropdown-topbar"
+              class="topbar__dropdown-field dropdown-field"
             >
               <p
-                class="dropdown-topbar__label"
+                class="dropdown-field__label"
               >
                 Currency:
               </p>

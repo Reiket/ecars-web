@@ -1,4 +1,4 @@
-import {RouterProvider} from 'react-router-dom';
+import {RouterProvider} from 'react-router';
 import {router} from './router';
 import {Root} from './root';
 import type {FC} from 'react';

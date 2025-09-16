@@ -38,14 +38,12 @@
       }
     }
   }
-}
-
-.dropdown-topbar {
-  display: flex;
-  align-items: center;
-  gap: s.rem(6);
-  &__label {
-    color: s.get-color(s.$topbarColors, "label-color");
-    opacity: 0.7;
+  &__dropdown-field {
+    .dropdown-field {
+      &__label {
+        color: s.get-color(s.$topbarColors, "label-color");
+        opacity: 0.7;
+      }
+    }
   }
 }

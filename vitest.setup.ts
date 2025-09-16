@@ -7,6 +7,8 @@ import '@testing-library/jest-dom/vitest';
 global.TextEncoder = global.TextEncoder || TextEncoder;
 global.TextDecoder = global.TextDecoder || TextDecoder;
 
+vi.mock('*.css', () => ({}));
+
 Object.defineProperty(window.navigator, 'language', {
   value: 'en-US',
   writable: true,

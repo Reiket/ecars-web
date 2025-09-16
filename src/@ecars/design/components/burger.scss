@@ -1,0 +1,53 @@
+@use "../settings" as s;
+.burger {
+  display: none;
+  @media (max-width: s.em(650)) {
+    z-index: 20;
+    display: block;
+    position: relative;
+    width: s.rem(25);
+    height: s.rem(15);
+    cursor: pointer;
+    span,
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      height: 10%;
+      width: 100%;
+      transition: all 0.3s ease-in;
+      background-color: #1a1a1a;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+    }
+
+    &._active span {
+      transform: scale(0) translate(0px, -50%);
+    }
+
+    &._active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    &._active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0px, 50%);
+    }
+  }
+}
