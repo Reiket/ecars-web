@@ -27,6 +27,13 @@ vi.mock('@ecars/services/helpers/helpers', () => ({
   bodyOverflow: vi.fn(),
 }));
 
+vi.mock('@ecars/services/hooks/useBurger', () => ({
+  useBurger: () => ({
+    isBurgerActive: false,
+    toggleBurger: toggleBurgerMock,
+  }),
+}));
+
 const toggleBurgerMock = vi.fn();
 
 describe('Header Component', () => {
