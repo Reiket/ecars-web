@@ -1,7 +1,7 @@
 import {Header, Navbar} from '@ecars/uiKit/Header';
 import {act, fireEvent, render, renderHook} from '@testing-library/react';
 
-import {MemoryRouter} from 'react-router';
+import {MemoryRouter} from 'react-router-dom';
 import {useBurger} from '@ecars/services/hooks/useBurger';
 import {useHeaderScroll} from '@ecars/services/hooks/useHeaderScroll';
 
