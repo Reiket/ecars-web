@@ -25,3 +25,13 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: vi.fn(),
   })),
 });
+
+
+Object.defineProperty(window, 'scrollTo', {
+  value: (_x: number, y: number) => {
+    Object.defineProperty(window, 'scrollY', {value: y, writable: true});
+  },
+  writable: true,
+});
+
+Object.defineProperty(window, 'scrollY', {value: 0, writable: true});

@@ -3,6 +3,29 @@ import {act, fireEvent, render, renderHook} from '@testing-library/react';
 
 import {MemoryRouter} from 'react-router';
 import {useBurger} from '@ecars/services/hooks/useBurger';
+import {useHeaderScroll} from '@ecars/services/hooks/useHeaderScroll';
+
+const scenarios = [
+  {
+    desc: 'initial state',
+    scrolls: [0],
+    expected: {sticky: false, showHeader: true},
+  },
+  {
+    desc: 'scrolled down below topbarHeight → sticky true, showHeader false',
+    scrolls: [100],
+    expected: {sticky: true, showHeader: false},
+  },
+  {
+    desc: 'scroll up again → sticky true, showHeader true',
+    scrolls: [150, 50],
+    expected: {sticky: true, showHeader: true},
+  },
+];
+
+vi.mock('@ecars/services/helpers/helpers', () => ({
+  bodyOverflow: vi.fn(),
+}));
 
 const toggleBurgerMock = vi.fn();
 
@@ -48,6 +71,36 @@ describe('Header Component', () => {
     }
     expect(toggleBurgerMock).toHaveBeenCalledTimes(1);
   });
+  scenarios.forEach((scenario) => {
+    const {desc, scrolls, expected} = scenario
+    test(desc, () => {
+      const {container} = render(
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>
+      );
+      const header = container.querySelector('header');
+
+      act(() => {
+        scrolls.forEach((y) => {
+          window.scrollTo(0, y);
+          window.dispatchEvent(new Event('scroll'));
+        });
+      });
+
+      if (expected.sticky) {
+        expect(header).toHaveClass('sticky');
+      } else {
+        expect(header).not.toHaveClass('sticky');
+      }
+
+      if (expected.showHeader) {
+        expect(header).toHaveClass('show-header');
+      } else {
+        expect(header).not.toHaveClass('show-header');
+      }
+    })
+  })
 });
 
 describe('useBurger hook', () => {
@@ -82,5 +135,55 @@ describe('useBurger hook', () => {
 
     expect(result.current.isBurgerActive).toBe(false);
     expect(bodyOverflow).toHaveBeenCalledWith(false);
+  });
+});
+
+describe('useHeaderScroll', () => {
+  beforeEach(() => {
+    window.scrollTo(0, 0);
+  });
+
+  test('should return initial state', () => {
+    const {result} = renderHook(() => useHeaderScroll());
+    expect(result.current.isSticky).toBe(false);
+    expect(result.current.showHeader).toBe(true);
+  });
+
+  test('should set isSticky to true when scrolled below topbarHeight', () => {
+    const {result} = renderHook(() => useHeaderScroll());
+
+    act(() => {
+      window.scrollTo(0, 100);
+      window.dispatchEvent(new Event('scroll'));
+    });
+
+    expect(result.current.isSticky).toBe(true);
+  });
+
+  test('should hide header when scrolling down', () => {
+    const {result} = renderHook(() => useHeaderScroll());
+
+    act(() => {
+      window.scrollTo(0, 10);
+      window.dispatchEvent(new Event('scroll'));
+    });
+
+    expect(result.current.showHeader).toBe(false);
+  });
+
+  test('should show header when scrolling up', () => {
+    const {result} = renderHook(() => useHeaderScroll());
+
+    act(() => {
+      window.scrollTo(0, 100);
+      window.dispatchEvent(new Event('scroll'));
+    });
+    expect(result.current.showHeader).toBe(false);
+
+    act(() => {
+      window.scrollTo(0, 50);
+      window.dispatchEvent(new Event('scroll'));
+    });
+    expect(result.current.showHeader).toBe(true);
   });
 });
