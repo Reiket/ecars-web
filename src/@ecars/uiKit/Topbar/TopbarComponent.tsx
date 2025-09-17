@@ -11,7 +11,10 @@ export const TopbarComponent: FC = () => (
   >
     <Topbar.Wrapper>
       <div className="topbar__body">
-        <SocialList items={socialLinks} color="lightgray"/>
+        <SocialList
+          items={socialLinks}
+          color="lightgray"
+        />
         <Topbar.Tools />
       </div>
     </Topbar.Wrapper>

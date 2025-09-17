@@ -72,12 +72,12 @@ describe('Header Component', () => {
     expect(toggleBurgerMock).toHaveBeenCalledTimes(1);
   });
   scenarios.forEach((scenario) => {
-    const {desc, scrolls, expected} = scenario
+    const {desc, scrolls, expected} = scenario;
     test(desc, () => {
       const {container} = render(
         <MemoryRouter>
           <Header />
-        </MemoryRouter>
+        </MemoryRouter>,
       );
       const header = container.querySelector('header');
 
@@ -99,8 +99,8 @@ describe('Header Component', () => {
       } else {
         expect(header).not.toHaveClass('show-header');
       }
-    })
-  })
+    });
+  });
 });
 
 describe('useBurger hook', () => {
