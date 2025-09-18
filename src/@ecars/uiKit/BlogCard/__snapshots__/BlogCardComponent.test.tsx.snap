@@ -9,7 +9,6 @@ exports[`Blog Card Component > renders correctly with column direction, category
     <img
       alt="Blog_Card_Image"
       class="blog-card__image"
-      src=""
     />
     <div
       class="blog-card__content"
@@ -39,7 +38,6 @@ exports[`Blog Card Component > renders correctly with column direction, category
     <img
       alt="Blog_Card_Image"
       class="blog-card__image"
-      src=""
     />
     <div
       class="blog-card__content"
@@ -74,7 +72,6 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
     <img
       alt="Blog_Card_Image"
       class="blog-card__image"
-      src=""
     />
     <div
       class="blog-card__content"
@@ -104,137 +101,6 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
     <img
       alt="Blog_Card_Image"
       class="blog-card__image"
-      src=""
-    />
-    <div
-      class="blog-card__content"
-    >
-      <span
-        class="category category--news"
-        data-testid="categoryTestId"
-      >
-        News
-      </span>
-      <h3
-        class="blog-card__title title-blog-card"
-      >
-        title
-      </h3>
-      <p
-        class="blog-card__description"
-      >
-        Description
-      </p>
-    </div>
-  </article>
-</div>
-`;
-
-exports[`Blog Card Component renders correctly with column direction, category, title  1`] = `
-<div>
-  <article
-    class="blog-card blog-card--column"
-    data-testid="blogCardTestId"
-  >
-    <img
-      alt="Blog_Card_Image"
-      class="blog-card__image"
-      src=""
-    />
-    <div
-      class="blog-card__content"
-    >
-      <span
-        class="category category--news"
-        data-testid="categoryTestId"
-      >
-        News
-      </span>
-      <h3
-        class="blog-card__title title-blog-card"
-      >
-        title
-      </h3>
-    </div>
-  </article>
-</div>
-`;
-
-exports[`Blog Card Component renders correctly with column direction, category, title has a description 1`] = `
-<div>
-  <article
-    class="blog-card blog-card--column"
-    data-testid="blogCardTestId"
-  >
-    <img
-      alt="Blog_Card_Image"
-      class="blog-card__image"
-      src=""
-    />
-    <div
-      class="blog-card__content"
-    >
-      <span
-        class="category category--news"
-        data-testid="categoryTestId"
-      >
-        News
-      </span>
-      <h3
-        class="blog-card__title title-blog-card"
-      >
-        title
-      </h3>
-      <p
-        class="blog-card__description"
-      >
-        Description
-      </p>
-    </div>
-  </article>
-</div>
-`;
-
-exports[`Blog Card Component renders correctly with row direction, category, title  1`] = `
-<div>
-  <article
-    class="blog-card blog-card--row"
-    data-testid="blogCardTestId"
-  >
-    <img
-      alt="Blog_Card_Image"
-      class="blog-card__image"
-      src=""
-    />
-    <div
-      class="blog-card__content"
-    >
-      <span
-        class="category category--news"
-        data-testid="categoryTestId"
-      >
-        News
-      </span>
-      <h3
-        class="blog-card__title title-blog-card"
-      >
-        title
-      </h3>
-    </div>
-  </article>
-</div>
-`;
-
-exports[`Blog Card Component renders correctly with row direction, category, title has a description 1`] = `
-<div>
-  <article
-    class="blog-card blog-card--row"
-    data-testid="blogCardTestId"
-  >
-    <img
-      alt="Blog_Card_Image"
-      class="blog-card__image"
-      src=""
     />
     <div
       class="blog-card__content"
