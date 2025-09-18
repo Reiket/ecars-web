@@ -9,7 +9,7 @@ exports[`SocialList Component > render component correctly with right items 1`] 
       class="social__item"
     >
       <a
-        class="link link--lightgray link--icon"
+        class="link link--dark link--icon"
         data-testid="routerLinkTestId"
         href="https://www.facebook.com"
         rel="noopener noreferrer"
@@ -34,7 +34,7 @@ exports[`SocialList Component > render component correctly with right items 1`] 
       class="social__item"
     >
       <a
-        class="link link--lightgray link--icon"
+        class="link link--dark link--icon"
         data-testid="routerLinkTestId"
         href="https://twitter.com"
         rel="noopener noreferrer"
@@ -59,7 +59,7 @@ exports[`SocialList Component > render component correctly with right items 1`] 
       class="social__item"
     >
       <a
-        class="link link--lightgray link--icon"
+        class="link link--dark link--icon"
         data-testid="routerLinkTestId"
         href="https://www.youtube.com"
         rel="noopener noreferrer"
@@ -84,7 +84,7 @@ exports[`SocialList Component > render component correctly with right items 1`] 
       class="social__item"
     >
       <a
-        class="link link--lightgray link--icon"
+        class="link link--dark link--icon"
         data-testid="routerLinkTestId"
         href="https://www.instagram.com"
         rel="noopener noreferrer"
@@ -109,7 +109,7 @@ exports[`SocialList Component > render component correctly with right items 1`] 
       class="social__item"
     >
       <a
-        class="link link--lightgray link--icon"
+        class="link link--dark link--icon"
         data-testid="routerLinkTestId"
         href="https://wa.me/971558119024"
         rel="noopener noreferrer"
@@ -136,7 +136,7 @@ exports[`SocialList Component > render component correctly with right items 1`] 
       class="social__item"
     >
       <a
-        class="link link--lightgray link--icon"
+        class="link link--dark link--icon"
         data-testid="routerLinkTestId"
         href="mailto:request@example.com"
         rel="noopener noreferrer"
