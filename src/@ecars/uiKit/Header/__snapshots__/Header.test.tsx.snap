@@ -26,10 +26,10 @@ exports[`Header Component > render component correctly 1`] = `
           />
         </a>
         <nav
-          class="navbar__navbar navbar"
+          class="header__navbar navbar"
         >
           <div
-            block="navbar"
+            block="header"
             class="navbar__overlay"
           />
           <ul
@@ -108,7 +108,7 @@ exports[`Header Component > render component correctly 1`] = `
                 class="navbar__tools"
               >
                 <div
-                  class="navbar__dropdown-field dropdown-field"
+                  class="header__dropdown-field dropdown-field"
                 >
                   <p
                     class="dropdown-field__label"
@@ -116,7 +116,7 @@ exports[`Header Component > render component correctly 1`] = `
                     Ship to:
                   </p>
                   <div
-                    class="navbar__dropdown-menu dropdown-menu dropdown-menu--light"
+                    class="header__dropdown-menu dropdown-menu dropdown-menu--light"
                     data-testid="dropdownTestId"
                   >
                     <div
@@ -190,7 +190,7 @@ exports[`Header Component > render component correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="navbar__dropdown-field dropdown-field"
+                  class="header__dropdown-field dropdown-field"
                 >
                   <p
                     class="dropdown-field__label"
@@ -198,7 +198,7 @@ exports[`Header Component > render component correctly 1`] = `
                     Currency:
                   </p>
                   <div
-                    class="navbar__dropdown-menu dropdown-menu dropdown-menu--light"
+                    class="header__dropdown-menu dropdown-menu dropdown-menu--light"
                     data-testid="dropdownTestId"
                   >
                     <div
@@ -261,13 +261,13 @@ exports[`Header Component > render component correctly 1`] = `
               class="navbar__item"
             >
               <ul
-                class="navbar__social social"
+                class="header__social social"
               >
                 <li
                   class="social__item"
                 >
                   <a
-                    class="navbar__link link link--gray link--icon"
+                    class="header__link link link--gray link--icon"
                     data-testid="routerLinkTestId"
                     href="https://www.facebook.com"
                     rel="noopener noreferrer"
@@ -292,7 +292,7 @@ exports[`Header Component > render component correctly 1`] = `
                   class="social__item"
                 >
                   <a
-                    class="navbar__link link link--gray link--icon"
+                    class="header__link link link--gray link--icon"
                     data-testid="routerLinkTestId"
                     href="https://twitter.com"
                     rel="noopener noreferrer"
@@ -317,7 +317,7 @@ exports[`Header Component > render component correctly 1`] = `
                   class="social__item"
                 >
                   <a
-                    class="navbar__link link link--gray link--icon"
+                    class="header__link link link--gray link--icon"
                     data-testid="routerLinkTestId"
                     href="https://www.youtube.com"
                     rel="noopener noreferrer"
@@ -342,7 +342,7 @@ exports[`Header Component > render component correctly 1`] = `
                   class="social__item"
                 >
                   <a
-                    class="navbar__link link link--gray link--icon"
+                    class="header__link link link--gray link--icon"
                     data-testid="routerLinkTestId"
                     href="https://www.instagram.com"
                     rel="noopener noreferrer"
@@ -367,7 +367,7 @@ exports[`Header Component > render component correctly 1`] = `
                   class="social__item"
                 >
                   <a
-                    class="navbar__link link link--gray link--icon"
+                    class="header__link link link--gray link--icon"
                     data-testid="routerLinkTestId"
                     href="https://wa.me/971558119024"
                     rel="noopener noreferrer"
@@ -394,7 +394,7 @@ exports[`Header Component > render component correctly 1`] = `
                   class="social__item"
                 >
                   <a
-                    class="navbar__link link link--gray link--icon"
+                    class="header__link link link--gray link--icon"
                     data-testid="routerLinkTestId"
                     href="mailto:request@example.com"
                     rel="noopener noreferrer"
