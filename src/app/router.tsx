@@ -1,4 +1,4 @@
-import {createBrowserRouter} from 'react-router-dom';
+import {createBrowserRouter} from 'react-router';
 import {PageUrls} from '@ecars/constants/page-urls';
 import Layout from '@ecars/pages/Layout/Layout';
 import {UiKit} from '@ecars/pages/uiKit/UiKit';

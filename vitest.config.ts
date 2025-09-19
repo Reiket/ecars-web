@@ -8,12 +8,21 @@ export default defineConfig({
     globals: true,
     setupFiles: './vitest.setup.ts',
     reporters: ['default', ['junit', {outputFile: 'test-results/junit.xml'}]],
-    pool: 'vmThreads',
+    server: {
+      deps: {
+        inline: true
+      }
+    },
+    coverage: {
+      provider: 'istanbul',
+      reporter: ['text', 'json', 'html', 'lcov'],
+      reportsDirectory: './coverage',
+    },
   },
-
   resolve: {
     alias: {
       '@ecars': path.resolve(__dirname, 'src/@ecars'),
     },
   },
+
 });

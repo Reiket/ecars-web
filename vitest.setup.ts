@@ -7,6 +7,8 @@ import '@testing-library/jest-dom/vitest';
 global.TextEncoder = global.TextEncoder || TextEncoder;
 global.TextDecoder = global.TextDecoder || TextDecoder;
 
+vi.mock('*.css', () => ({}));
+
 Object.defineProperty(window.navigator, 'language', {
   value: 'en-US',
   writable: true,
@@ -23,3 +25,13 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: vi.fn(),
   })),
 });
+
+
+Object.defineProperty(window, 'scrollTo', {
+  value: (_x: number, y: number) => {
+    Object.defineProperty(window, 'scrollY', {value: y, writable: true});
+  },
+  writable: true,
+});
+
+Object.defineProperty(window, 'scrollY', {value: 0, writable: true});

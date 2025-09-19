@@ -3,11 +3,11 @@ import type {ElementProps} from 'ecars-web-lib';
 import {topbarDropdownsConfig} from '@ecars/uiKit/DropdownField/constants';
 import {DropdownField} from '@ecars/uiKit/DropdownField';
 
-export const TopbarTools: FC<ElementProps> = ({block}) => (
-  <div className="topbar__tools">
+export const HeaderNavbarTools: FC<ElementProps> = ({block}) => (
+  <div className="navbar__tools">
     {topbarDropdownsConfig.map((dropdown) => (
       <DropdownField
-        theme="dark"
+        theme="light"
         key={dropdown.label}
         block={block}
         {...dropdown}

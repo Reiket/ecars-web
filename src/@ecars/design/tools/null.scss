@@ -23,6 +23,7 @@ html,
 body {
   height: 100%;
   min-width: s.$minWidth + px;
+  scrollbar-gutter: stable;
 }
 body {
   color: s.$mainColor;

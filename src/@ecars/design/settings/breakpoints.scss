@@ -9,7 +9,6 @@ $maxWidthContainer: 1047;
 $lgWidthContainer: 1224;
 $mdWidthContainer: 1088;
 $smWidthContainer: 808;
-
 // Container Padding
 $containerPadding: 30;
 
@@ -23,3 +22,4 @@ $pc: math.div($containerWidth, 16) + em; // PC, laptops, some tablets in horizon
 $tablet: math.div(991.98, 16) + em; // Tablets, some phones in horizontal position
 $mobile: math.div(767.98, 16) + em; // Phones L
 $mobileSmall: math.div(479.98, 16) + em; // Phones S
+$burgerMove: math.div(650, 16) + em;

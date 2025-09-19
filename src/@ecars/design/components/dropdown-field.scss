@@ -1,0 +1,8 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.dropdown-field {
+  display: flex;
+  align-items: center;
+  gap: s.rem(6);
+}
