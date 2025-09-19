@@ -2,7 +2,7 @@ import type {FC} from 'react';
 import {Navbar} from '@ecars/uiKit/Header';
 import type {ElementProps} from 'ecars-web-lib';
 
-interface Props extends ElementProps {
+export interface Props extends ElementProps {
   isBurgerActive: boolean;
 }
 

@@ -4,7 +4,7 @@ import type {ElementProps} from 'ecars-web-lib';
 import {cn} from 'ecars-web-lib';
 import {useHeaderScroll} from '@ecars/services/hooks/useHeaderScroll';
 
-interface Props extends ElementProps {
+export interface Props extends ElementProps {
   children: ReactNode;
 }
 

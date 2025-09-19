@@ -2,7 +2,7 @@ import type {FC} from 'react';
 import type {ElementProps} from 'ecars-web-lib';
 import {cn} from 'ecars-web-lib';
 
-interface Props extends ElementProps {
+export interface Props extends ElementProps {
   isBurger: boolean;
   onClick: () => void;
 }
