@@ -4,24 +4,7 @@ import {act, fireEvent, render, renderHook} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import {useBurger} from '@ecars/services/hooks/useBurger';
 import {useHeaderScroll} from '@ecars/services/hooks/useHeaderScroll';
-
-const scenarios = [
-  {
-    desc: 'initial state',
-    scrolls: [0],
-    expected: {sticky: false, showHeader: true},
-  },
-  {
-    desc: 'scrolled down below topbarHeight → sticky true, showHeader false',
-    scrolls: [100],
-    expected: {sticky: true, showHeader: false},
-  },
-  {
-    desc: 'scroll up again → sticky true, showHeader true',
-    scrolls: [150, 50],
-    expected: {sticky: true, showHeader: true},
-  },
-];
+import {headerTestScenarios} from '@ecars/uiKit/Header/constants';
 
 vi.mock('@ecars/services/helpers/helpers', () => ({
   bodyOverflow: vi.fn(),
@@ -47,7 +30,6 @@ describe('Header Component', () => {
     expect(container).toMatchSnapshot();
   });
   test('clicking burger toggles active class', () => {
-    const toggleBurgerMock = vi.fn();
     const {container} = render(
       <MemoryRouter>
         <Header.Burger
@@ -78,7 +60,7 @@ describe('Header Component', () => {
     }
     expect(toggleBurgerMock).toHaveBeenCalledTimes(1);
   });
-  scenarios.forEach((scenario) => {
+  headerTestScenarios.forEach((scenario) => {
     const {desc, scrolls, expected} = scenario;
     test(desc, () => {
       const {container} = render(

@@ -4,7 +4,7 @@
 .topbar {
   background: s.get-color(s.$topbarColors, "background");
   padding: s.rem(10);
-  @media (max-width: s.em(650)) {
+  @media (max-width: s.$burgerMove) {
     display: none;
   }
   &__social {

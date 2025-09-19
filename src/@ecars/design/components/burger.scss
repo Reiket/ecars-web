@@ -1,7 +1,7 @@
 @use "../settings" as s;
 .burger {
   display: none;
-  @media (max-width: s.em(650)) {
+  @media (max-width: s.$burgerMove) {
     z-index: 20;
     display: block;
     position: relative;
@@ -16,7 +16,7 @@
       height: 10%;
       width: 100%;
       transition: all 0.3s ease-in;
-      background-color: #1a1a1a;
+      background-color: s.$mainColor;
     }
 
     &::before,
@@ -33,21 +33,21 @@
     }
     span {
       top: 50%;
-      transform: scale(1) translate(0px, -50%);
+      transform: scale(1) translate(s.rem(0), -50%);
     }
 
     &._active span {
-      transform: scale(0) translate(0px, -50%);
+      transform: scale(0) translate(s.rem(0), -50%);
     }
 
     &._active::before {
       top: 50%;
-      transform: rotate(-45deg) translate(0px, -50%);
+      transform: rotate(-45deg) translate(s.rem(0), -50%);
     }
 
     &._active::after {
       bottom: 50%;
-      transform: rotate(45deg) translate(0px, 50%);
+      transform: rotate(45deg) translate(s.rem(0), 50%);
     }
   }
 }

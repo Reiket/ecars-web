@@ -8,7 +8,7 @@
   padding: s.rem(12) 0;
   background-color: s.get-color(s.$headerColors, "background");
   border-bottom: s.rem(2) solid transparent;
-  @media (max-width: s.em(650)) {
+  @media (max-width: s.$burgerMove) {
     top: 0;
   }
   &.show-header {
@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     gap: s.rem(16);
-    @media (max-width: s.em(650)) {
+    @media (max-width: s.$burgerMove) {
       display: none;
     }
   }
@@ -94,7 +94,7 @@
     display: flex;
     align-items: center;
     gap: s.rem(32);
-    @media (max-width: s.rem(650)) {
+    @media (max-width: s.$burgerMove) {
       padding-top: s.rem(85);
       position: fixed;
       flex-direction: column;
@@ -135,7 +135,7 @@
     width: 100%;
   }
   &__item {
-    @media (min-width: s.em(650)) {
+    @media (min-width: s.$burgerMove) {
       &:last-child,
       &:nth-last-child(2) {
         display: none;

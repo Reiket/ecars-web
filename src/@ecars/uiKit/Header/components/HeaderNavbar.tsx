@@ -1,12 +1,16 @@
 import type {FC} from 'react';
 import {Navbar} from '@ecars/uiKit/Header';
+import type {ElementProps} from 'ecars-web-lib';
 
-interface Props {
+interface Props extends ElementProps {
   isBurgerActive: boolean;
 }
 
-export const HeaderNavbar: FC<Props> = ({isBurgerActive}) => (
-  <Navbar.Wrapper isBurgerActive={isBurgerActive}>
+export const HeaderNavbar: FC<Props> = ({isBurgerActive, block}) => (
+  <Navbar.Wrapper
+    block={block}
+    isBurgerActive={isBurgerActive}
+  >
     <div className="navbar__overlay"></div>
     <Navbar.List />
   </Navbar.Wrapper>

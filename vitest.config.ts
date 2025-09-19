@@ -12,7 +12,12 @@ export default defineConfig({
       deps: {
         inline: true
       }
-    }
+    },
+    coverage: {
+      provider: 'istanbul',
+      reporter: ['text', 'json', 'html', 'lcov'],
+      reportsDirectory: './coverage',
+    },
   },
   resolve: {
     alias: {

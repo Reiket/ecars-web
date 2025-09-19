@@ -52,3 +52,21 @@ export const headerUtilsConfig: HeaderUtil[] = [
   {to: PageUrls.FAVORITES, icon: <Icons.FavoriteSolid />},
   {to: PageUrls.LOGIN, icon: <Icons.Account />},
 ];
+
+export const headerTestScenarios = [
+  {
+    desc: 'initial state',
+    scrolls: [0],
+    expected: {sticky: false, showHeader: true},
+  },
+  {
+    desc: 'scrolled down below topbarHeight → sticky true, showHeader false',
+    scrolls: [100],
+    expected: {sticky: true, showHeader: false},
+  },
+  {
+    desc: 'scroll up again → sticky true, showHeader true',
+    scrolls: [150, 50],
+    expected: {sticky: true, showHeader: true},
+  },
+];
