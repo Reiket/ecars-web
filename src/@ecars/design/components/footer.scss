@@ -1,0 +1,84 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.footer {
+  background: #ffffff;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    @include s.adaptiveValue("gap", 60, 30);
+  }
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: s.rem(24);
+    flex-wrap: wrap;
+  }
+  &__col {
+    &:first-child {
+      flex: 0 0 s.rem(288);
+      .footer__link {
+        width: s.rem(20);
+        height: s.rem(20);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &:last-child {
+      .footer__social {
+        padding-top: s.rem(24);
+        display: flex;
+        flex-direction: column;
+        gap: s.rem(12);
+        align-items: flex-start;
+      }
+    }
+  }
+  &__text {
+    padding-top: s.rem(24);
+    color: #484848;
+    &:not(:last-child) {
+      margin-bottom: s.em(24, 14);
+    }
+  }
+  &__list-title {
+    font-size: s.rem(16);
+    line-height: math.div(22, 16);
+  }
+  &__social {
+    display: flex;
+    gap: s.rem(24);
+    align-items: center;
+    svg {
+      font-size: s.rem(16);
+    }
+  }
+  &__list {
+    padding-top: s.rem(24);
+    display: flex;
+    flex-direction: column;
+    gap: s.rem(12);
+  }
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+  gap: s.rem(24);
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  @media (max-width: s.em(530)) {
+    justify-content: center;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: s.rem(24);
+  }
+  &__description {
+    color: #767676;
+  }
+}

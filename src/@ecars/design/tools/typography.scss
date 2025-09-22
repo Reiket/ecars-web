@@ -5,3 +5,9 @@
   font-size: s.rem(16);
   line-height: 120%;
 }
+
+.title-list-footer {
+  font-weight: 600;
+  font-size: s.rem(16);
+  line-height: math.div(22, 16);
+}
