@@ -2,7 +2,9 @@
 @use "../settings" as s;
 
 .footer {
-  background: #ffffff;
+  @include s.adaptiveValue("padding-top", 80, 40);
+  @include s.adaptiveValue("padding-bottom", 80, 40);
+  background: s.get-color(s.$footerColors, "background");
   &__body {
     display: flex;
     flex-direction: column;
@@ -38,7 +40,7 @@
   }
   &__text {
     padding-top: s.rem(24);
-    color: #484848;
+    color: s.get-color(s.$footerColors, "text-color");
     &:not(:last-child) {
       margin-bottom: s.em(24, 14);
     }
@@ -79,6 +81,6 @@
     gap: s.rem(24);
   }
   &__description {
-    color: #767676;
+    color: s.get-color(s.$footerColors, "description-color");
   }
 }
