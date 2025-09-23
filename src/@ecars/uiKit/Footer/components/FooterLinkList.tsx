@@ -3,7 +3,7 @@ import type {ElementProps} from 'ecars-web-lib';
 import {RouterLink} from 'ecars-web-lib';
 import type {FooterLink} from '@ecars/uiKit/Footer/constants';
 
-interface Props extends ElementProps {
+export interface Props extends ElementProps {
   links: FooterLink[];
 }
 
