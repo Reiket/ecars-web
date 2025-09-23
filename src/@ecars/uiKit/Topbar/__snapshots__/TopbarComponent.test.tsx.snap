@@ -13,7 +13,6 @@ exports[`Topbar Component > component renders correctly 1`] = `
         class="topbar__container container container--lg"
       >
         <div
-          block="topbar"
           class="topbar__body"
         >
           <ul
