@@ -1,12 +1,12 @@
 import type {ComponentProps} from 'react';
 import type {Meta, StoryObj} from '@storybook/react';
-import {Header} from '@ecars/uiKit/Header';
 import {MemoryRouter} from 'react-router';
+import {Footer} from '@ecars/uiKit/Footer';
 
-type StoryProps = ComponentProps<typeof Header>;
+type StoryProps = ComponentProps<typeof Footer>;
 
 const meta: Meta<StoryProps> = {
-  component: Header,
+  component: Footer,
   tags: ['autodocs'],
 };
 
@@ -17,7 +17,7 @@ type Story = StoryObj<StoryProps>;
 export const Primary: Story = {
   render: () => (
     <MemoryRouter>
-      <Header />
+      <Footer />
     </MemoryRouter>
   ),
 };
