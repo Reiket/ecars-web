@@ -15,11 +15,9 @@ export default meta;
 type Story = StoryObj<StoryProps>;
 
 export const Primary: Story = {
-  render: () => {
-    return (
-      <MemoryRouter>
-        <Header />
-      </MemoryRouter>
-    );
-  },
+  render: () => (
+    <MemoryRouter>
+      <Header />
+    </MemoryRouter>
+  ),
 };

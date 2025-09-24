@@ -38,7 +38,5 @@ export default meta;
 type Story = StoryObj<StoryProps>;
 
 export const Primary: Story = {
-  render: ({...args}) => {
-    return <BlogCard {...args} />;
-  },
+  render: ({...args}) => <BlogCard {...args} />,
 };

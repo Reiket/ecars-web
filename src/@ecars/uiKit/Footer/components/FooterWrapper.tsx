@@ -6,10 +6,8 @@ export interface Props extends ElementProps {
   children: ReactNode;
 }
 
-export const FooterWrapper: FC<Props> = ({children, block}) => {
-  return (
-    <footer className="footer">
-      <Page.Container block={block}>{children}</Page.Container>
-    </footer>
-  );
-};
+export const FooterWrapper: FC<Props> = ({children, block}) => (
+  <footer className="footer">
+    <Page.Container block={block}>{children}</Page.Container>
+  </footer>
+);

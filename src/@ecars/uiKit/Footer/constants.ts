@@ -9,14 +9,14 @@ export const FooterCopyWrapperHOC = withBlockClass(FooterCopyWrapper, 'copy');
 export const footerSocialLinks = socialLinks.filter((item) => !('label' in item));
 export const footerContactsLinks = socialLinks.filter((item) => 'label' in item);
 
-export const copyLinks = [
+export const copyLinks: FooterLink[] = [
   {
     label: 'Privacy Policy',
-    href: PageUrls.PRIVACY,
+    to: PageUrls.PRIVACY,
   },
   {
     label: 'Terms & Conditions',
-    href: PageUrls.TERMS,
+    to: PageUrls.TERMS,
   },
 ];
 

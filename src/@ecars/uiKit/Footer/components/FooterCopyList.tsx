@@ -12,7 +12,7 @@ export const FooterCopyList: FC<ElementProps> = ({block}) => (
       >
         <RouterLink
           block={block}
-          to={link.href}
+          to={link.to}
           color="gray"
         >
           {link.label}
