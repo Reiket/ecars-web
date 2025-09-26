@@ -1,0 +1,42 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.intro {
+  position: relative;
+}
+
+.intro-block {
+  background: url("assets/images/intro/intro.png") no-repeat top / cover;
+  &__body {
+    @include s.adaptiveValue("padding-top", 120, 40);
+    @include s.adaptiveValue("padding-bottom", 193, 40);
+    max-width: s.rem(600);
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: s.rem(32);
+    }
+  }
+  &__block,
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: s.rem(32);
+  }
+  &__social {
+    @media (max-width: s.$mobileSmall) {
+      row-gap: s.rem(18);
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+  &__block {
+    @media (max-width: s.$mobile) {
+      align-items: stretch;
+      flex-direction: column;
+    }
+  }
+  &__link {
+    font-weight: 600;
+  }
+}

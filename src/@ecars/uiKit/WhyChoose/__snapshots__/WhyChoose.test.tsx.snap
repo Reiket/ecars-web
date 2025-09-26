@@ -1,0 +1,95 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`WhyChoose Component > render component correctly 1`] = `
+<div>
+  <div
+    class="why-choose"
+  >
+    <section
+      class="why-choose__section section"
+    >
+      <div
+        class="why-choose__container container container--lg"
+      >
+        <div
+          class="why-choose__body"
+        >
+          <div
+            class="why-choose__image"
+          >
+            <img
+              alt="why_choose_image"
+              src="/assets/images/why/01.png"
+            />
+          </div>
+          <div
+            class="why-choose__content"
+          >
+            <h2
+              class="why-choose__title section-title"
+            >
+              Why choose us
+            </h2>
+            <p
+              class="why-choose__text"
+            >
+              Quis blandit turpis cursus in hac. In hendrerit gravida rutrum quisque. Pellentesque habitant morbi tristique senectus et. Eget gravida cum sociis natoque. Pharetra diam sit amet nisl suscipit adipiscing bibendum.
+            </p>
+            <p
+              class="why-choose__text"
+            >
+              Porttitor massa id neque aliquam. In fermentum posuere urna nec. Rhoncus aenean vel elit scelerisque mauris pellentesque. Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi. Consequat id porta nibh venenatis cras sed.
+            </p>
+            <ul
+              class="why-choose__why-choose-list why-choose-list"
+            >
+              <li
+                class="why-choose-list__item"
+              >
+                <h4
+                  class="why-choose-list__title title-why-choose-list"
+                >
+                  Some headline
+                </h4>
+                <p
+                  class="why-choose-list__text"
+                >
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                </p>
+              </li>
+              <li
+                class="why-choose-list__item"
+              >
+                <h4
+                  class="why-choose-list__title title-why-choose-list"
+                >
+                  Some headline
+                </h4>
+                <p
+                  class="why-choose-list__text"
+                >
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                </p>
+              </li>
+              <li
+                class="why-choose-list__item"
+              >
+                <h4
+                  class="why-choose-list__title title-why-choose-list"
+                >
+                  Some headline
+                </h4>
+                <p
+                  class="why-choose-list__text"
+                >
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;

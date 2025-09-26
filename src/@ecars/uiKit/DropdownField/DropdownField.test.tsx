@@ -1,4 +1,4 @@
-import {DropdownField} from '@ecars/uiKit/DropdownField/index';
+import {DropdownField} from '@ecars/uiKit/DropdownField';
 import {render, screen} from '@testing-library/react';
 import type {DropdownOption} from 'ecars-web-lib';
 

@@ -1,0 +1,43 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`InquiryCta Component > render component correctly 1`] = `
+<div>
+  <div
+    class="inquiry-cta"
+  >
+    <section
+      class="inquiry-cta__section section"
+    >
+      <div
+        class="inquiry-cta__container container container--sm"
+      >
+        <div
+          class="inquiry-cta__body"
+        >
+          <div
+            class="inquiry-cta__block"
+          >
+            <h2
+              class="inquiry-cta__title block-title"
+            >
+              Send an inquiry now and get the best offers suitable for your requirements
+            </h2>
+            <p
+              class="inquiry-cta__text"
+            >
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+            </p>
+          </div>
+          <button
+            class="inquiry-cta__button button button--big button--green"
+            data-testid="buttonTestId"
+            type="button"
+          >
+            Get a quote
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;

@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Header, Navbar} from '@ecars/uiKit/Header/index';
+import {Header, Navbar} from '@ecars/uiKit/Header';
 import {Button, Logo} from 'ecars-web-lib';
 import {useBurger} from '@ecars/services/hooks/useBurger';
 
