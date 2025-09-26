@@ -1,0 +1,53 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.send {
+  background: #2c2926;
+  @include s.adaptiveValue("padding-top", 96, 50);
+  @include s.adaptiveValue("padding-bottom", 96, 50);
+  &__body {
+    display: flex;
+    gap: s.rem(12.5);
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: s.em(800)) {
+      flex-direction: column;
+      gap: s.rem(40);
+    }
+  }
+  &__col {
+    color: #ffffff;
+    @media (min-width: s.em(800)) {
+      min-width: s.rem(392);
+      @include s.adaptiveValue("padding-right", 104, 30);
+      @include s.adaptiveValue("padding-left", 104, 30);
+      &:not(:last-child) {
+        border-right: s.rem(1) solid #ffffff26;
+        @include s.adaptiveValue("padding-right", 116.5, 46.5);
+      }
+    }
+  }
+  &__icon {
+    padding-bottom: s.rem(24);
+    > svg {
+      font-size: s.rem(40);
+    }
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: s.em(24, 22);
+    }
+  }
+  &__text {
+    font-size: s.rem(16);
+    line-height: math.div(24, 16);
+    &:not(:last-child) {
+      margin-bottom: s.em(44, 16);
+    }
+  }
+  &__button {
+    @media (max-width: s.$mobileSmall) {
+      width: 100%;
+    }
+  }
+}

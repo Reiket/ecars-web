@@ -1,0 +1,112 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Works Component > render component correctly 1`] = `
+<div>
+  <div
+    class="works"
+  >
+    <section
+      class="works__section section"
+    >
+      <div
+        class="works__container container container--lg"
+      >
+        <div
+          class="works__body"
+        >
+          <h2
+            class="works__title section-title"
+          >
+            How it works
+          </h2>
+          <p
+            class="works__text"
+          >
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+          </p>
+          <ol
+            class="works__works-list works-list"
+          >
+            <li
+              class="works-list__item"
+            >
+              <span
+                class="works-list__number"
+              >
+                1
+              </span>
+              <h4
+                class="works-list__title title-works-list"
+              >
+                Find a car
+              </h4>
+              <p
+                class="works-list__text"
+              >
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+              </p>
+            </li>
+            <li
+              class="works-list__item"
+            >
+              <span
+                class="works-list__number"
+              >
+                2
+              </span>
+              <h4
+                class="works-list__title title-works-list"
+              >
+                Extensive inspection
+              </h4>
+              <p
+                class="works-list__text"
+              >
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+              </p>
+            </li>
+            <li
+              class="works-list__item"
+            >
+              <span
+                class="works-list__number"
+              >
+                3
+              </span>
+              <h4
+                class="works-list__title title-works-list"
+              >
+                Safe Buying
+              </h4>
+              <p
+                class="works-list__text"
+              >
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+              </p>
+            </li>
+            <li
+              class="works-list__item"
+            >
+              <span
+                class="works-list__number"
+              >
+                4
+              </span>
+              <h4
+                class="works-list__title title-works-list"
+              >
+                Delivery and support
+              </h4>
+              <p
+                class="works-list__text"
+              >
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;

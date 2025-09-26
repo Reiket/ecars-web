@@ -18,3 +18,5 @@ export const socialLinks: SocialItem[] = [
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   {href: 'mailto:request@example.com', LeftIcon: Icons.Email, label: 'request@example.com'},
 ];
+
+export const contactsLinks = socialLinks.filter((item) => 'label' in item);

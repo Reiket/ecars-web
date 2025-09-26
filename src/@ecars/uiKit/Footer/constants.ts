@@ -7,7 +7,6 @@ import {FooterCopyWrapper} from '@ecars/uiKit/Footer/components/FooterCopyWrappe
 export const FooterWrapperHOC = withBlockClass(FooterWrapper, 'footer');
 export const FooterCopyWrapperHOC = withBlockClass(FooterCopyWrapper, 'copy');
 export const footerSocialLinks = socialLinks.filter((item) => !('label' in item));
-export const footerContactsLinks = socialLinks.filter((item) => 'label' in item);
 
 export const copyLinks: FooterLink[] = [
   {

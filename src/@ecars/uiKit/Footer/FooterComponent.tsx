@@ -1,7 +1,8 @@
 import type {FC} from 'react';
 import {Copy, Footer} from '@ecars/uiKit/Footer';
-import {carsLinks, companyLinks, footerContactsLinks} from '@ecars/uiKit/Footer/constants';
+import {carsLinks, companyLinks} from '@ecars/uiKit/Footer/constants';
 import {SocialList} from '@ecars/uiKit/SocialList/SocialList';
+import {contactsLinks} from '@ecars/uiKit/SocialList/constants';
 
 export const FooterComponent: FC = () => (
   <Footer.Wrapper>
@@ -18,7 +19,7 @@ export const FooterComponent: FC = () => (
         </Footer.Column>
         <Footer.Column title="Contacts">
           <SocialList
-            items={footerContactsLinks}
+            items={contactsLinks}
             color="gray"
           />
         </Footer.Column>

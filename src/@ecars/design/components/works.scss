@@ -1,0 +1,62 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.works {
+  @include s.adaptiveValue("padding-top", 96, 50);
+  @include s.adaptiveValue("padding-bottom", 96, 50);
+  &__body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: s.em(24, 38);
+    }
+  }
+  &__text {
+    max-width: s.rem(600);
+    margin: 0 auto;
+  }
+}
+
+.works-list {
+  @include s.adaptiveValue("margin-top", 48, 20);
+  display: flex;
+  list-style-type: none;
+  gap: s.rem(24);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: s.em(500)) {
+    justify-content: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__number {
+    position: relative;
+    background: #e49a49;
+    width: s.rem(56);
+    height: s.rem(56);
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: s.rem(18);
+    line-height: math.div(24, 18);
+    font-weight: 600;
+    margin-bottom: s.rem(24);
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: s.em(12, 18);
+    }
+  }
+  &__text {
+    @media (min-width: s.em(50)) {
+      max-width: s.rem(224);
+    }
+  }
+}
