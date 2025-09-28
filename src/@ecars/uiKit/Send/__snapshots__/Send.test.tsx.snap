@@ -45,7 +45,7 @@ exports[`Send Component > render component correctly 1`] = `
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
             </p>
             <button
-              class="button button--big button--green"
+              class="send__button button button--big button--green"
               data-testid="buttonTestId"
               type="button"
             >
@@ -87,7 +87,7 @@ exports[`Send Component > render component correctly 1`] = `
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
             </p>
             <button
-              class="button button--big button--white"
+              class="send__button button button--big button--white"
               data-testid="buttonTestId"
               type="button"
             >

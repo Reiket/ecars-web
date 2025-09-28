@@ -49,7 +49,7 @@ export const navbarLinksConfig: NavbarLink[] = [
 ];
 
 export const headerUtilsConfig: HeaderUtil[] = [
-  {to: PageUrls.FAVORITES, icon: <Icons.FavoriteSolid />},
+  {to: PageUrls.FAVORITES, icon: <Icons.Favorite />},
   {to: PageUrls.LOGIN, icon: <Icons.Account />},
 ];
 

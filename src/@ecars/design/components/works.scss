@@ -1,6 +1,8 @@
 @use "sass:math";
 @use "../settings" as s;
 
+$worksQueryWidth: 500;
+
 .works {
   @include s.adaptiveValue("padding-top", 96, 50);
   @include s.adaptiveValue("padding-bottom", 96, 50);
@@ -27,7 +29,7 @@
   gap: s.rem(24);
   justify-content: space-between;
   flex-wrap: wrap;
-  @media (max-width: s.em(500)) {
+  @media (max-width: s.em($worksQueryWidth)) {
     justify-content: center;
   }
   &__item {
@@ -37,7 +39,7 @@
   }
   &__number {
     position: relative;
-    background: #e49a49;
+    background: s.get-color(s.$worksColors, "icon-background");
     width: s.rem(56);
     height: s.rem(56);
     display: flex;
@@ -55,7 +57,7 @@
     }
   }
   &__text {
-    @media (min-width: s.em(50)) {
+    @media (min-width: s.em($worksQueryWidth)) {
       max-width: s.rem(224);
     }
   }

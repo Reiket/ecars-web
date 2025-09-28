@@ -1,8 +1,10 @@
 @use "sass:math";
 @use "../settings" as s;
 
+$sendQueryWidth: 800;
+
 .send {
-  background: #2c2926;
+  background: s.get-color(s.$sendColors, "background");
   @include s.adaptiveValue("padding-top", 96, 50);
   @include s.adaptiveValue("padding-bottom", 96, 50);
   &__body {
@@ -10,19 +12,19 @@
     gap: s.rem(12.5);
     justify-content: space-between;
     align-items: center;
-    @media (max-width: s.em(800)) {
+    @media (max-width: s.em($sendQueryWidth)) {
       flex-direction: column;
       gap: s.rem(40);
     }
   }
   &__col {
-    color: #ffffff;
-    @media (min-width: s.em(800)) {
+    color: s.get-color(s.$sendColors, "column-color");
+    @media (min-width: s.em($sendQueryWidth)) {
       min-width: s.rem(392);
       @include s.adaptiveValue("padding-right", 104, 30);
       @include s.adaptiveValue("padding-left", 104, 30);
       &:not(:last-child) {
-        border-right: s.rem(1) solid #ffffff26;
+        border-right: s.rem(1) solid s.get-color(s.$sendColors, "border");
         @include s.adaptiveValue("padding-right", 116.5, 46.5);
       }
     }

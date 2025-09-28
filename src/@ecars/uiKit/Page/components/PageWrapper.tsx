@@ -4,7 +4,7 @@ import {cn} from 'ecars-web-lib';
 import {Page} from '@ecars/uiKit/Page';
 import type {PageContainerSize} from '@ecars/uiKit/Page/constants';
 
-interface Props extends ElementProps {
+export interface Props extends ElementProps {
   children: ReactNode;
   name: string;
   size?: PageContainerSize;

@@ -32,12 +32,7 @@
       max-width: s.rem(392);
     }
   }
-  &__text {
-    &:nth-child(2) {
-      margin-bottom: s.rem(30);
-    }
-  }
-  &__list {
+  &__why-choose-list {
     @include s.adaptiveValue("margin-top", 48, 20);
   }
 }
