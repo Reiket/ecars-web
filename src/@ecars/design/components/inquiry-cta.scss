@@ -1,0 +1,29 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.inquiry-cta {
+  background: #2c2926;
+  @include s.adaptiveValue("padding-top", 96, 50);
+  @include s.adaptiveValue("padding-bottom", 96, 50);
+  &__body {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: s.rem(24);
+  }
+  &__block {
+    max-width: s.rem(470);
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: s.em(24, 22);
+    }
+  }
+  &__button {
+    @media (max-width: s.$mobileSmall) {
+      width: 100%;
+    }
+  }
+}

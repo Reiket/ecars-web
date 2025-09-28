@@ -1,0 +1,42 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.benefits {
+  @media (min-width: s.$tablet) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: s.rem(-70);
+  }
+  &__body {
+    background: s.get-color(s.$benefitsColors, "background");
+    border-radius: s.rem(16);
+    padding: s.rem(40);
+    @media (max-width: s.$tablet) {
+      padding: s.rem(40) 0;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: s.rem(40);
+    align-items: flex-start;
+    @media (max-width: s.$tablet) {
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: s.rem(8);
+  }
+  &__icon {
+    background: s.get-color(s.$benefitsColors, "icon-background");
+    flex: 0 0 s.rem(56);
+    width: s.rem(56);
+    height: s.rem(56);
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -11,3 +11,34 @@
   font-size: s.rem(16);
   line-height: math.div(22, 16);
 }
+
+.title-why-choose-list,
+.title-benefits-list {
+  font-weight: 600;
+  font-size: s.rem(16);
+  line-height: math.div(20, 16);
+}
+
+.page-title {
+  font-weight: 600;
+  @include s.adaptiveValue("font-size", 60, 40);
+  line-height: 115%;
+}
+
+.title-works-list {
+  font-weight: 600;
+  font-size: s.rem(20);
+  line-height: 120%;
+}
+
+.block-title {
+  font-size: s.rem(22);
+  line-height: math.div(26.4, 22);
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: s.rem(36);
+  font-weight: 600;
+  line-height: 115%;
+}

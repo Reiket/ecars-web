@@ -1,0 +1,61 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.why-choose {
+  @include s.adaptiveValue("padding-top", 96, 50);
+  @include s.adaptiveValue("padding-bottom", 96, 50);
+  &__body {
+    display: flex;
+    gap: s.rem(24);
+    align-items: center;
+    @media (max-width: s.$mobile) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: s.em(24, 38);
+    }
+  }
+  &__image {
+    flex: 1 1 auto;
+    > img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: s.$mobile) {
+      max-width: s.rem(392);
+    }
+  }
+  &__why-choose-list {
+    @include s.adaptiveValue("margin-top", 48, 20);
+  }
+}
+
+.why-choose-list {
+  display: flex;
+  flex-direction: column;
+  gap: s.rem(24);
+  padding-left: s.rem(32);
+
+  &__title {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: s.em(8, 16);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: #e49a49;
+      left: s.rem(-32);
+      top: 50%;
+      width: s.rem(16);
+      height: s.rem(2);
+    }
+  }
+}
