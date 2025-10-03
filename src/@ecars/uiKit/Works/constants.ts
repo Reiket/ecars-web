@@ -1,7 +1,7 @@
 import {withBlockClass} from 'ecars-web-lib';
-import {PageWrapper} from '@ecars/uiKit/Page/components/PageWrapper';
+import {SectionWrapper} from '@ecars/uiKit/Section/components/SectionWrapper';
 
-export const WorksWrapperHOC = withBlockClass(PageWrapper, 'works');
+export const WorksWrapperHOC = withBlockClass(SectionWrapper, 'works');
 
 export interface WorksStepType {
   title: string;

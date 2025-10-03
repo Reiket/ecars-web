@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Page Component > render component 1`] = `
+exports[`Section Component > render component correctly 1`] = `
 <div>
   <section
     class="test__section section"
@@ -14,7 +14,7 @@ exports[`Page Component > render component 1`] = `
 </div>
 `;
 
-exports[`Page Component > render component 2`] = `
+exports[`Section Component > render component correctly 2`] = `
 <div>
   <section
     class="test__section section"
@@ -28,7 +28,7 @@ exports[`Page Component > render component 2`] = `
 </div>
 `;
 
-exports[`Page Component > render component 3`] = `
+exports[`Section Component > render component correctly 3`] = `
 <div>
   <section
     class="test__section section"

@@ -1,18 +1,18 @@
-import {PAGE_CONTAINER_SIZE} from '@ecars/uiKit/Page/constants';
-import {Page} from '@ecars/uiKit/Page';
+import {SECTION_CONTAINER_SIZE} from '@ecars/uiKit/Section/constants';
+import {Section} from '@ecars/uiKit/Section/index';
 import {render} from '@testing-library/react';
 
-describe('Page Component', () => {
-  const containerSizes = Object.values(PAGE_CONTAINER_SIZE);
+describe('Section Component', () => {
+  const containerSizes = Object.values(SECTION_CONTAINER_SIZE);
   containerSizes.forEach((size) => {
-    test('render component', () => {
+    test('render component correctly', () => {
       const {container} = render(
-        <Page
+        <Section
           containerSize={size}
           block="test"
         >
           1
-        </Page>,
+        </Section>,
       );
       expect(container).toMatchSnapshot();
       const containerElement = container.querySelector('.container');
