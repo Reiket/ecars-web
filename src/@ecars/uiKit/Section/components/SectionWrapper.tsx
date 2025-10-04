@@ -1,22 +1,22 @@
 import type {FC, ReactNode} from 'react';
 import type {ElementProps} from 'ecars-web-lib';
 import {cn} from 'ecars-web-lib';
-import {Page} from '@ecars/uiKit/Page';
-import type {PageContainerSize} from '@ecars/uiKit/Page/constants';
+import {Section} from '@ecars/uiKit/Section';
+import type {SectionContainerSize} from '@ecars/uiKit/Section/constants';
 
 export interface Props extends ElementProps {
   children: ReactNode;
   name: string;
-  size?: PageContainerSize;
+  size?: SectionContainerSize;
 }
 
-export const PageWrapper: FC<Props> = ({children, block, name, size}) => (
+export const SectionWrapper: FC<Props> = ({children, block, name, size}) => (
   <div className={cn('', name)}>
-    <Page
+    <Section
       containerSize={size}
       block={block}
     >
       {children}
-    </Page>
+    </Section>
   </div>
 );

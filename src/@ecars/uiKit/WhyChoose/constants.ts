@@ -1,7 +1,7 @@
 import {withBlockClass} from 'ecars-web-lib';
-import {PageWrapper} from '@ecars/uiKit/Page/components/PageWrapper';
+import {SectionWrapper} from '@ecars/uiKit/Section/components/SectionWrapper';
 
-export const WhyChooseWrapperHOC = withBlockClass(PageWrapper, 'why-choose');
+export const WhyChooseWrapperHOC = withBlockClass(SectionWrapper, 'why-choose');
 
 export interface WhyChooseItemType {
   title: string;

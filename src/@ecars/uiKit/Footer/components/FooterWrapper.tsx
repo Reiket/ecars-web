@@ -1,5 +1,5 @@
 import type {FC, ReactNode} from 'react';
-import {Page} from '@ecars/uiKit/Page';
+import {Section} from '@ecars/uiKit/Section';
 import type {ElementProps} from 'ecars-web-lib';
 
 export interface Props extends ElementProps {
@@ -8,6 +8,6 @@ export interface Props extends ElementProps {
 
 export const FooterWrapper: FC<Props> = ({children, block}) => (
   <footer className="footer">
-    <Page.Container block={block}>{children}</Page.Container>
+    <Section.Container block={block}>{children}</Section.Container>
   </footer>
 );

@@ -1,8 +1,8 @@
 import {withBlockClass} from 'ecars-web-lib';
-import {PageWrapper} from '@ecars/uiKit/Page/components/PageWrapper';
+import {SectionWrapper} from '@ecars/uiKit/Section/components/SectionWrapper';
 
-export const IntroWrapperHOC = withBlockClass(PageWrapper, 'intro-block');
-export const BenefitsWrapperHOC = withBlockClass(PageWrapper, 'benefits');
+export const IntroWrapperHOC = withBlockClass(SectionWrapper, 'intro-block');
+export const BenefitsWrapperHOC = withBlockClass(SectionWrapper, 'benefits');
 
 export interface BenefitItemType {
   icon: string;

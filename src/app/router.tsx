@@ -1,12 +1,14 @@
 import {createBrowserRouter} from 'react-router';
 import {PageUrls} from '@ecars/constants/page-urls';
-import Layout from '@ecars/pages/Layout/Layout';
 import {UiKit} from '@ecars/pages/uiKit/UiKit';
+import {PageLayout} from '@ecars/uiKit/Page/PageLayout';
+import {HomePage} from '@ecars/pages/HomePage/HomePage';
 
 export const router = createBrowserRouter([
   {
     path: PageUrls.LAYOUT,
-    element: <Layout />,
+    element: <PageLayout />,
+    children: [{index: true, element: <HomePage />}],
   },
   {
     path: PageUrls.UIKIT,

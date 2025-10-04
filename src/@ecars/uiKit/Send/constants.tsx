@@ -1,9 +1,9 @@
 import {Icons, withBlockClass} from 'ecars-web-lib';
-import {PageWrapper} from '@ecars/uiKit/Page/components/PageWrapper';
+import {SectionWrapper} from '@ecars/uiKit/Section/components/SectionWrapper';
 import type {ReactNode} from 'react';
 import type {ButtonColorType} from 'ecars-web-lib/dist/components/Button/constants';
 
-export const SendWrapperHOC = withBlockClass(PageWrapper, 'send');
+export const SendWrapperHOC = withBlockClass(SectionWrapper, 'send');
 
 interface SendItemType {
   icon: ReactNode;
