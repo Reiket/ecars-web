@@ -6,10 +6,16 @@ import * as hooks from 'ecars-web-lib';
 
 const isOpenTestCases = [true, false];
 const onClose = vi.fn();
+
+vi.mock('@ecars/services/helpers/helpers', () => ({
+  bodyOverflow: vi.fn(),
+}));
+
 const useClickOutsideSpy = vi.spyOn(hooks, 'useClickOutside');
 describe('Popup Component', () => {
   isOpenTestCases.forEach((isOpen) => {
-    test(`Popup is ${isOpen ? 'open' : 'closed'}`, () => {
+    const testName = `Popup is ${isOpen ? 'open' : 'closed'}`;
+    test(testName, () => {
       render(
         <Popup
           isOpen={isOpen}
@@ -19,10 +25,11 @@ describe('Popup Component', () => {
         </Popup>,
       );
       const popupElement = document.querySelector('.popup');
+      const openPopupClass = '_popup-open';
       if (isOpen) {
-        expect(popupElement).toHaveClass('open');
+        expect(popupElement).toHaveClass(openPopupClass);
       } else {
-        expect(popupElement).not.toHaveClass('open');
+        expect(popupElement).not.toHaveClass(openPopupClass);
       }
       expect(popupElement).toMatchSnapshot();
       expect(popupElement).toBeInTheDocument();
@@ -53,10 +60,6 @@ describe('Popup Component', () => {
     expect(useClickOutsideSpy).toHaveBeenCalledWith(onClose);
   });
 });
-
-vi.mock('@ecars/services/helpers/helpers', () => ({
-  bodyOverflow: vi.fn(),
-}));
 
 interface TestCase {
   name: string;

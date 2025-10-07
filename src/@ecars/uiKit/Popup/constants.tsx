@@ -7,4 +7,3 @@ export interface PopupComponentType {
 }
 
 export const PopupWrapperHOC = withBlockClass(PopupWrapper, 'popup');
-export const POPUP_TEST_ID = 'popupTestId';

@@ -4,7 +4,7 @@ import type {ElementProps} from 'ecars-web-lib';
 import {ButtonWithIcon, Icons, useClickOutside} from 'ecars-web-lib';
 import {Popup} from '@ecars/uiKit/Popup';
 
-interface Props extends ElementProps {
+export interface Props extends ElementProps {
   isOpen: boolean;
   onClose: () => void;
   children: ReactNode;

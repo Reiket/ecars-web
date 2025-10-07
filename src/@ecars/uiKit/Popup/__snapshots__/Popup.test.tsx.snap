@@ -3,7 +3,6 @@
 exports[`Popup Component > Popup is closed 1`] = `
 <div
   class="popup__popup popup"
-  data-test-id="popupTestId"
 >
   <div
     class="popup__inner"
@@ -39,8 +38,7 @@ exports[`Popup Component > Popup is closed 1`] = `
 
 exports[`Popup Component > Popup is open 1`] = `
 <div
-  class="popup__popup popup open"
-  data-test-id="popupTestId"
+  class="popup__popup popup _popup-open"
 >
   <div
     class="popup__inner"
