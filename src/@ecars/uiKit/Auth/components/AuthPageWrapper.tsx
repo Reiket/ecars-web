@@ -10,8 +10,8 @@ export interface Props extends ElementProps {
   size?: SectionContainerSize;
 }
 
-export const SectionWrapper: FC<Props> = ({children, block, name, size}) => (
-  <div className={cn(block, name)}>
+export const AuthPageWrapper: FC<Props> = ({children, block, name, size}) => (
+  <div className={cn("", name)}>
 
     <Section
       containerSize={size}

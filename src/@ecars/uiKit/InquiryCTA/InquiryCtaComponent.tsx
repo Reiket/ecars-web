@@ -1,10 +1,12 @@
 import type {FC} from 'react';
 import {InquiryCTA} from '@ecars/uiKit/InquiryCTA';
+import type {ElementProps} from 'ecars-web-lib';
 import {Button} from 'ecars-web-lib';
 
-export const InquiryCtaComponent: FC = () => (
+export const InquiryCtaComponent: FC<ElementProps> = ({block}) => (
   <InquiryCTA.Wrapper
     name="inquiry-cta"
+    block={block}
     size="sm"
   >
     <div className="inquiry-cta__body">

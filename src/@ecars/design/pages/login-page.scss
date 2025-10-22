@@ -1,0 +1,94 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: s.rem(30) s.rem(0);
+  flex: 1 1 auto;
+  @media (max-width: s.$mobile) {
+    align-items: stretch;
+  }
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media (min-width: s.$mobile) {
+      width: s.rem(392);
+    }
+  }
+  &__form {
+    margin-top: s.rem(32);
+    display: flex;
+    flex-direction: column;
+    gap: s.rem(24);
+    + .auth__link {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-top: s.rem(20);
+      padding: s.rem(4) 0;
+      > svg {
+       font-size: s.rem(25);
+        transform: translateY(-2.3%);
+      }
+    }
+  }
+  &__text {
+    text-align: center;
+  }
+  &__link {
+    font-weight: 700;
+    padding-left: s.rem(4);
+  }
+  &__separator {
+    text-align: center;
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      background: #E6E6E6;
+      height: s.rem(1);
+      left: 0;
+      z-index: 1;
+      top: 50%;
+      position: absolute;
+    }
+    > span {
+      background: #ffffff;
+      color: #767676;
+      padding: s.rem(0) s.rem(10);
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &__button {
+    justify-content: center;
+    gap: s.rem(8);
+  }
+  &__field {
+    position: relative;
+    .auth__link {
+      position: absolute;
+      right: 0;
+    }
+  }
+  &__subtitle {
+    padding-top: s.rem(16);
+    > span {
+      font-weight: 700;
+    }
+  }
+  &__checkbox-block {
+    display: flex;
+    align-items: center;
+    gap: s.rem(8);
+    .auth__link {
+      font-weight: 400;
+      padding: 0;
+    }
+  }
+}
