@@ -1,12 +1,12 @@
 import {RouterProvider} from 'react-router';
 import {router} from './router';
-import {Root} from './root';
 import type {FC} from 'react';
+import {Fragment} from 'react';
 
 export const App: FC = () => {
   return (
-    <Root>
+    <Fragment>
       <RouterProvider router={router} />
-    </Root>
+    </Fragment>
   );
 };
