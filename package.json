@@ -27,7 +27,7 @@
     "@testing-library/react": "^16.3.0",
     "@vitest/coverage-istanbul": "^3.2.4",
     "clsx": "^2.1.1",
-    "ecars-web-lib": "1.0.30",
+    "ecars-web-lib": "1.0.32",
     "gh-pages": "^6.3.0",
     "identity-obj-proxy": "^3.0.0",
     "react-redux": "^9.2.0",

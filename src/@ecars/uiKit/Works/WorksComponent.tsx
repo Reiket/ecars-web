@@ -1,8 +1,12 @@
 import type {FC} from 'react';
 import {Works} from '@ecars/uiKit/Works';
+import type {ElementProps} from 'ecars-web-lib';
 
-export const WorksComponent: FC = () => (
-  <Works.Wrapper name="works">
+export const WorksComponent: FC<ElementProps> = ({block}) => (
+  <Works.Wrapper
+    name="works"
+    block={block}
+  >
     <div className="works__body">
       <h2 className="works__title section-title">How it works</h2>
       <p className="works__text">

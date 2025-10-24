@@ -1,8 +1,12 @@
 import type {FC} from 'react';
 import {WhyChoose} from '@ecars/uiKit/WhyChoose';
+import type {ElementProps} from 'ecars-web-lib';
 
-export const WhyChooseComponent: FC = () => (
-  <WhyChoose.Wrapper name="why-choose">
+export const WhyChooseComponent: FC<ElementProps> = ({block}) => (
+  <WhyChoose.Wrapper
+    name="why-choose"
+    block={block}
+  >
     <div className="why-choose__body">
       <div className="why-choose__image">
         <img

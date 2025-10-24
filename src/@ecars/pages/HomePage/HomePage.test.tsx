@@ -1,9 +1,9 @@
 import {render} from '@testing-library/react';
-import {HomePage} from '@ecars/pages/HomePage/HomePage';
+import {HomePageComponent} from '@ecars/pages/HomePage/HomePageComponent';
 
 describe('HomePage Component', () => {
   test('render component correctly', () => {
-    const {container} = render(<HomePage />);
+    const {container} = render(<HomePageComponent />);
     expect(container).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
