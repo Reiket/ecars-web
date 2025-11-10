@@ -1,11 +1,13 @@
-import type {FC, ReactNode} from 'react';
+import type {FC, FormEvent, ReactNode} from 'react';
 import {Fragment} from 'react';
 import type {ElementProps} from 'ecars-web-lib';
 import {Button, ButtonWithIcon, Icons, RouterLink} from 'ecars-web-lib';
 
 interface Props extends ElementProps {
+  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
   buttonText: string;
   children?: ReactNode;
+  isLoading?: boolean;
   linkConfig?: {
     to: string;
     label: string;
@@ -14,13 +16,27 @@ interface Props extends ElementProps {
   isResetForm?: boolean;
 }
 
-export const AuthForm: FC<Props> = ({children, text, linkConfig, buttonText, block, isResetForm = false}) => {
+export const AuthForm: FC<Props> = ({
+  children,
+  text,
+  linkConfig,
+  isLoading,
+  onSubmit,
+  buttonText,
+  block,
+  isResetForm = false,
+}) => {
   return (
-    <form className="auth__form">
+    <form
+      onSubmit={onSubmit}
+      className="auth__form"
+    >
       {children}
       <Button
         size="big"
+        type="submit"
         color="green"
+        disabled={isLoading}
       >
         {buttonText}
       </Button>

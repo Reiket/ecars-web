@@ -11,8 +11,7 @@ export interface Props extends ElementProps {
 }
 
 export const AuthPageWrapper: FC<Props> = ({children, block, name, size}) => (
-  <div className={cn("", name)}>
-
+  <div className={cn('', name)}>
     <Section
       containerSize={size}
       block={block}

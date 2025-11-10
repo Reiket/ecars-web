@@ -16,7 +16,13 @@ export const ResetPasswordPage: FC = () => {
           <Input placeholder="example@mail.com" />
         </Field>
       </AuthForm>
-      <RouterLink to={PageUrls.LOGIN} color="green"> <Icons.ArrowNarrowLeft/> Back to login</RouterLink>
+      <RouterLink
+        to={PageUrls.LOGIN}
+        color="green"
+      >
+        {' '}
+        <Icons.ArrowNarrowLeft /> Back to login
+      </RouterLink>
     </AuthPage>
   );
 };

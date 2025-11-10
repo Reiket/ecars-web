@@ -3,4 +3,4 @@ import {HomePageWrapperHOC} from '@ecars/pages/HomePage/constants';
 
 export const HomePage = Object.assign(HomePageComponent, {
   Wrapper: HomePageWrapperHOC,
-})
+});
