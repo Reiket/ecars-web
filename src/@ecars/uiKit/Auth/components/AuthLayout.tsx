@@ -1,7 +1,7 @@
 import type {FC, ReactNode} from 'react';
 import {AuthPage} from '@ecars/uiKit/Auth';
 
-interface Props {
+export interface Props {
   title: string;
   children: ReactNode;
 }

@@ -3,7 +3,7 @@ import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import {apiSlice} from '@ecars/core/slices/api/apiSlice';
 import authReducer from '@ecars/core/slices/store/auth/authSlice';
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   [apiSlice.reducerPath]: apiSlice.reducer,
   auth: authReducer,
 });

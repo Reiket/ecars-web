@@ -5,7 +5,7 @@ import {Fragment} from 'react';
 import {useGetCurrentUserQuery} from '@ecars/core/slices/api/authApiSlice';
 
 export const App: FC = () => {
-  useGetCurrentUserQuery();
+  useGetCurrentUserQuery(undefined);
   return (
     <Fragment>
       <RouterProvider router={router} />

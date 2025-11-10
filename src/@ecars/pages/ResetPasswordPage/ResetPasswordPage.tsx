@@ -9,6 +9,9 @@ export const ResetPasswordPage: FC = () => {
     <AuthPage title="Forgot password">
       <p className="auth__subtitle">No worries, we'll send you reset instructions.</p>
       <AuthForm
+        onSubmit={() => {
+          /* empty */
+        }}
         isResetForm
         buttonText="Reset password"
       >

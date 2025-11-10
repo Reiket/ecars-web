@@ -5,7 +5,7 @@ import type {User} from '@ecars/core/types/types';
 
 type UserType = User | null;
 
-interface AuthState {
+export interface AuthState {
   user: UserType;
 }
 

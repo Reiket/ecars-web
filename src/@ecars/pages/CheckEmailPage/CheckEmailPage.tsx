@@ -11,6 +11,9 @@ export const CheckEmailPage: FC = () => {
         We sent a password reset link to <span>user777@gmail.com</span>
       </p>
       <AuthForm
+        onSubmit={() => {
+          /* empty */
+        }}
         isResetForm
         buttonText="Open email app"
         text="Didn't receive the email?"
