@@ -68,7 +68,7 @@ export default tseslint.config(
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
-    linterOptions: {reportUnusedDisableDirectives: 'error'},
+    linterOptions: { reportUnusedDisableDirectives: 'error' },
     rules: {
       '@typescript-eslint/ban-ts-comment': [
         'error',
@@ -90,12 +90,12 @@ export default tseslint.config(
           varsIgnorePattern: '^_',
         },
       ],
-      '@typescript-eslint/consistent-type-imports': ['error', {disallowTypeAnnotations: true, prefer: 'type-imports'}],
+      '@typescript-eslint/consistent-type-imports': ['error', { disallowTypeAnnotations: true, prefer: 'type-imports' }],
       '@typescript-eslint/explicit-module-boundary-types': 'error',
       '@typescript-eslint/no-var-requires': 'off',
       'no-constant-condition': 'off',
       'curly': ['error', 'all'],
-      'eqeqeq': ['error', 'always', {null: 'never'}],
+      'eqeqeq': ['error', 'always', { null: 'never' }],
       'prefer-arrow-callback': 'error',
       'prefer-const': 'error',
       'no-console': 'error',
@@ -123,27 +123,33 @@ export default tseslint.config(
     },
   },
   {
+    files: ['packages/*/tests/**/*.{ts,tsx,cts,mts}', 'packages/parser/tests/**/*.{ts,tsx,cts,mts}'],
+    ignores: vitestFiles,
+    rules: {
+      '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/no-unsafe-call': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+      '@typescript-eslint/no-unsafe-return': 'off',
+    },
+  },
+  {
     files: ['packages/*/tests/**/*.{ts,tsx,cts,mts}'],
     ignores: vitestFiles,
     languageOptions: {
-      globals: {...jestPlugin.environments.globals.globals},
+      globals: { ...jestPlugin.environments.globals.globals },
     },
   },
   {
     files: vitestFiles,
     languageOptions: {
-      globals: {...vitestPlugin.environments.env.globals},
+      globals: { ...vitestPlugin.environments.env.globals },
     },
   },
   {
-    files: ['packages/*/tests/**/*.test.{ts,tsx,cts,mts}', 'packages/parser/tests/**/*.{ts,tsx,cts,mts}'],
-    ignores: vitestFiles,
+    files: ['src/@ecars/uiKit/**/*.{ts,tsx}'],
     rules: {
-      '@typescript-eslint/no-empty-function': ['error', {allow: ['arrowFunctions']}],
       '@typescript-eslint/no-unsafe-assignment': 'off',
-      '@typescript-eslint/no-unsafe-call': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
-      '@typescript-eslint/no-unsafe-return': 'off',
     },
   },
 );
