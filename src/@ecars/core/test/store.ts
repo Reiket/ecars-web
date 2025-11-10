@@ -1,8 +1,9 @@
+import type {EnhancedStore} from '@reduxjs/toolkit';
 import {configureStore} from '@reduxjs/toolkit';
 import {apiSlice} from '@ecars/core/slices/api/apiSlice';
 import authReducer from '@ecars/core/slices/store/auth/authSlice';
 
-export const setupIntegrationTestStore = () => {
+export const setupIntegrationTestStore = (): EnhancedStore => {
   return configureStore({
     reducer: {
       [apiSlice.reducerPath]: apiSlice.reducer,

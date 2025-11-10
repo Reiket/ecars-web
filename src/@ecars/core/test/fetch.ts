@@ -2,7 +2,7 @@ import {vi, beforeEach, afterAll} from 'vitest';
 
 export const mockFetch = vi.fn();
 
-export const setupFetchMocks = () => {
+export const setupFetchMocks = (): void => {
   vi.stubGlobal('fetch', mockFetch);
 
   beforeEach(() => {
@@ -14,7 +14,7 @@ export const setupFetchMocks = () => {
   });
 };
 
-export const mockFetchSuccess = (body: unknown, status = 200) => {
+export const mockFetchSuccess = (body: unknown, status = 200): void => {
   mockFetch.mockResolvedValue(
     new Response(JSON.stringify(body), {
       status,
@@ -23,7 +23,7 @@ export const mockFetchSuccess = (body: unknown, status = 200) => {
   );
 };
 
-export const mockFetchFailure = (body: unknown = {message: 'Error'}, status = 401) => {
+export const mockFetchFailure = (body: unknown = {message: 'Error'}, status = 401): void => {
   mockFetch.mockResolvedValue(
     new Response(JSON.stringify(body), {
       status,

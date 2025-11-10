@@ -12,7 +12,6 @@ import url from 'node:url';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-
 const vitestFiles = [
   'packages/eslint-plugin-internal/tests/**/*.test.{ts,tsx,cts,mts}',
   'packages/typescript-eslint/tests/**/*.test.{ts,tsx,cts,mts}',
@@ -40,9 +39,17 @@ export default tseslint.config(
   },
   {
     ignores: [
-      '.nx/', '.yarn/', '**/node_modules/**', '**/dist/**', '**/coverage/**',
-      '**/__snapshots__/**', '**/build/**', 'packages/*/generated',
-      'packages/website/src/vendor/', 'vite.config.ts', 'vitest.setup.ts',
+      '.nx/',
+      '.yarn/',
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/coverage/**',
+      '**/__snapshots__/**',
+      '**/build/**',
+      'packages/*/generated',
+      'packages/website/src/vendor/',
+      'vite.config.ts',
+      'vitest.setup.ts',
     ],
   },
   eslint.configs.recommended,
@@ -61,10 +68,11 @@ export default tseslint.config(
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
-    linterOptions: { reportUnusedDisableDirectives: 'error' },
+    linterOptions: {reportUnusedDisableDirectives: 'error'},
     rules: {
       '@typescript-eslint/ban-ts-comment': [
-        'error', {
+        'error',
+        {
           minimumDescriptionLength: 5,
           'ts-check': false,
           'ts-expect-error': 'allow-with-description',
@@ -72,20 +80,22 @@ export default tseslint.config(
           'ts-nocheck': true,
         },
       ],
+      'no-control-regex': 'off',
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-unused-vars': [
-        'error', {
+        'error',
+        {
           argsIgnorePattern: '^_',
           caughtErrors: 'all',
           varsIgnorePattern: '^_',
         },
       ],
-      '@typescript-eslint/consistent-type-imports': ['error', { disallowTypeAnnotations: true, prefer: 'type-imports' }],
+      '@typescript-eslint/consistent-type-imports': ['error', {disallowTypeAnnotations: true, prefer: 'type-imports'}],
       '@typescript-eslint/explicit-module-boundary-types': 'error',
       '@typescript-eslint/no-var-requires': 'off',
       'no-constant-condition': 'off',
       'curly': ['error', 'all'],
-      'eqeqeq': ['error', 'always', { null: 'never' }],
+      'eqeqeq': ['error', 'always', {null: 'never'}],
       'prefer-arrow-callback': 'error',
       'prefer-const': 'error',
       'no-console': 'error',
@@ -96,10 +106,13 @@ export default tseslint.config(
       'import/newline-after-import': 'error',
       'import/no-absolute-path': 'error',
       'import/no-duplicates': 'error',
-      'import/no-extraneous-dependencies': ['error', {
-        devDependencies: true,
-        peerDependencies: true,
-      }],
+      'import/no-extraneous-dependencies': [
+        'error',
+        {
+          devDependencies: true,
+          peerDependencies: true,
+        },
+      ],
     },
   },
   {
@@ -113,23 +126,20 @@ export default tseslint.config(
     files: ['packages/*/tests/**/*.{ts,tsx,cts,mts}'],
     ignores: vitestFiles,
     languageOptions: {
-      globals: { ...jestPlugin.environments.globals.globals },
+      globals: {...jestPlugin.environments.globals.globals},
     },
   },
   {
     files: vitestFiles,
     languageOptions: {
-      globals: { ...vitestPlugin.environments.env.globals },
+      globals: {...vitestPlugin.environments.env.globals},
     },
   },
   {
-    files: [
-      'packages/*/tests/**/*.test.{ts,tsx,cts,mts}',
-      'packages/parser/tests/**/*.{ts,tsx,cts,mts}',
-    ],
+    files: ['packages/*/tests/**/*.test.{ts,tsx,cts,mts}', 'packages/parser/tests/**/*.{ts,tsx,cts,mts}'],
     ignores: vitestFiles,
     rules: {
-      '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
+      '@typescript-eslint/no-empty-function': ['error', {allow: ['arrowFunctions']}],
       '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
