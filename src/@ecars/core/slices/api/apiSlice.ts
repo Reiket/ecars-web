@@ -6,7 +6,7 @@ import {toast} from 'react-toastify';
 
 const rawBaseQuery = fetchBaseQuery({
   credentials: 'include',
-  baseUrl: import.meta.env.VITE_API_BASE_URL,
+  baseUrl: process.env.NODE_ENV === 'test' ? 'http://localhost' : import.meta.env.VITE_API_BASE_URL,
 });
 
 const baseQueryWithErrorHandling: BaseQueryFn<

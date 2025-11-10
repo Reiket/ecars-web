@@ -4,7 +4,6 @@ export const mockFetch = vi.fn();
 
 export const setupFetchMocks = (): void => {
   vi.stubGlobal('fetch', mockFetch);
-
   beforeEach(() => {
     mockFetch.mockReset();
   });
