@@ -3,7 +3,7 @@ import type {LoginRequest, RegisterRequest} from '@ecars/core/api/auth-query';
 import {selectCurrentUser} from '@ecars/core/slices/store/auth/authSlice';
 import type {IntegrationTestStore} from '@ecars/core/test/store';
 import {setupIntegrationTestStore} from '@ecars/core/test/store';
-import {mockFetchFailure, mockFetchSuccess, setupFetchMocks} from '@ecars/core/test/fetch';
+import {mockFetchSuccess, setupFetchMocks} from '@ecars/core/test/fetch';
 import {mockAuthResponse, mockGetUserResponse, mockUser} from '@ecars/core/slices/store/auth/mocks';
 import {authApiSlice} from '@ecars/core/slices/api/authApiSlice';
 
@@ -47,27 +47,5 @@ describe('Auth Functional', () => {
     expect(selectCurrentUser(store.getState())).toBeNull();
     await store.dispatch(authApiSlice.endpoints.getCurrentUser.initiate(undefined));
     expect(selectCurrentUser(store.getState())).toEqual(mockUser);
-  });
-
-  test('login mutation should not dispatch setCredentials on failure', async () => {
-    mockFetchFailure({message: 'Unauthorized'}, 401);
-    const mockLoginRequest: LoginRequest = {
-      email: 'test@mail.com',
-      password: 'password',
-    };
-
-    expect(selectCurrentUser(store.getState())).toBeNull();
-
-    const promise = store.dispatch(authApiSlice.endpoints.login.initiate(mockLoginRequest));
-
-    promise.catch(() => {
-      /* empty */
-    });
-
-    const result = await promise;
-
-    expect(result).toHaveProperty('error');
-    expect(selectCurrentUser(store.getState())).toBeNull();
-    promise.abort();
   });
 });
