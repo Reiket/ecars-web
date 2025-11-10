@@ -9,7 +9,7 @@ import {authApiSlice} from '@ecars/core/slices/api/authApiSlice';
 
 setupFetchMocks();
 
-describe('authApiSlice', () => {
+describe('Auth Functional', () => {
   let store: IntegrationTestStore;
 
   beforeEach(() => {
