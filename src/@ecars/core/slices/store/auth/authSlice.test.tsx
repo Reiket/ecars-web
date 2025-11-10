@@ -57,8 +57,17 @@ describe('Auth Functional', () => {
     };
 
     expect(selectCurrentUser(store.getState())).toBeNull();
-    const result = await store.dispatch(authApiSlice.endpoints.login.initiate(mockLoginRequest));
+
+    const promise = store.dispatch(authApiSlice.endpoints.login.initiate(mockLoginRequest));
+
+    promise.catch(() => {
+      /* empty */
+    });
+
+    const result = await promise;
+
     expect(result).toHaveProperty('error');
     expect(selectCurrentUser(store.getState())).toBeNull();
+    promise.abort();
   });
 });
