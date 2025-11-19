@@ -9,7 +9,7 @@ import {toast} from 'react-toastify';
 
 interface UseRegistrationFormReturn {
   form: UseFormReturn<RegistrationForm>;
-  handleFormSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  handleFormSubmit: (e: FormEvent<HTMLFormElement>) => Promise<void> | void;
   isLoading: boolean;
 }
 
@@ -35,7 +35,7 @@ export const useRegistrationForm = (): UseRegistrationFormReturn => {
   };
 
   const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
-    void form.handleSubmit(onSubmit)(e);
+    return form.handleSubmit(onSubmit)(e);
   };
 
   return {

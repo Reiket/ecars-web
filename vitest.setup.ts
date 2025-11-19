@@ -3,6 +3,13 @@
 import {vi} from 'vitest';
 import {TextEncoder} from 'util';
 import '@testing-library/jest-dom/vitest';
+import type * as ReactRouterDom from 'react-router-dom';
+import {
+  defaultMutationState,
+  mockHandleSubmit,
+  mockMutationFunction,
+  mockNavigate,
+} from '@ecars/services/__mocks__/tests';
 
 global.TextEncoder = global.TextEncoder || TextEncoder;
 global.TextDecoder = global.TextDecoder || TextDecoder;
@@ -26,7 +33,6 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-
 Object.defineProperty(window, 'scrollTo', {
   value: (_x: number, y: number) => {
     Object.defineProperty(window, 'scrollY', {value: y, writable: true});
@@ -35,3 +41,53 @@ Object.defineProperty(window, 'scrollTo', {
 });
 
 Object.defineProperty(window, 'scrollY', {value: 0, writable: true});
+
+
+vi.mock('@ecars/core/slices/api/authApiSlice', () => ({
+  useLoginMutation: vi.fn(() => [mockMutationFunction, defaultMutationState]),
+  useRegisterMutation: vi.fn(() => [mockMutationFunction, defaultMutationState]),
+}));
+
+vi.mock('react-hook-form', async (importOriginal) => {
+  const originalModule = await importOriginal();
+
+  return {
+    originalModule,
+    useForm: vi.fn(() => ({
+      handleSubmit: mockHandleSubmit,
+    })),
+    Controller: vi.fn(({render}) => {
+      return render({
+        field: {
+          onChange: vi.fn(),
+          onBlur: vi.fn(),
+          value: '',
+        },
+        fieldState: {
+          error: undefined,
+          isDirty: false,
+          isTouched: false,
+        },
+        formState: {errors: {}},
+      });
+    }),
+  };
+});
+vi.mock('react-router-dom', async (importOriginal) => {
+  const actual = await importOriginal<typeof ReactRouterDom>();
+  return {
+    ...actual,
+    useNavigate: () => mockNavigate,
+  };
+});
+
+vi.mock('react-toastify', () => ({
+  toast: {
+    error: vi.fn(),
+  },
+}));
+
+vi.mock('@ecars/services/helpers/errors', () => ({
+  getErrorMessage: vi.fn(),
+}));
+

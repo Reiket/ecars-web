@@ -1,9 +1,9 @@
 import {beforeEach, describe, expect, test} from 'vitest';
 import type {LoginRequest, RegisterRequest} from '@ecars/core/api/auth-query';
 import {selectCurrentUser} from '@ecars/core/slices/store/auth/authSlice';
-import type {IntegrationTestStore} from '@ecars/core/test/store';
-import {setupIntegrationTestStore} from '@ecars/core/test/store';
-import {mockFetchSuccess, setupFetchMocks} from '@ecars/core/test/fetch';
+import type {IntegrationTestStore} from '@ecars/services/testing/store';
+import {setupIntegrationTestStore} from '@ecars/services/testing/store';
+import {mockFetchSuccess, setupFetchMocks} from '@ecars/services/testing/fetch';
 import {mockAuthResponse, mockGetUserResponse, mockUser} from '@ecars/core/slices/store/auth/mocks';
 import {authApiSlice} from '@ecars/core/slices/api/authApiSlice';
 

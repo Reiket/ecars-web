@@ -3,7 +3,7 @@ import {useForm} from 'react-hook-form';
 import {toast} from 'react-toastify';
 import {useLoginMutation} from '@ecars/core/slices/api/authApiSlice';
 import {getErrorMessage} from '@ecars/services/helpers/errors';
-import {useNavigate} from 'react-router';
+import {useNavigate} from 'react-router-dom';
 import {PageUrls} from '@ecars/constants/page-urls';
 import type {FormEvent} from 'react';
 
@@ -13,7 +13,7 @@ export interface LoginForm {
 }
 interface UseLoginFormReturn {
   form: UseFormReturn<LoginForm>;
-  handleFormSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  handleFormSubmit: (e: FormEvent<HTMLFormElement>) => Promise<void> | void;
   isLoading: boolean;
 }
 
@@ -35,7 +35,7 @@ export const useLoginForm = (): UseLoginFormReturn => {
   };
 
   const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
-    void form.handleSubmit(onSubmit)(e);
+    return form.handleSubmit(onSubmit)(e);
   };
 
   return {
