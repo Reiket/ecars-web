@@ -4,12 +4,7 @@ import {vi} from 'vitest';
 import {TextEncoder} from 'util';
 import '@testing-library/jest-dom/vitest';
 import type * as ReactRouterDom from 'react-router-dom';
-import {
-  defaultMutationState,
-  mockHandleSubmit,
-  mockMutationFunction,
-  mockNavigate,
-} from '@ecars/services/__mocks__/tests';
+import {mockHandleSubmit, mockNavigate} from '@ecars/services/__mocks__/tests';
 
 global.TextEncoder = global.TextEncoder || TextEncoder;
 global.TextDecoder = global.TextDecoder || TextDecoder;
@@ -42,11 +37,6 @@ Object.defineProperty(window, 'scrollTo', {
 
 Object.defineProperty(window, 'scrollY', {value: 0, writable: true});
 
-
-vi.mock('@ecars/core/slices/api/authApiSlice', () => ({
-  useLoginMutation: vi.fn(() => [mockMutationFunction, defaultMutationState]),
-  useRegisterMutation: vi.fn(() => [mockMutationFunction, defaultMutationState]),
-}));
 
 vi.mock('react-hook-form', async (importOriginal) => {
   const originalModule = await importOriginal();

@@ -15,6 +15,10 @@ import {
   mockMutationFunction,
 } from '@ecars/services/__mocks__/tests';
 
+vi.mock('@ecars/core/slices/api/authApiSlice', () => ({
+  useRegisterMutation: vi.fn(() => [mockMutationFunction, defaultMutationState]),
+}));
+
 describe('useRegistrationForm hook', () => {
   const mockFormData: RegistrationForm = {
     name: 'Test User',
