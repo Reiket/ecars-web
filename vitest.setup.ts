@@ -77,7 +77,3 @@ vi.mock('react-toastify', () => ({
   },
 }));
 
-vi.mock('@ecars/services/helpers/errors', () => ({
-  getErrorMessage: vi.fn(),
-}));
-

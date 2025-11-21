@@ -17,6 +17,10 @@ import {act, renderHook} from '@testing-library/react';
 import {PageUrls} from '@ecars/constants/page-urls';
 import {toast} from 'react-toastify';
 
+vi.mock('@ecars/services/helpers/errors', () => ({
+  getErrorMessage: vi.fn(),
+}));
+
 vi.mock('@ecars/core/slices/api/authApiSlice', () => ({
   useLoginMutation: vi.fn(() => [mockMutationFunction, defaultMutationState]),
 }));

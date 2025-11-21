@@ -37,10 +37,4 @@ export const loginQuery = (credentials: LoginRequest): FetchArgs => ({
 export const getCurrentUserQuery = (): FetchArgs => ({
   url: API_ENDPOINTS.AUTH_USER,
   method: 'GET',
-  credentials: 'include',
 });
-
-// export const logOutQuery = () => ({
-//   url: '/auth/logout',
-//   method: 'POST',
-// });

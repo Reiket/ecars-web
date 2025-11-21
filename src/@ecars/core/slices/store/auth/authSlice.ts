@@ -1,6 +1,6 @@
 import type {PayloadAction} from '@reduxjs/toolkit';
 import {createSlice} from '@reduxjs/toolkit';
-import type {RootState} from '../../../../../app/store';
+import type {RootState} from 'src/app/store';
 import type {User} from '@ecars/core/types/types';
 
 type UserType = User | null;

@@ -50,7 +50,7 @@
     &::after {
       content: "";
       width: 100%;
-      background: #e6e6e6;
+      background: s.get-color(s.$authPageColors, "separator-border");
       height: s.rem(1);
       left: 0;
       z-index: 1;
@@ -58,8 +58,8 @@
       position: absolute;
     }
     > span {
-      background: #ffffff;
-      color: #767676;
+      background: s.get-color(s.$authPageColors, "separator-background");
+      color: s.get-color(s.$authPageColors, "separator-color");
       padding: s.rem(0) s.rem(10);
       position: relative;
       z-index: 2;
