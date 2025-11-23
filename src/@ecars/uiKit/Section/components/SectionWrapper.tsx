@@ -8,15 +8,18 @@ export interface Props extends ElementProps {
   children: ReactNode;
   name: string;
   size?: SectionContainerSize;
+  className?: string;
 }
 
-export const SectionWrapper: FC<Props> = ({children, block, name, size}) => (
-  <div className={cn(block, name)}>
-    <Section
-      containerSize={size}
-      block={block}
-    >
-      {children}
-    </Section>
-  </div>
-);
+export const SectionWrapper: FC<Props> = ({children, block, name, size, className}) => {
+  return (
+    <div className={cn(className, name)}>
+      <Section
+        containerSize={size}
+        block={block}
+      >
+        {children}
+      </Section>
+    </div>
+  );
+};

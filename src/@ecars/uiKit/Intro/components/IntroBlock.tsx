@@ -1,11 +1,15 @@
 import type {FC} from 'react';
 import {Intro} from '@ecars/uiKit/Intro';
+import type {ElementProps} from 'ecars-web-lib';
 import {Button} from 'ecars-web-lib';
 import {SocialList} from '@ecars/uiKit/SocialList/SocialList';
 import {contactsLinks} from '@ecars/uiKit/SocialList/constants';
 
-export const IntroBlock: FC = () => (
-  <Intro.Wrapper name="intro-block">
+export const IntroBlock: FC<ElementProps> = ({block}) => (
+  <Intro.Wrapper
+    block={block}
+    name="intro-block"
+  >
     <div className="intro-block__body">
       <h1 className="intro-block__title page-title">Car import services with delivery to your doorstep.</h1>
       <div className="intro-block__block">

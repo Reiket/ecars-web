@@ -3,7 +3,7 @@
 exports[`WhyChoose Component > render component correctly 1`] = `
 <div>
   <div
-    class="why-choose__why-choose why-choose"
+    class="why-choose"
   >
     <section
       class="why-choose__section section"

@@ -6,7 +6,7 @@ import {cn} from 'ecars-web-lib';
 
 export const IntroComponent: FC<ElementProps> = ({block}) => (
   <div className={cn(block, 'intro')}>
-    <Intro.Block />
-    <Benefits />
+    <Intro.Block block={block} />
+    <Benefits block={block} />
   </div>
 );

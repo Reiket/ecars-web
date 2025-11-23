@@ -3,7 +3,7 @@
 exports[`Send Component > render component correctly 1`] = `
 <div>
   <div
-    class="send__send send"
+    class="send"
   >
     <section
       class="send__section section"

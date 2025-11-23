@@ -6,8 +6,8 @@ import {Button} from 'ecars-web-lib';
 export const InquiryCtaComponent: FC<ElementProps> = ({block}) => (
   <InquiryCTA.Wrapper
     name="inquiry-cta"
-    block={block}
     size="sm"
+    block={block}
   >
     <div className="inquiry-cta__body">
       <div className="inquiry-cta__block">

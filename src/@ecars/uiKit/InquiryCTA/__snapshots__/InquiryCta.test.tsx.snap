@@ -3,7 +3,7 @@
 exports[`InquiryCta Component > render component correctly 1`] = `
 <div>
   <div
-    class="inquiry-cta__inquiry-cta inquiry-cta"
+    class="inquiry-cta"
   >
     <section
       class="inquiry-cta__section section"
