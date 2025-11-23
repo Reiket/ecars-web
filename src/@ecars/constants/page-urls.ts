@@ -16,6 +16,7 @@ export const PageUrls = Object.freeze({
   CHECK_EMAIL: '/check-email',
   SET_NEW_PASS: '/set-new-pass',
   SUCCESS_REST_PASS: '/success-rest-pass',
+  ACCOUNT: '/account',
 });
 
 export type PageUrlType = (typeof PageUrls)[keyof typeof PageUrls];

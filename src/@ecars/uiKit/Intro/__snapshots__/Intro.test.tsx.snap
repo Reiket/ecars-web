@@ -6,7 +6,7 @@ exports[`Intro Component > render component correctly 1`] = `
     class="intro"
   >
     <div
-      class="intro-block"
+      class="intro-block__intro-block intro-block"
     >
       <section
         class="intro-block__section section"
@@ -100,7 +100,7 @@ exports[`Intro Component > render component correctly 1`] = `
       </section>
     </div>
     <div
-      class="benefits"
+      class="benefits__benefits benefits"
     >
       <section
         class="benefits__section section"

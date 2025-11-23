@@ -9,6 +9,9 @@ export const ResetPasswordPage: FC = () => {
     <AuthPage title="Forgot password">
       <p className="auth__subtitle">No worries, we'll send you reset instructions.</p>
       <AuthForm
+        onSubmit={() => {
+          /* empty */
+        }}
         isResetForm
         buttonText="Reset password"
       >
@@ -16,7 +19,13 @@ export const ResetPasswordPage: FC = () => {
           <Input placeholder="example@mail.com" />
         </Field>
       </AuthForm>
-      <RouterLink to={PageUrls.LOGIN} color="green"> <Icons.ArrowNarrowLeft/> Back to login</RouterLink>
+      <RouterLink
+        to={PageUrls.LOGIN}
+        color="green"
+      >
+        {' '}
+        <Icons.ArrowNarrowLeft /> Back to login
+      </RouterLink>
     </AuthPage>
   );
 };

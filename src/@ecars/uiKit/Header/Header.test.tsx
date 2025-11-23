@@ -5,6 +5,8 @@ import {MemoryRouter} from 'react-router-dom';
 import {useBurger} from '@ecars/services/hooks/useBurger';
 import {useHeaderScroll} from '@ecars/services/hooks/useHeaderScroll';
 import {headerTestScenarios} from '@ecars/uiKit/Header/constants';
+import {Provider} from 'react-redux';
+import {store} from '../../../app/store';
 
 vi.mock('@ecars/services/helpers/helpers', () => ({
   bodyOverflow: vi.fn(),
@@ -14,22 +16,26 @@ const toggleBurgerMock = vi.fn();
 describe('Header Component', () => {
   test('render component correctly', () => {
     const {container} = render(
-      <MemoryRouter>
-        <Header />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>
+      </Provider>,
     );
     expect(container).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
   test('clicking burger toggles active class', () => {
     const {container} = render(
-      <MemoryRouter>
-        <Header.Burger
-          onClick={toggleBurgerMock}
-          isBurger
-        />
-        <Navbar isBurgerActive />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <MemoryRouter>
+          <Header.Burger
+            onClick={toggleBurgerMock}
+            isBurger
+          />
+          <Navbar isBurgerActive />
+        </MemoryRouter>
+      </Provider>,
     );
     const burger = container.querySelector('.burger');
     const navbar = container.querySelector('.navbar');
@@ -42,9 +48,12 @@ describe('Header Component', () => {
   });
   test('renders and toggles burger hook', () => {
     const {container} = render(
-      <MemoryRouter>
-        <Header />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>
+        ,
+      </Provider>,
     );
     const burger = container.querySelector('.burger');
     if (burger) {
@@ -56,9 +65,12 @@ describe('Header Component', () => {
     const {desc, scrolls, expected} = scenario;
     test(desc, () => {
       const {container} = render(
-        <MemoryRouter>
-          <Header />
-        </MemoryRouter>,
+        <Provider store={store}>
+          <MemoryRouter>
+            <Header />
+          </MemoryRouter>
+          ,
+        </Provider>,
       );
       const header = container.querySelector('header');
 

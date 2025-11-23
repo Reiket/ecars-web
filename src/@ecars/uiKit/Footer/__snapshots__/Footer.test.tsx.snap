@@ -19,6 +19,7 @@ exports[`Footer Component > render component correctly 1`] = `
           >
             <a
               class="footer__logo logo"
+              href="/"
             >
               <img
                 alt="Logo"

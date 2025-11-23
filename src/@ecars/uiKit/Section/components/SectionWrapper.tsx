@@ -12,7 +12,6 @@ export interface Props extends ElementProps {
 
 export const SectionWrapper: FC<Props> = ({children, block, name, size}) => (
   <div className={cn(block, name)}>
-
     <Section
       containerSize={size}
       block={block}

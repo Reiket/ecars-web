@@ -7,6 +7,9 @@ export const SuccessRestPasswordPage: FC = () => {
     <AuthPage title="Password has been reset">
       <p className="auth__subtitle">Your password has been successfully reset. Click the button below to log in.</p>
       <AuthForm
+        onSubmit={() => {
+          /* empty */
+        }}
         isResetForm
         buttonText="Login"
       />

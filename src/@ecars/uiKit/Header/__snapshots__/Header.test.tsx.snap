@@ -18,6 +18,7 @@ exports[`Header Component > render component correctly 1`] = `
         </button>
         <a
           class="header__logo logo"
+          href="/"
         >
           <img
             alt="Logo"

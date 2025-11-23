@@ -8,6 +8,9 @@ export const SetNewPasswordPage: FC = () => {
     <AuthPage title="Check your email">
       <p className="auth__subtitle">Your new password must be different from your previously used passwords.</p>
       <AuthForm
+        onSubmit={() => {
+          /* empty */
+        }}
         isResetForm
         buttonText="Reset password"
       >

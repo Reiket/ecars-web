@@ -3,7 +3,7 @@
 exports[`Works Component > render component correctly 1`] = `
 <div>
   <div
-    class="works"
+    class="works__works works"
   >
     <section
       class="works__section section"
