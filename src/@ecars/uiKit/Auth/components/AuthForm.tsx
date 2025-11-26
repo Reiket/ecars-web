@@ -4,8 +4,8 @@ import type {ElementProps} from 'ecars-web-lib';
 import {Button, ButtonWithIcon, Icons, RouterLink} from 'ecars-web-lib';
 
 interface Props extends ElementProps {
-  onSubmit: (event: FormEvent<HTMLFormElement>) => Promise<void> | void;
-  buttonText: string;
+  onSubmit?: (event: FormEvent<HTMLFormElement>) => Promise<void> | void;
+  buttonText?: string;
   children?: ReactNode;
   isLoading?: boolean;
   linkConfig?: {
@@ -27,7 +27,9 @@ export const AuthForm: FC<Props> = ({
   isResetForm = false,
 }) => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    void onSubmit(event);
+    if (onSubmit) {
+      void onSubmit(event);
+    }
   };
   return (
     <form
@@ -35,14 +37,16 @@ export const AuthForm: FC<Props> = ({
       className="auth__form"
     >
       {children}
-      <Button
-        size="big"
-        type="submit"
-        color="green"
-        disabled={isLoading}
-      >
-        {buttonText}
-      </Button>
+      {!!buttonText && (
+        <Button
+          size="big"
+          type="submit"
+          color="green"
+          disabled={isLoading}
+        >
+          {buttonText}
+        </Button>
+      )}
       {!!text && (
         <p className="auth__text">
           {text}

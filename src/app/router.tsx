@@ -8,8 +8,8 @@ import {LoginPage} from '@ecars/pages/LoginPage/LoginPage';
 import {RegistrationPage} from '@ecars/pages/RegistrationPage/RegistrationPage';
 import {ResetPasswordPage} from '@ecars/pages/ResetPasswordPage/ResetPasswordPage';
 import {CheckEmailPage} from '@ecars/pages/CheckEmailPage/CheckEmailPage';
-import {SetNewPasswordPage} from '@ecars/pages/SetNewPasswordPage/SetNewPasswordPage';
-import {SuccessRestPasswordPage} from '@ecars/pages/SuccessRestPasswordPage';
+import {NewPasswordPage} from '@ecars/pages/NewPasswordPage/NewPasswordPage';
+import {SuccessRestPasswordPage} from '@ecars/pages/SuccessRestPasswordPage/SuccessRestPasswordPage';
 
 export const router = createBrowserRouter([
   {
@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
       {path: PageUrls.REGISTRATION, element: <RegistrationPage />},
       {path: PageUrls.RESET_PASSWORD, element: <ResetPasswordPage />},
       {path: PageUrls.CHECK_EMAIL, element: <CheckEmailPage />},
-      {path: PageUrls.SET_NEW_PASS, element: <SetNewPasswordPage />},
+      {path: PageUrls.SET_NEW_PASS, element: <NewPasswordPage />},
       {path: PageUrls.SUCCESS_REST_PASS, element: <SuccessRestPasswordPage />},
     ],
   },
