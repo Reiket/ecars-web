@@ -63,7 +63,7 @@ exports[`Login Page Component > should render page correctly 1`] = `
                 Forgot password?
               </a>
               <div
-                class="auth__password password"
+                class="password__password password"
                 data-testid="passwordInputTestId"
               >
                 <input

@@ -319,7 +319,7 @@ exports[`Footer Component > render component correctly 1`] = `
           </div>
         </div>
         <div
-          class="footer__copy copy"
+          class="copy__copy copy"
         >
           <p
             class="copy__description"

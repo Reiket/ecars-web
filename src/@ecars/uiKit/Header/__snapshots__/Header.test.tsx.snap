@@ -26,7 +26,7 @@ exports[`Header Component > render component correctly 1`] = `
           />
         </a>
         <nav
-          class="header__navbar navbar"
+          class="navbar__navbar navbar"
         >
           <div
             class="navbar__overlay"
