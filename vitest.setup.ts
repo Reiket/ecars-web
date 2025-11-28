@@ -4,7 +4,7 @@ import {vi} from 'vitest';
 import {TextEncoder} from 'util';
 import '@testing-library/jest-dom/vitest';
 import type * as ReactRouterDom from 'react-router-dom';
-import {mockHandleSubmit, mockNavigate} from '@ecars/services/__mocks__/tests';
+import {mockHandleSubmit, mockNavigate, mockSearchParamsGet} from '@ecars/services/__mocks__/tests';
 
 global.TextEncoder = global.TextEncoder || TextEncoder;
 global.TextDecoder = global.TextDecoder || TextDecoder;
@@ -63,17 +63,20 @@ vi.mock('react-hook-form', async (importOriginal) => {
     }),
   };
 });
+
 vi.mock('react-router-dom', async (importOriginal) => {
   const actual = await importOriginal<typeof ReactRouterDom>();
   return {
     ...actual,
     useNavigate: () => mockNavigate,
+    useSearchParams: () => [{get: mockSearchParamsGet}],
   };
 });
 
 vi.mock('react-toastify', () => ({
   toast: {
     error: vi.fn(),
+    success: vi.fn(),
   },
 }));
 

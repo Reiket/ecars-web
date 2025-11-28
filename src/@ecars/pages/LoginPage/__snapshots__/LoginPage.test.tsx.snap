@@ -101,7 +101,7 @@ exports[`Login Page Component > should render page correctly 1`] = `
               </div>
             </div>
             <button
-              class="button button--big button--green"
+              class="auth__button button button--big button--green"
               data-testid="buttonTestId"
               type="submit"
             >

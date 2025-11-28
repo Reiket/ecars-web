@@ -81,6 +81,9 @@
     > span {
       font-weight: 700;
     }
+    &:has(+ button) {
+      margin-bottom: s.rem(40);
+    }
   }
   &__checkbox-block {
     display: flex;

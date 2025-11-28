@@ -1,9 +1,8 @@
-import {describe, expect, test, vi} from 'vitest';
-import type {RegistrationForm} from '@ecars/pages/RegistrationPage/constants';
 import type {SubmitHandler} from 'react-hook-form';
 import {getErrorMessage} from '@ecars/services/helpers/errors';
 import {useRegisterMutation} from '@ecars/core/slices/api/authApiSlice';
 import {act, renderHook} from '@testing-library/react';
+import type {RegistrationForm} from '@ecars/core/hooks/useRegisterForm';
 import {useRegistrationForm} from '@ecars/core/hooks/useRegisterForm';
 import {toast} from 'react-toastify';
 import {

@@ -19,6 +19,16 @@ export interface LoginRequest {
   password: string;
 }
 
+export interface ForgotPasswordRequest {
+  email: string;
+}
+
+export interface ResetPasswordRequest {
+  code: string;
+  password: string;
+  passwordConfirmation: string;
+}
+
 export const registerQuery = (credentials: RegisterRequest): FetchArgs => ({
   url: API_ENDPOINTS.REGISTER,
   method: 'POST',
@@ -37,4 +47,22 @@ export const loginQuery = (credentials: LoginRequest): FetchArgs => ({
 export const getCurrentUserQuery = (): FetchArgs => ({
   url: API_ENDPOINTS.AUTH_USER,
   method: 'GET',
+});
+
+export const forgotPasswordQuery = (data: ForgotPasswordRequest): FetchArgs => ({
+  url: API_ENDPOINTS.FORGOT_PASSWORD,
+  method: 'POST',
+  body: {
+    email: data.email,
+  },
+});
+
+export const resetPasswordQuery = (data: ResetPasswordRequest): FetchArgs => ({
+  url: API_ENDPOINTS.RESET_PASSWORD,
+  method: 'POST',
+  body: {
+    code: data.code,
+    password: data.password,
+    passwordConfirmation: data.passwordConfirmation,
+  },
 });

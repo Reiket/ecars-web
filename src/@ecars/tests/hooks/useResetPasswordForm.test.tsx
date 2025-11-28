@@ -1,5 +1,6 @@
-import type {LoginForm} from '@ecars/core/hooks/useLoginForm';
-import {useLoginForm} from '@ecars/core/hooks/useLoginForm';
+import {renderHook, act} from '@testing-library/react';
+import type {ResetPasswordForm} from '@ecars/core/hooks/useResetPasswordForm';
+import {useResetPasswordForm} from '@ecars/core/hooks/useResetPasswordForm';
 import {
   defaultMutationState,
   mockApiError,
@@ -11,8 +12,7 @@ import {
 } from '@ecars/services/__mocks__/tests';
 import type {SubmitHandler} from 'react-hook-form';
 import {getErrorMessage} from '@ecars/services/helpers/errors';
-import {useLoginMutation} from '@ecars/core/slices/api/authApiSlice';
-import {act, renderHook} from '@testing-library/react';
+import {useForgotPasswordMutation} from '@ecars/core/slices/api/authApiSlice';
 import {PageUrls} from '@ecars/constants/page-urls';
 import {toast} from 'react-toastify';
 
@@ -21,22 +21,20 @@ vi.mock('@ecars/services/helpers/errors', () => ({
 }));
 
 vi.mock('@ecars/core/slices/api/authApiSlice', () => ({
-  useLoginMutation: vi.fn(() => [mockMutationFunction, defaultMutationState]),
+  useForgotPasswordMutation: vi.fn(() => [mockMutationFunction, defaultMutationState]),
 }));
 
-describe('useLoginForm hook', () => {
-  const mockFormData: LoginForm = {
+describe('useResetPasswordForm hook', () => {
+  const mockFormData: ResetPasswordForm = {
     email: 'test@example.com',
-    password: 'password123',
   };
 
   beforeEach(() => {
     vi.clearAllMocks();
-    mockHandleSubmit.mockImplementation((onSubmit: SubmitHandler<LoginForm>) => (e: Event) => {
+    mockHandleSubmit.mockImplementation((onSubmit: SubmitHandler<ResetPasswordForm>) => (e: Event) => {
       e.preventDefault();
       return onSubmit(mockFormData);
     });
-
     mockMutationFunction.mockReturnValue({
       unwrap: () => Promise.resolve(),
     });
@@ -51,15 +49,15 @@ describe('useLoginForm hook', () => {
       isUninitialized: false,
     };
 
-    vi.mocked(useLoginMutation).mockReturnValue([mockMutationFunction, loadingState]);
+    vi.mocked(useForgotPasswordMutation).mockReturnValue([mockMutationFunction, loadingState]);
 
-    const {result} = renderHook(() => useLoginForm());
+    const {result} = renderHook(() => useResetPasswordForm());
 
     expect(result.current.isLoading).toBe(true);
   });
 
-  test('should call login mutation with correct data on submit', async () => {
-    const {result} = renderHook(() => useLoginForm());
+  test('should call forgotPassword mutation with correct data on submit', async () => {
+    const {result} = renderHook(() => useResetPasswordForm());
 
     await act(async () => {
       await result.current.handleFormSubmit(mockFormEvent);
@@ -68,24 +66,25 @@ describe('useLoginForm hook', () => {
     expect(mockMutationFunction).toHaveBeenCalledWith(mockFormData);
   });
 
-  test('should navigate to ACCOUNT page on successful login', async () => {
-    const {result} = renderHook(() => useLoginForm());
+  test('should navigate to CHECK_EMAIL page with email in state on success', async () => {
+    const {result} = renderHook(() => useResetPasswordForm());
 
     await act(async () => {
       await result.current.handleFormSubmit(mockFormEvent);
     });
-
     expect(mockMutationFunction).toHaveBeenCalled();
-    expect(mockNavigate).toHaveBeenCalledWith(PageUrls.ACCOUNT);
+    expect(mockNavigate).toHaveBeenCalledWith(PageUrls.CHECK_EMAIL, {
+      state: {email: mockFormData.email},
+    });
     expect(toast.error).not.toHaveBeenCalled();
   });
 
-  test('should call getErrorMessage and toast.error on failed login', async () => {
+  test('should call getErrorMessage and toast.error on failed request', async () => {
     mockMutationFunction.mockReturnValue({
       unwrap: () => Promise.reject(mockApiError),
     });
 
-    const {result} = renderHook(() => useLoginForm());
+    const {result} = renderHook(() => useResetPasswordForm());
 
     await act(async () => {
       await result.current.handleFormSubmit(mockFormEvent);
@@ -93,7 +92,6 @@ describe('useLoginForm hook', () => {
 
     expect(mockMutationFunction).toHaveBeenCalled();
     expect(mockNavigate).not.toHaveBeenCalled();
-
     expect(getErrorMessage).toHaveBeenCalledWith(mockApiError);
     expect(toast.error).toHaveBeenCalledWith(mockErrorMessage);
   });

@@ -1,0 +1,76 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CheckEmail Component > should render correctly 1`] = `
+<div>
+  <div
+    class="auth"
+  >
+    <section
+      class="auth__section section"
+    >
+      <div
+        class="auth__container container container--lg"
+      >
+        <div
+          class="auth__body"
+        >
+          <h2
+            class="auth__title section-title"
+          >
+            Check your email
+          </h2>
+          <p
+            class="auth__subtitle"
+          >
+            We sent a password reset link to 
+            <span />
+          </p>
+          <form
+            class="auth__form"
+          >
+            <p
+              class="auth__text"
+            >
+              Didn't receive the email?
+              <a
+                class="auth__link link link--green"
+                data-discover="true"
+                data-testid="routerLinkTestId"
+                href="/reset-password"
+              >
+                Click to resend
+              </a>
+            </p>
+          </form>
+          <a
+            class="auth__link link link--green"
+            data-discover="true"
+            data-testid="routerLinkTestId"
+            href="/login"
+          >
+            <svg
+              block="auth"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0V0z"
+                fill="none"
+              />
+              <path
+                d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+              />
+            </svg>
+             Back to login
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;

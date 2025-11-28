@@ -1,6 +1,5 @@
 import {render} from '@testing-library/react';
 import {RegistrationPage} from '@ecars/pages/RegistrationPage/RegistrationPage';
-import {describe, expect, test, vi} from 'vitest';
 import {MemoryRouter} from 'react-router-dom';
 
 vi.mock('@ecars/core/hooks/useRegisterForm', () => ({

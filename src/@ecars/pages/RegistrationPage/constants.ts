@@ -6,6 +6,7 @@ import {
   passwordValidator,
 } from '@ecars/services/helpers/validators';
 import type {UseFormGetValues} from 'react-hook-form';
+import type {RegistrationForm} from '@ecars/core/hooks/useRegisterForm';
 
 export interface RegisterFieldConfig {
   name: keyof Omit<RegistrationForm, 'isAgree'>;
@@ -13,14 +14,6 @@ export interface RegisterFieldConfig {
   placeholder: string;
   component: typeof Input | typeof PasswordInput;
   rules: (getValues: UseFormGetValues<RegistrationForm>) => object;
-}
-
-export interface RegistrationForm {
-  email: string;
-  name: string;
-  password: string;
-  confirmedPassword: string;
-  isAgree: boolean;
 }
 
 export const registrationFormFieldsConfig: RegisterFieldConfig[] = [

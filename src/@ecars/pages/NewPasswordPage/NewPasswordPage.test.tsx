@@ -1,10 +1,10 @@
+import {NewPasswordPage} from '@ecars/pages/NewPasswordPage/NewPasswordPage';
 import {render} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
-import {LoginPage} from '@ecars/pages/LoginPage/LoginPage';
 import {mockHandleSubmit} from '@ecars/services/__mocks__/tests';
 
-vi.mock('@ecars/core/hooks/useLoginForm', () => ({
-  useLoginForm: () => ({
+vi.mock('@ecars/core/hooks/useNewPasswordForm', () => ({
+  useNewPasswordForm: () => ({
     handleFormSubmit: mockHandleSubmit,
     form: {
       register: () => ({}),
@@ -13,11 +13,11 @@ vi.mock('@ecars/core/hooks/useLoginForm', () => ({
   }),
 }));
 
-describe('Login Page Component', () => {
-  test('should render page correctly', () => {
+describe('NewPasswordPage Component', () => {
+  test('should render correctly', () => {
     const {container} = render(
       <MemoryRouter>
-        <LoginPage />
+        <NewPasswordPage />
       </MemoryRouter>,
     );
     expect(container).toBeInTheDocument();

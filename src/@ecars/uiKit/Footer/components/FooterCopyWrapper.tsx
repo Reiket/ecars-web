@@ -4,6 +4,9 @@ import {cn} from 'ecars-web-lib';
 
 export interface Props extends ElementProps {
   children: ReactNode;
+  className?: string;
 }
 
-export const FooterCopyWrapper: FC<Props> = ({children, block}) => <div className={cn(block, 'copy')}>{children}</div>;
+export const FooterCopyWrapper: FC<Props> = ({children, className}) => (
+  <div className={cn(className, 'copy')}>{children}</div>
+);
