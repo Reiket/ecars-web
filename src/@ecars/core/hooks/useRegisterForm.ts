@@ -1,19 +1,21 @@
 import {useRegisterMutation} from '@ecars/core/slices/api/authApiSlice';
 import type {RegisterRequest} from '@ecars/core/api/auth-query';
-import type {SubmitHandler, UseFormReturn} from 'react-hook-form';
+import type {SubmitHandler} from 'react-hook-form';
 import {useForm} from 'react-hook-form';
-import type {RegistrationForm} from '@ecars/pages/RegistrationPage/constants';
 import type {FormEvent} from 'react';
 import {getErrorMessage} from '@ecars/services/helpers/errors';
 import {toast} from 'react-toastify';
+import type {UseAuthFormReturn} from '@ecars/core/types/types';
 
-interface UseRegistrationFormReturn {
-  form: UseFormReturn<RegistrationForm>;
-  handleFormSubmit: (e: FormEvent<HTMLFormElement>) => Promise<void> | void;
-  isLoading: boolean;
+export interface RegistrationForm {
+  email: string;
+  name: string;
+  password: string;
+  confirmedPassword: string;
+  isAgree: boolean;
 }
 
-export const useRegistrationForm = (): UseRegistrationFormReturn => {
+export const useRegistrationForm = (): UseAuthFormReturn<RegistrationForm> => {
   const [registerMutation, {isLoading}] = useRegisterMutation();
   const form = useForm<RegistrationForm>({
     mode: 'onChange',

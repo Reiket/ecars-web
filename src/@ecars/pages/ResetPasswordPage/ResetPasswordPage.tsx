@@ -5,10 +5,6 @@ import {AuthPage} from '@ecars/uiKit/Auth';
 import {PageUrls} from '@ecars/constants/page-urls';
 import {useResetPasswordForm} from '@ecars/core/hooks/useResetPasswordForm';
 
-export interface ResetPasswordForm {
-  email: string;
-}
-
 export const ResetPasswordPage: FC = () => {
   const {handleFormSubmit, form, isLoading} = useResetPasswordForm();
   return (
@@ -22,7 +18,7 @@ export const ResetPasswordPage: FC = () => {
       >
         <Field label="Email address">
           <Input
-            name={'email'}
+            name="email"
             register={form.register('email')}
             placeholder="example@mail.com"
           />

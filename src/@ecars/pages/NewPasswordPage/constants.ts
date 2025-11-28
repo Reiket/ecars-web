@@ -1,6 +1,6 @@
 import {confirmPassValidator, passwordValidator} from '@ecars/services/helpers/validators';
 import type {UseFormGetValues} from 'react-hook-form';
-import type {NewPasswordForm} from '@ecars/pages/NewPasswordPage/NewPasswordPage';
+import type {NewPasswordForm} from '@ecars/core/hooks/useNewPasswordForm';
 
 export interface NewPasswordFieldConfig {
   name: keyof NewPasswordForm;

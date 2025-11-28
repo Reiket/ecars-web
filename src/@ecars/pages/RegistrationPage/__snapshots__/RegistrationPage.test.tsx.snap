@@ -76,7 +76,7 @@ exports[`Registration Page Component > should render page correctly 1`] = `
                 Password
               </label>
               <div
-                class="password__password password"
+                class="auth__password password"
                 data-testid="passwordInputTestId"
               >
                 <input
@@ -125,7 +125,7 @@ exports[`Registration Page Component > should render page correctly 1`] = `
                 Confirm password
               </label>
               <div
-                class="password__password password"
+                class="auth__password password"
                 data-testid="passwordInputTestId"
               >
                 <input
@@ -222,7 +222,7 @@ exports[`Registration Page Component > should render page correctly 1`] = `
               </p>
             </div>
             <button
-              class="button button--big button--green"
+              class="auth__button button button--big button--green"
               data-testid="buttonTestId"
               type="submit"
             >

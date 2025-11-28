@@ -1,7 +1,6 @@
-import {describe, expect, test, vi, beforeEach} from 'vitest';
 import {renderHook, act} from '@testing-library/react';
-import {useResetPasswordForm} from '@ecars/core/hooks/useResetPasswordForm'; // Перевірте шлях
-import type {ResetPasswordForm} from '@ecars/pages/ResetPasswordPage/ResetPasswordPage';
+import type {ResetPasswordForm} from '@ecars/core/hooks/useResetPasswordForm';
+import {useResetPasswordForm} from '@ecars/core/hooks/useResetPasswordForm';
 import {
   defaultMutationState,
   mockApiError,

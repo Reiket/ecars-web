@@ -1,12 +1,12 @@
 import {render} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
-import {SuccessRestPasswordPage} from '@ecars/pages/SuccessRestPasswordPage/SuccessRestPasswordPage';
+import {CheckEmailPage} from '@ecars/pages/CheckEmailPage/CheckEmailPage';
 
-describe('SuccessRestPasswordPage Component', () => {
+describe('CheckEmail Component', () => {
   test('should render correctly', () => {
     const {container} = render(
       <MemoryRouter>
-        <SuccessRestPasswordPage />
+        <CheckEmailPage />
       </MemoryRouter>,
     );
     expect(container).toBeInTheDocument();

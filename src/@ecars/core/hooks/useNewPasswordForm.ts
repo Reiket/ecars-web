@@ -1,4 +1,4 @@
-import type {SubmitHandler, UseFormReturn} from 'react-hook-form';
+import type {SubmitHandler} from 'react-hook-form';
 import {useForm} from 'react-hook-form';
 import {useNavigate, useSearchParams} from 'react-router-dom';
 import {useResetPasswordMutation} from '@ecars/core/slices/api/authApiSlice';
@@ -7,17 +7,17 @@ import {useEffect} from 'react';
 import {toast} from 'react-toastify';
 import {PageUrls} from '@ecars/constants/page-urls';
 import {getErrorMessage} from '@ecars/services/helpers/errors';
-import type {NewPasswordForm} from '@ecars/pages/NewPasswordPage/NewPasswordPage';
+import {TOAST_MESSAGES} from '@ecars/constants/toast-messages';
+import type {UseAuthFormReturn} from '@ecars/core/types/types';
 
-interface UseLoginFormReturn {
-  form: UseFormReturn<NewPasswordForm>;
-  handleFormSubmit: (e: FormEvent<HTMLFormElement>) => Promise<void> | void;
-  isLoading: boolean;
+export interface NewPasswordForm {
+  password: string;
+  confirmedPassword: string;
 }
 
 const PARAMS_CODE = 'code';
 
-export const useNewPasswordForm = (): UseLoginFormReturn => {
+export const useNewPasswordForm = (): UseAuthFormReturn<NewPasswordForm> => {
   const form = useForm<NewPasswordForm>({mode: 'onChange'});
   const [searchParams] = useSearchParams();
   const code = searchParams.get(PARAMS_CODE);
@@ -26,7 +26,7 @@ export const useNewPasswordForm = (): UseLoginFormReturn => {
 
   useEffect(() => {
     if (!code) {
-      toast.error('Invalid or missing reset code');
+      toast.error(TOAST_MESSAGES.MISSING_CODE);
       void navigate(PageUrls.LOGIN);
     }
   }, [code, navigate]);
@@ -42,7 +42,7 @@ export const useNewPasswordForm = (): UseLoginFormReturn => {
         passwordConfirmation: data.confirmedPassword,
       }).unwrap();
 
-      toast.success('Password changed successfully!');
+      toast.success(TOAST_MESSAGES.SUCCESS_REST_PASS);
       void navigate(PageUrls.SUCCESS_REST_PASS);
     } catch (err: unknown) {
       const message = getErrorMessage(err);

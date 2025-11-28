@@ -47,6 +47,7 @@ export const LoginPage: FC = () => {
             <PasswordInput
               hasError={!!password}
               name="password"
+              block="auth"
               register={register('password', passwordLoginValidator)}
               placeholder="Your password"
             />

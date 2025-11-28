@@ -1,4 +1,4 @@
-import type {SubmitHandler, UseFormReturn} from 'react-hook-form';
+import type {SubmitHandler} from 'react-hook-form';
 import {useForm} from 'react-hook-form';
 import {toast} from 'react-toastify';
 import {useLoginMutation} from '@ecars/core/slices/api/authApiSlice';
@@ -6,18 +6,14 @@ import {getErrorMessage} from '@ecars/services/helpers/errors';
 import {useNavigate} from 'react-router-dom';
 import {PageUrls} from '@ecars/constants/page-urls';
 import type {FormEvent} from 'react';
+import type {UseAuthFormReturn} from '@ecars/core/types/types';
 
 export interface LoginForm {
   email: string;
   password: string;
 }
-interface UseLoginFormReturn {
-  form: UseFormReturn<LoginForm>;
-  handleFormSubmit: (e: FormEvent<HTMLFormElement>) => Promise<void> | void;
-  isLoading: boolean;
-}
 
-export const useLoginForm = (): UseLoginFormReturn => {
+export const useLoginForm = (): UseAuthFormReturn<LoginForm> => {
   const form = useForm<LoginForm>({
     mode: 'onChange',
   });

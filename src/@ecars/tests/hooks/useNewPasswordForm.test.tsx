@@ -1,7 +1,6 @@
-import {describe, expect, test, vi, beforeEach} from 'vitest';
 import {renderHook, act} from '@testing-library/react';
-import {useNewPasswordForm} from '@ecars/core/hooks/useNewPasswordForm'; // Перевірте шлях імпорту
-import type {NewPasswordForm} from '@ecars/pages/NewPasswordPage/NewPasswordPage';
+import type {NewPasswordForm} from '@ecars/core/hooks/useNewPasswordForm';
+import {useNewPasswordForm} from '@ecars/core/hooks/useNewPasswordForm';
 import {
   defaultMutationState,
   mockApiError,
@@ -11,12 +10,14 @@ import {
   mockMutationFunction,
   mockNavigate,
   mockSearchParamsGet,
+  VALID_CODE,
 } from '@ecars/services/__mocks__/tests';
 import type {SubmitHandler} from 'react-hook-form';
 import {getErrorMessage} from '@ecars/services/helpers/errors';
 import {useResetPasswordMutation} from '@ecars/core/slices/api/authApiSlice';
 import {PageUrls} from '@ecars/constants/page-urls';
 import {toast} from 'react-toastify';
+import {TOAST_MESSAGES} from '@ecars/constants/toast-messages';
 
 vi.mock('@ecars/services/helpers/errors', () => ({
   getErrorMessage: vi.fn(),
@@ -31,8 +32,6 @@ describe('useNewPasswordForm hook', () => {
     password: 'newPassword123',
     confirmedPassword: 'newPassword123',
   };
-
-  const VALID_CODE = 'valid-reset-code';
 
   beforeEach(() => {
     vi.clearAllMocks();
@@ -70,7 +69,7 @@ describe('useNewPasswordForm hook', () => {
 
     renderHook(() => useNewPasswordForm());
 
-    expect(toast.error).toHaveBeenCalledWith('Invalid or missing reset code');
+    expect(toast.error).toHaveBeenCalledWith(TOAST_MESSAGES.MISSING_CODE);
     expect(mockNavigate).toHaveBeenCalledWith(PageUrls.LOGIN);
   });
 
@@ -107,7 +106,7 @@ describe('useNewPasswordForm hook', () => {
     });
 
     expect(mockMutationFunction).toHaveBeenCalled();
-    expect(toast.success).toHaveBeenCalledWith('Password changed successfully!');
+    expect(toast.success).toHaveBeenCalledWith(TOAST_MESSAGES.SUCCESS_REST_PASS);
     expect(mockNavigate).toHaveBeenCalledWith(PageUrls.SUCCESS_REST_PASS);
     expect(toast.error).not.toHaveBeenCalled();
   });

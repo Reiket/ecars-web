@@ -5,11 +5,6 @@ import {AuthPage} from '@ecars/uiKit/Auth';
 import {newPasswordFormFieldsConfig} from '@ecars/pages/NewPasswordPage/constants';
 import {useNewPasswordForm} from '@ecars/core/hooks/useNewPasswordForm';
 
-export interface NewPasswordForm {
-  password: string;
-  confirmedPassword: string;
-}
-
 export const NewPasswordPage: FC = () => {
   const {form, isLoading, handleFormSubmit} = useNewPasswordForm();
   const {

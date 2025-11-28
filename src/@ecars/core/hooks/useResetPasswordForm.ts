@@ -1,20 +1,18 @@
+import type {SubmitHandler} from 'react-hook-form';
 import {useForm} from 'react-hook-form';
-import type {SubmitHandler, UseFormReturn} from 'react-hook-form';
 import {useForgotPasswordMutation} from '@ecars/core/slices/api/authApiSlice';
 import {useNavigate} from 'react-router-dom';
 import {PageUrls} from '@ecars/constants/page-urls';
 import {getErrorMessage} from '@ecars/services/helpers/errors';
 import {toast} from 'react-toastify';
 import type {FormEvent} from 'react';
-import type {ResetPasswordForm} from '@ecars/pages/ResetPasswordPage/ResetPasswordPage';
+import type {UseAuthFormReturn} from '@ecars/core/types/types';
 
-interface UseResetPasswordFormReturn {
-  form: UseFormReturn<ResetPasswordForm>;
-  handleFormSubmit: (e: FormEvent<HTMLFormElement>) => Promise<void> | void;
-  isLoading: boolean;
+export interface ResetPasswordForm {
+  email: string;
 }
 
-export const useResetPasswordForm = (): UseResetPasswordFormReturn => {
+export const useResetPasswordForm = (): UseAuthFormReturn<ResetPasswordForm> => {
   const form = useForm<ResetPasswordForm>({
     mode: 'onChange',
   });

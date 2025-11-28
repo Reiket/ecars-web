@@ -1,4 +1,3 @@
-import {describe, expect, test, vi} from 'vitest';
 import {NewPasswordPage} from '@ecars/pages/NewPasswordPage/NewPasswordPage';
 import {render} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';

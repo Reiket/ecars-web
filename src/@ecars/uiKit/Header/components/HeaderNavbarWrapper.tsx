@@ -5,11 +5,12 @@ import {cn} from 'ecars-web-lib';
 export interface Props extends ElementProps {
   children: ReactNode;
   isBurgerActive: boolean;
+  className?: string;
 }
 
-export const HeaderNavbarWrapper: FC<Props> = ({block, children, isBurgerActive}) => (
+export const HeaderNavbarWrapper: FC<Props> = ({className, children, isBurgerActive}) => (
   <nav
-    className={cn(block, 'navbar', {
+    className={cn(className, 'navbar', {
       '_open-burger': isBurgerActive,
     })}
   >

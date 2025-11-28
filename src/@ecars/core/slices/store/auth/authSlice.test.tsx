@@ -1,5 +1,10 @@
 import {beforeEach, describe, expect, test} from 'vitest';
-import type {LoginRequest, RegisterRequest} from '@ecars/core/api/auth-query';
+import type {
+  ForgotPasswordRequest,
+  LoginRequest,
+  RegisterRequest,
+  ResetPasswordRequest,
+} from '@ecars/core/api/auth-query';
 import {selectCurrentUser} from '@ecars/core/slices/store/auth/authSlice';
 import type {IntegrationTestStore} from '@ecars/services/__mocks__/store';
 import {setupIntegrationTestStore} from '@ecars/services/__mocks__/store';
@@ -43,9 +48,32 @@ describe('Auth slice', () => {
 
   test('getCurrentUser query (onQueryStarted) should dispatch setCredentials on success', async () => {
     mockFetchSuccess(mockGetUserResponse);
-
     expect(selectCurrentUser(store.getState())).toBeNull();
     await store.dispatch(authApiSlice.endpoints.getCurrentUser.initiate(undefined));
+    expect(selectCurrentUser(store.getState())).toEqual(mockUser);
+  });
+  test('forgotPassword mutation should execute successfully but NOT update credentials', async () => {
+    mockFetchSuccess({});
+    const mockForgotRequest: ForgotPasswordRequest = {
+      email: 'test@mail.com',
+    };
+
+    expect(selectCurrentUser(store.getState())).toBeNull();
+    const result = await store.dispatch(authApiSlice.endpoints.forgotPassword.initiate(mockForgotRequest));
+    expect(result).toMatchObject({});
+    expect(selectCurrentUser(store.getState())).toBeNull();
+  });
+  test('resetPassword mutation (onQueryStarted) should dispatch setCredentials on success', async () => {
+    mockFetchSuccess(mockAuthResponse);
+
+    const mockResetRequest: ResetPasswordRequest = {
+      code: 'some-reset-code',
+      password: 'newPassword123',
+      passwordConfirmation: 'newPassword123',
+    };
+
+    expect(selectCurrentUser(store.getState())).toBeNull();
+    await store.dispatch(authApiSlice.endpoints.resetPassword.initiate(mockResetRequest));
     expect(selectCurrentUser(store.getState())).toEqual(mockUser);
   });
 });

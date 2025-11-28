@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ResetPasswordPage Component > should render correctly 1`] = `
+exports[`CheckEmail Component > should render correctly 1`] = `
 <div>
   <div
     class="auth"
@@ -17,44 +17,30 @@ exports[`ResetPasswordPage Component > should render correctly 1`] = `
           <h2
             class="auth__title section-title"
           >
-            Forgot password
+            Check your email
           </h2>
           <p
             class="auth__subtitle"
           >
-            No worries, we'll send you reset instructions.
+            We sent a password reset link to 
+            <span />
           </p>
           <form
             class="auth__form"
           >
-            <div
-              class="auth__field field"
-              data-testid="fieldTestId"
+            <p
+              class="auth__text"
             >
-              <label
-                class="field__label"
-                data-testid="fieldLabelTestId"
-                for="input"
+              Didn't receive the email?
+              <a
+                class="auth__link link link--green"
+                data-discover="true"
+                data-testid="routerLinkTestId"
+                href="/reset-password"
               >
-                Email address
-              </label>
-              <input
-                autocomplete="off"
-                class="auth__input input"
-                data-testid="inputTestId"
-                id="input"
-                name="email"
-                placeholder="example@mail.com"
-                type="text"
-              />
-            </div>
-            <button
-              class="auth__button button button--big button--green"
-              data-testid="buttonTestId"
-              type="submit"
-            >
-              Reset password
-            </button>
+                Click to resend
+              </a>
+            </p>
           </form>
           <a
             class="auth__link link link--green"

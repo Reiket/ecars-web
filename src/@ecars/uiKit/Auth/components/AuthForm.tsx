@@ -39,6 +39,7 @@ export const AuthForm: FC<Props> = ({
       {children}
       {!!buttonText && (
         <Button
+          block={block}
           size="big"
           type="submit"
           color="green"
