@@ -18,7 +18,7 @@ export interface NewPasswordForm {
 const PARAMS_CODE = 'code';
 
 export const useNewPasswordForm = (): UseAuthFormReturn<NewPasswordForm> => {
-  const form = useForm<NewPasswordForm>({mode: 'onChange'});
+  const form = useForm<NewPasswordForm>();
   const [searchParams] = useSearchParams();
   const code = searchParams.get(PARAMS_CODE);
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ export const useNewPasswordForm = (): UseAuthFormReturn<NewPasswordForm> => {
   useEffect(() => {
     if (!code) {
       toast.error(TOAST_MESSAGES.MISSING_CODE);
-      void navigate(PageUrls.LOGIN);
+      void navigate(PageUrls.LAYOUT);
     }
   }, [code, navigate]);
   const onSubmit: SubmitHandler<NewPasswordForm> = async (data) => {
@@ -43,7 +43,7 @@ export const useNewPasswordForm = (): UseAuthFormReturn<NewPasswordForm> => {
       }).unwrap();
 
       toast.success(TOAST_MESSAGES.SUCCESS_REST_PASS);
-      void navigate(PageUrls.SUCCESS_REST_PASS);
+      void navigate(PageUrls.SUCCESS_REST_PASS, {state: {resetSuccess: true}});
     } catch (err: unknown) {
       const message = getErrorMessage(err);
       toast.error(message);

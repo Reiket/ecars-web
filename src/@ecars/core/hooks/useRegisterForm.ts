@@ -6,6 +6,9 @@ import type {FormEvent} from 'react';
 import {getErrorMessage} from '@ecars/services/helpers/errors';
 import {toast} from 'react-toastify';
 import type {UseAuthFormReturn} from '@ecars/core/types/types';
+import {useNavigate} from 'react-router-dom';
+import {PageUrls} from '@ecars/constants/page-urls';
+import {TOAST_MESSAGES} from '@ecars/constants/toast-messages';
 
 export interface RegistrationForm {
   email: string;
@@ -17,10 +20,8 @@ export interface RegistrationForm {
 
 export const useRegistrationForm = (): UseAuthFormReturn<RegistrationForm> => {
   const [registerMutation, {isLoading}] = useRegisterMutation();
-  const form = useForm<RegistrationForm>({
-    mode: 'onChange',
-  });
-
+  const form = useForm<RegistrationForm>();
+  const navigate = useNavigate();
   const onSubmit: SubmitHandler<RegistrationForm> = async (data) => {
     const credentials: RegisterRequest = {
       username: data.name,
@@ -30,6 +31,8 @@ export const useRegistrationForm = (): UseAuthFormReturn<RegistrationForm> => {
 
     try {
       await registerMutation(credentials).unwrap();
+      toast.success(TOAST_MESSAGES.SUCCESS_SIGN_UP);
+      void navigate(PageUrls.ACCOUNT);
     } catch (err: unknown) {
       const message = getErrorMessage(err);
       toast.error(message);

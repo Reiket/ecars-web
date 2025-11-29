@@ -13,9 +13,7 @@ export interface ResetPasswordForm {
 }
 
 export const useResetPasswordForm = (): UseAuthFormReturn<ResetPasswordForm> => {
-  const form = useForm<ResetPasswordForm>({
-    mode: 'onChange',
-  });
+  const form = useForm<ResetPasswordForm>();
   const [forgotPassword, {isLoading}] = useForgotPasswordMutation();
   const navigate = useNavigate();
   const onSubmit: SubmitHandler<ResetPasswordForm> = async (data) => {
