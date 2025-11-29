@@ -64,13 +64,13 @@ describe('useNewPasswordForm hook', () => {
     expect(result.current.isLoading).toBe(true);
   });
 
-  test('should redirect to LOGIN page if code param is missing', () => {
+  test('should redirect to LAYOUT page if code param is missing', () => {
     mockSearchParamsGet.mockReturnValue(null);
 
     renderHook(() => useNewPasswordForm());
 
     expect(toast.error).toHaveBeenCalledWith(TOAST_MESSAGES.MISSING_CODE);
-    expect(mockNavigate).toHaveBeenCalledWith(PageUrls.LOGIN);
+    expect(mockNavigate).toHaveBeenCalledWith(PageUrls.LAYOUT);
   });
 
   test('should call resetPassword mutation with correct data on submit', async () => {
@@ -91,6 +91,7 @@ describe('useNewPasswordForm hook', () => {
     mockSearchParamsGet.mockReturnValue(null);
     const {result} = renderHook(() => useNewPasswordForm());
     vi.clearAllMocks();
+
     await act(async () => {
       await result.current.handleFormSubmit(mockFormEvent);
     });
@@ -98,7 +99,7 @@ describe('useNewPasswordForm hook', () => {
     expect(mockMutationFunction).not.toHaveBeenCalled();
   });
 
-  test('should navigate to SUCCESS_REST_PASS page on successful password reset', async () => {
+  test('should navigate to SUCCESS_REST_PASS page with state on successful password reset', async () => {
     const {result} = renderHook(() => useNewPasswordForm());
 
     await act(async () => {
@@ -107,7 +108,10 @@ describe('useNewPasswordForm hook', () => {
 
     expect(mockMutationFunction).toHaveBeenCalled();
     expect(toast.success).toHaveBeenCalledWith(TOAST_MESSAGES.SUCCESS_REST_PASS);
-    expect(mockNavigate).toHaveBeenCalledWith(PageUrls.SUCCESS_REST_PASS);
+    expect(mockNavigate).toHaveBeenCalledWith(PageUrls.SUCCESS_REST_PASS, {
+      state: {resetSuccess: true},
+    });
+
     expect(toast.error).not.toHaveBeenCalled();
   });
 
@@ -123,7 +127,7 @@ describe('useNewPasswordForm hook', () => {
     });
 
     expect(mockMutationFunction).toHaveBeenCalled();
-    expect(mockNavigate).not.toHaveBeenCalledWith(PageUrls.SUCCESS_REST_PASS);
+    expect(mockNavigate).not.toHaveBeenCalledWith(PageUrls.SUCCESS_REST_PASS, expect.anything());
 
     expect(getErrorMessage).toHaveBeenCalledWith(mockApiError);
     expect(toast.error).toHaveBeenCalledWith(mockErrorMessage);

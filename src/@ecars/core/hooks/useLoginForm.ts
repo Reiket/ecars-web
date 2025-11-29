@@ -7,6 +7,7 @@ import {useNavigate} from 'react-router-dom';
 import {PageUrls} from '@ecars/constants/page-urls';
 import type {FormEvent} from 'react';
 import type {UseAuthFormReturn} from '@ecars/core/types/types';
+import {TOAST_MESSAGES} from '@ecars/constants/toast-messages';
 
 export interface LoginForm {
   email: string;
@@ -14,15 +15,14 @@ export interface LoginForm {
 }
 
 export const useLoginForm = (): UseAuthFormReturn<LoginForm> => {
-  const form = useForm<LoginForm>({
-    mode: 'onChange',
-  });
+  const form = useForm<LoginForm>();
 
   const [login, {isLoading}] = useLoginMutation();
   const navigate = useNavigate();
   const onSubmit: SubmitHandler<LoginForm> = async (data) => {
     try {
       await login(data).unwrap();
+      toast.success(TOAST_MESSAGES.SUCCESS_LOGIN);
       await navigate(PageUrls.ACCOUNT);
     } catch (err: unknown) {
       const message = getErrorMessage(err);

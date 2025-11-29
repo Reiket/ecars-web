@@ -12,7 +12,10 @@ import {
   mockFormEvent,
   mockHandleSubmit,
   mockMutationFunction,
+  mockNavigate,
 } from '@ecars/services/__mocks__/tests';
+import {PageUrls} from '@ecars/constants/page-urls';
+import {TOAST_MESSAGES} from '@ecars/constants/toast-messages';
 
 vi.mock('@ecars/services/helpers/errors', () => ({
   getErrorMessage: vi.fn(),
@@ -72,14 +75,22 @@ describe('useRegistrationForm hook', () => {
     expect(mockMutationFunction).toHaveBeenCalledWith(expectedCredentials);
   });
 
-  test('should not call toast.error on successful registration', async () => {
+  test('should call registerMutation, show success toast and navigate to ACCOUNT page on submit', async () => {
     const {result} = renderHook(() => useRegistrationForm());
 
     await act(async () => {
       await result.current.handleFormSubmit(mockFormEvent);
     });
 
-    expect(mockMutationFunction).toHaveBeenCalled();
+    const expectedCredentials = {
+      username: mockFormData.name,
+      email: mockFormData.email,
+      password: mockFormData.password,
+    };
+
+    expect(mockMutationFunction).toHaveBeenCalledWith(expectedCredentials);
+    expect(mockNavigate).toHaveBeenCalledWith(PageUrls.ACCOUNT);
+    expect(toast.success).toHaveBeenCalledWith(TOAST_MESSAGES.SUCCESS_SIGN_UP);
     expect(toast.error).not.toHaveBeenCalled();
   });
 
@@ -95,6 +106,9 @@ describe('useRegistrationForm hook', () => {
     });
 
     expect(mockMutationFunction).toHaveBeenCalled();
+    expect(mockNavigate).not.toHaveBeenCalled();
+    expect(toast.success).not.toHaveBeenCalled();
+
     expect(getErrorMessage).toHaveBeenCalledWith(mockApiError);
     expect(toast.error).toHaveBeenCalledWith(mockErrorMessage);
   });

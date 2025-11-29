@@ -15,6 +15,7 @@ import {useLoginMutation} from '@ecars/core/slices/api/authApiSlice';
 import {act, renderHook} from '@testing-library/react';
 import {PageUrls} from '@ecars/constants/page-urls';
 import {toast} from 'react-toastify';
+import {TOAST_MESSAGES} from '@ecars/constants/toast-messages';
 
 vi.mock('@ecars/services/helpers/errors', () => ({
   getErrorMessage: vi.fn(),
@@ -68,7 +69,7 @@ describe('useLoginForm hook', () => {
     expect(mockMutationFunction).toHaveBeenCalledWith(mockFormData);
   });
 
-  test('should navigate to ACCOUNT page on successful login', async () => {
+  test('should navigate to ACCOUNT page and show success toast on successful login', async () => {
     const {result} = renderHook(() => useLoginForm());
 
     await act(async () => {
@@ -77,6 +78,7 @@ describe('useLoginForm hook', () => {
 
     expect(mockMutationFunction).toHaveBeenCalled();
     expect(mockNavigate).toHaveBeenCalledWith(PageUrls.ACCOUNT);
+    expect(toast.success).toHaveBeenCalledWith(TOAST_MESSAGES.SUCCESS_LOGIN);
     expect(toast.error).not.toHaveBeenCalled();
   });
 
@@ -93,7 +95,7 @@ describe('useLoginForm hook', () => {
 
     expect(mockMutationFunction).toHaveBeenCalled();
     expect(mockNavigate).not.toHaveBeenCalled();
-
+    expect(toast.success).not.toHaveBeenCalled();
     expect(getErrorMessage).toHaveBeenCalledWith(mockApiError);
     expect(toast.error).toHaveBeenCalledWith(mockErrorMessage);
   });
