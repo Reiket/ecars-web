@@ -11,6 +11,5 @@ export const BLOG_QUERY_PARAMS = {
   sort: 'createdAt:desc',
 };
 
-
 export const BLOG_CARD_TEST_ID = 'blogCardTestId';
 export const BLOG_CARD_SKELETON_TEST_ID = 'blogCardSkeletonTestId';

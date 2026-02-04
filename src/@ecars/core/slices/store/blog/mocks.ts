@@ -22,8 +22,8 @@ export const mockBlogCards: BlogArticle[] = [
       },
     },
     classnames: 'blog-card-style',
-  }
-]
+  },
+];
 
 export const mockBlogResponse: GetBlogArticlesResponse = {
   data: mockBlogCards,

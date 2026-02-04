@@ -40,5 +40,5 @@
 .section-title {
   font-weight: 600;
   line-height: 115%;
-  @include s.adaptiveValue("font-size", 36, 24)
+  @include s.adaptiveValue("font-size", 36, 24);
 }

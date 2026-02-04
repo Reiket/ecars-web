@@ -12,13 +12,13 @@ export const mockFormEvent = {
 export const mockErrorMessage = 'Error';
 export const mockApiError = new Error(mockErrorMessage);
 export const VALID_CODE = 'valid-reset-code';
-  export const defaultMutationState = {
-    isLoading: false,
-    isSuccess: false,
-    isError: false,
-    isUninitialized: true,
-    data: undefined,
-    error: undefined,
-    reset: vi.fn(),
-    refetch: vi.fn(),
-  };
+export const defaultMutationState = {
+  isLoading: false,
+  isSuccess: false,
+  isError: false,
+  isUninitialized: true,
+  data: undefined,
+  error: undefined,
+  reset: vi.fn(),
+  refetch: vi.fn(),
+};
