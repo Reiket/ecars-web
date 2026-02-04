@@ -64,7 +64,7 @@ exports[`Header Component > render component correctly 1`] = `
                 data-discover="true"
                 href="/blog"
               >
-                Blog
+                BlogComponent
               </a>
             </li>
             <li

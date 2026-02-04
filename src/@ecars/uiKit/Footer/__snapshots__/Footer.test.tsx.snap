@@ -168,7 +168,7 @@ exports[`Footer Component > render component correctly 1`] = `
                   data-testid="routerLinkTestId"
                   href="/blog"
                 >
-                  Blog
+                  BlogComponent
                 </a>
               </li>
               <li

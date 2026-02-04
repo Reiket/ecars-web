@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Blog Card Component > renders correctly with column direction, category, title  1`] = `
+exports[`BlogComponent Card Component > renders correctly with column direction, category, title  1`] = `
 <div>
   <article
     class="blog-card blog-card--column"
@@ -29,7 +29,7 @@ exports[`Blog Card Component > renders correctly with column direction, category
 </div>
 `;
 
-exports[`Blog Card Component > renders correctly with column direction, category, title has a description 1`] = `
+exports[`BlogComponent Card Component > renders correctly with column direction, category, title has a description 1`] = `
 <div>
   <article
     class="blog-card blog-card--column"
@@ -63,7 +63,7 @@ exports[`Blog Card Component > renders correctly with column direction, category
 </div>
 `;
 
-exports[`Blog Card Component > renders correctly with row direction, category, title  1`] = `
+exports[`BlogComponent Card Component > renders correctly with row direction, category, title  1`] = `
 <div>
   <article
     class="blog-card blog-card--row"
@@ -92,7 +92,7 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
 </div>
 `;
 
-exports[`Blog Card Component > renders correctly with row direction, category, title has a description 1`] = `
+exports[`BlogComponent Card Component > renders correctly with row direction, category, title has a description 1`] = `
 <div>
   <article
     class="blog-card blog-card--row"

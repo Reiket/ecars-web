@@ -1,0 +1,20 @@
+@use "sass:math";
+@use "../settings" as s;
+
+.blog {
+  @include s.adaptiveValue("padding-top", 96, 50);
+  @include s.adaptiveValue("padding-bottom", 96, 50);
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__content {
+    @include s.adaptiveValue("padding-top", 48, 20);
+    display: grid;
+    @media (min-width: s.$mobileSmall) {
+      grid-template-columns: repeat(auto-fill, minmax(s.rem(392), 1fr));
+    }
+    gap: s.rem(24);
+  }
+}
