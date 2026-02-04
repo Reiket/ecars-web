@@ -14,11 +14,13 @@ describe('HomePage Component', () => {
       isLoading: true,
       data: undefined,
     });
-  })
+  });
   test('render component correctly', () => {
-    const {container} = render(<MemoryRouter>
-      <HomePage />
-    </MemoryRouter>);
+    const {container} = render(
+      <MemoryRouter>
+        <HomePage />
+      </MemoryRouter>,
+    );
     expect(container).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
