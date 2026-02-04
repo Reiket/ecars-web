@@ -4,7 +4,7 @@ import type {BlogArticle} from '@ecars/core/types/types';
 import {BLOG_SKELETON_ITEMS_COUNT} from '@ecars/uiKit/Blog/constants';
 import {BlogSkeleton} from '@ecars/uiKit/Skeletons/BlogSkeleton/BlogSkeleton';
 
-interface Props {
+export interface Props {
   isLoading: boolean;
   items?: BlogArticle[];
 }
