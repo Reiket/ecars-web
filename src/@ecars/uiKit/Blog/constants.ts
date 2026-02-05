@@ -9,6 +9,7 @@ export const BLOG_SKELETON_ITEMS_COUNT = 3;
 export const BLOG_QUERY_PARAMS = {
   pageSize: BLOG_PAGE_SIZE,
   sort: 'createdAt:desc',
+  image: 'imageUrl',
 };
 
 export const BLOG_CARD_TEST_ID = 'blogCardTestId';
