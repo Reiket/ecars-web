@@ -29,7 +29,7 @@ describe('Blog Component', () => {
       data: undefined,
     });
 
-    render(
+    const {container} = render(
       <MemoryRouter>
         <Blog />
       </MemoryRouter>,
@@ -38,6 +38,7 @@ describe('Blog Component', () => {
     const skeletons = screen.getAllByTestId(BLOG_CARD_SKELETON_TEST_ID);
     expect(skeletons).toHaveLength(BLOG_SKELETON_ITEMS_COUNT);
     expect(screen.queryByTestId(BLOG_CARD_TEST_ID)).not.toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 
   test('should render blog cards when data is loaded', () => {
@@ -46,7 +47,7 @@ describe('Blog Component', () => {
       data: {data: mockBlogCards},
     });
 
-    render(
+    const {container} = render(
       <MemoryRouter>
         <Blog />
       </MemoryRouter>,
@@ -54,5 +55,6 @@ describe('Blog Component', () => {
     expect(screen.queryByTestId(BLOG_CARD_SKELETON_TEST_ID)).not.toBeInTheDocument();
     const cards = screen.getAllByTestId(BLOG_CARD_TEST_ID);
     expect(cards).toHaveLength(mockBlogCards.length);
+    expect(container).toMatchSnapshot();
   });
 });

@@ -9,25 +9,33 @@ export interface Props {
   items?: BlogArticle[];
 }
 
-export const BlogContent: FC<Props> = ({isLoading, items}) => (
-  <div className="blog__content">
-    {isLoading
-      ? [...Array(BLOG_SKELETON_ITEMS_COUNT)].map((_, index) => (
+export const BlogContent: FC<Props> = ({isLoading, items}) => {
+  if (isLoading) {
+    return (
+      <div className="blog__content">
+        {[...Array(BLOG_SKELETON_ITEMS_COUNT)].map((_, index) => (
           <BlogSkeleton
             key={index}
             isText
             type="card"
           />
-        ))
-      : items?.map((item) => (
-          <BlogCard
-            key={item.id}
-            direction="column"
-            title={item.title}
-            category={item.category}
-            imageUrl={item.imageUrl.formats.medium?.url}
-            description={item.description}
-          />
         ))}
-  </div>
-);
+      </div>
+    );
+  }
+
+  return (
+    <div className="blog__content">
+      {items?.map((item) => (
+        <BlogCard
+          key={item.id}
+          direction="column"
+          title={item.title}
+          category={item.category}
+          imageUrl={item.imageUrl.formats.medium?.url}
+          description={item.description}
+        />
+      ))}
+    </div>
+  );
+};

@@ -7,7 +7,7 @@ export const BlogCardContent: FC<BlogCardContentProps> = ({title, description, c
   <div className="blog-card__content">
     <Category category={category} />
     <Link
-      to={'/card'}
+      to="/card"
       className="blog-card__title title-blog-card"
     >
       {title}
