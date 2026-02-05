@@ -2,6 +2,7 @@ import {render, screen} from '@testing-library/react';
 import {BLOG_CARD_DIRECTION, BLOG_CARD_TEST_ID} from '@ecars/uiKit/BlogCard/constants';
 import {BlogCard} from '@ecars/uiKit/BlogCard';
 import {capitalizeFirstLetter, CATEGORIES_LIST} from 'ecars-web-lib';
+import {MemoryRouter} from 'react-router-dom';
 
 const defaultProps = {
   title: 'title',
@@ -17,11 +18,13 @@ describe('Blog Card Component', () => {
       const hasDescription = option ? 'has a description' : '';
       test(`renders correctly with ${direction} direction, category, title ${hasDescription}`, () => {
         const {container} = render(
-          <BlogCard
-            description={option}
-            direction={direction}
-            {...defaultProps}
-          />,
+          <MemoryRouter>
+            <BlogCard
+              description={option}
+              direction={direction}
+              {...defaultProps}
+            />
+          </MemoryRouter>,
         );
         const element = screen.getByTestId(BLOG_CARD_TEST_ID);
         expect(element).toBeInTheDocument();

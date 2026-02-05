@@ -1,0 +1,52 @@
+@use "sass:math";
+@use "../settings" as s;
+
+$blogQueryWidth: 840;
+
+.blog-skeleton {
+  &__category {
+    width: s.rem(53);
+    height: s.rem(20);
+    border-radius: s.rem(8);
+    animation: skeleton-loading 2s linear infinite alternate;
+  }
+  &__content {
+    width: 100%;
+    padding: s.rem(16);
+  }
+  &__title {
+    margin-top: s.rem(8);
+    height: s.rem(45);
+    border-radius: s.rem(8);
+    animation: skeleton-loading 2s linear infinite alternate;
+  }
+  &__text {
+    margin-top: s.rem(8);
+    border-radius: s.rem(8);
+    height: s.rem(60);
+    animation: skeleton-loading 2s linear infinite alternate;
+  }
+  &--card {
+    .blog-skeleton {
+      &__image {
+        border-radius: s.rem(8);
+        animation: skeleton-loading 2s linear infinite alternate;
+        @media (min-width: s.em($blogQueryWidth)) {
+          height: s.rem(250);
+        }
+        @media (max-width: s.em($blogQueryWidth)) {
+          @include s.adaptiveValue("height", 540, 193, $blogQueryWidth, 320, 1);
+        }
+      }
+    }
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 92%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 98%);
+  }
+}

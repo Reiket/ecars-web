@@ -5,6 +5,7 @@ import {WhyChoose} from '@ecars/uiKit/WhyChoose';
 import {Works} from '@ecars/uiKit/Works';
 import {Send} from '@ecars/uiKit/Send';
 import {HomePage} from '@ecars/pages/HomePage/index';
+import {Blog} from '@ecars/uiKit/Blog';
 
 export const HomePageComponent: FC = () => (
   <HomePage.Wrapper>
@@ -12,6 +13,7 @@ export const HomePageComponent: FC = () => (
     <InquiryCTA />
     <WhyChoose />
     <Works />
+    <Blog />
     <Send />
   </HomePage.Wrapper>
 );

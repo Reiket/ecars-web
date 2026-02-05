@@ -20,4 +20,5 @@ export const defaultMutationState = {
   data: undefined,
   error: undefined,
   reset: vi.fn(),
+  refetch: vi.fn(),
 };

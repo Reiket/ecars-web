@@ -8,6 +8,7 @@
   transition: border 0.2s linear;
   border-bottom: s.rem(2) solid transparent;
   display: flex;
+  position: relative;
   &--column {
     flex-direction: column;
     .blog-card__image {
@@ -25,12 +26,23 @@
     max-width: 100%;
     height: auto;
     object-fit: cover;
+    @media (min-width: s.em(840)) {
+      height: s.rem(250);
+    }
   }
   &__content {
     padding: s.rem(16);
+    display: flex;
+    flex-direction: column;
   }
   &__title {
     padding-top: s.rem(12);
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
     &:not(:last-child) {
       margin-bottom: s.em(12, 18);
     }

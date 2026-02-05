@@ -434,6 +434,121 @@ exports[`HomePage Component > render component correctly 1`] = `
       </section>
     </div>
     <div
+      class="home-page__blog blog"
+    >
+      <section
+        class="blog__section section"
+      >
+        <div
+          class="blog__container container container--lg"
+        >
+          <div
+            class="blog__body"
+          >
+            <div
+              class="blog__top"
+            >
+              <h2
+                class="blog__title section-title"
+              >
+                Read our blog
+              </h2>
+              <a
+                class="link link--green link--icon"
+                data-discover="true"
+                data-testid="routerLinkTestId"
+                href="/blog-catalog"
+              >
+                All articles
+                <svg
+                  data-testid="rightIconLinkTestId"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h24v24H0V0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div
+              class="blog__content"
+            >
+              <div
+                class="blog-skeleton__blog-skeleton--card blog-skeleton--card"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                  <div
+                    class="blog-skeleton__text"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton__blog-skeleton--card blog-skeleton--card"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                  <div
+                    class="blog-skeleton__text"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton__blog-skeleton--card blog-skeleton--card"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                  <div
+                    class="blog-skeleton__text"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
       class="home-page__send send"
     >
       <section

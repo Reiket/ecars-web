@@ -19,11 +19,13 @@ exports[`Blog Card Component > renders correctly with column direction, category
       >
         News
       </span>
-      <h3
+      <a
         class="blog-card__title title-blog-card"
+        data-discover="true"
+        href="/card"
       >
         title
-      </h3>
+      </a>
     </div>
   </article>
 </div>
@@ -48,11 +50,13 @@ exports[`Blog Card Component > renders correctly with column direction, category
       >
         News
       </span>
-      <h3
+      <a
         class="blog-card__title title-blog-card"
+        data-discover="true"
+        href="/card"
       >
         title
-      </h3>
+      </a>
       <p
         class="blog-card__description"
       >
@@ -82,11 +86,13 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
       >
         News
       </span>
-      <h3
+      <a
         class="blog-card__title title-blog-card"
+        data-discover="true"
+        href="/card"
       >
         title
-      </h3>
+      </a>
     </div>
   </article>
 </div>
@@ -111,11 +117,13 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
       >
         News
       </span>
-      <h3
+      <a
         class="blog-card__title title-blog-card"
+        data-discover="true"
+        href="/card"
       >
         title
-      </h3>
+      </a>
       <p
         class="blog-card__description"
       >

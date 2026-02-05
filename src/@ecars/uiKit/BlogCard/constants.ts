@@ -14,7 +14,7 @@ export interface BlogCardContentProps {
 }
 
 export interface BlogCardImageProps {
-  imageUrl: string;
+  imageUrl?: string;
   alt?: string;
 }
 
