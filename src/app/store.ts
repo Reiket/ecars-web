@@ -1,10 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
 import {apiSlice} from '@ecars/core/slices/api/apiSlice';
 import authReducer from '@ecars/core/slices/store/auth/authSlice';
+import blogReducer from '@ecars/core/slices/store/blog/BlogSlice';
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
+    blog: blogReducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),

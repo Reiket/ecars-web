@@ -1,0 +1,106 @@
+@use "sass:math";
+@use "../settings" as s;
+
+$blogCatalogCardWidth: 340;
+
+.blog-catalog {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: s.rem(16);
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: s.rem(24);
+    justify-content: space-between;
+    @media (max-width: s.$blogCatalogMove) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__text {
+    font-size: s.rem(16);
+    line-height: math.div(24, 16);
+    color: s.get-color(s.$blogCatalogColors, "color-text");
+  }
+  &__categories {
+    padding-top: s.rem(32);
+    gap: s.rem(24);
+    @media (max-width: s.$mobileSmall) {
+      flex-wrap: wrap;
+    }
+  }
+  &__categories,
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: s.rem(24);
+  }
+  &__list {
+    gap: s.rem(16);
+  }
+  &__name {
+    font-weight: 600;
+    @media (max-width: s.$mobileSmall) {
+      flex: 1 1 100%;
+    }
+  }
+  &__block {
+    width: 100%;
+  }
+  &__posts {
+    padding: s.rem(24) 0;
+    display: grid;
+    gap: s.rem(24);
+    grid-template-columns: repeat(2, minmax(s.rem($blogCatalogCardWidth), 1fr));
+    @media (max-width: s.$mobile) {
+      grid-template-columns: repeat(1, minmax(s.rem($blogCatalogCardWidth), 1fr));
+    }
+    @media (max-width: s.$mobileSmall) {
+      grid-template-columns: auto;
+    }
+    .blog-card {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+}
+
+.featured-posts {
+  flex: 0 0 s.rem(392);
+  padding-top: s.rem(38);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media (max-width: s.$blogCatalogMove) {
+    flex: 0;
+    padding-bottom: s.rem(20);
+  }
+  gap: s.rem(24);
+  .blog-card {
+    &__image {
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    display: flex;
+    gap: s.rem(24);
+    @media (min-width: s.$blogCatalogMove) {
+      flex-direction: column;
+    }
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__slider {
+    width: 100%;
+    min-width: 0;
+    .swiper-slide {
+      height: auto;
+    }
+  }
+}

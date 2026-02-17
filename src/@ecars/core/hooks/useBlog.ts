@@ -1,5 +1,4 @@
 import {useGetBlogArticlesQuery} from '@ecars/core/slices/api/blogApiSlice';
-import {BLOG_QUERY_PARAMS} from '@ecars/uiKit/Blog/constants';
 import type {GetBlogArticlesResponse} from '@ecars/core/api/blog-query';
 
 interface UseBlogResult {
@@ -7,7 +6,17 @@ interface UseBlogResult {
   data?: GetBlogArticlesResponse;
 }
 
-export const useBlog = (): UseBlogResult => {
-  const {data, isLoading} = useGetBlogArticlesQuery(BLOG_QUERY_PARAMS);
+interface BlogParams {
+  pageSize?: number;
+  sort?: string;
+  populate?: string;
+  image?: string;
+  fields?: string[];
+  limit?: number;
+  page?: number;
+}
+
+export const useBlog = (params: BlogParams): UseBlogResult => {
+  const {data, isLoading} = useGetBlogArticlesQuery(params);
   return {data, isLoading};
 };

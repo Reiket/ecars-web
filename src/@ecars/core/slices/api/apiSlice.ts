@@ -3,10 +3,14 @@ import type {FetchArgs, FetchBaseQueryError, FetchBaseQueryMeta} from '@reduxjs/
 import type {BaseQueryFn} from '@reduxjs/toolkit/query';
 import {SLICE_TAGS} from '@ecars/constants/slice-tags';
 import {toast} from 'react-toastify';
+import qs from 'qs';
 
 const rawBaseQuery = fetchBaseQuery({
   credentials: 'include',
   baseUrl: process.env.NODE_ENV === 'test' ? 'http://localhost' : import.meta.env.VITE_API_BASE_URL,
+  paramsSerializer: (params) => {
+    return String(qs.stringify(params, {encodeValuesOnly: true}));
+  },
 });
 
 const baseQueryWithErrorHandling: BaseQueryFn<

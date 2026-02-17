@@ -3,7 +3,6 @@ export const PageUrls = Object.freeze({
   UIKIT: '/uikit',
   CATALOG: '/catalog',
   ABOUT: '/about',
-  Blog: '/blog',
   FAQ: '/faq',
   FAVORITES: '/favorites',
   LOGIN: '/login',

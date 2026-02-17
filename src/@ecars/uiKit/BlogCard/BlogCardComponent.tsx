@@ -1,7 +1,6 @@
 import type {FC} from 'react';
 import {BlogCard} from '@ecars/uiKit/BlogCard';
 import type {BlogCardContentProps, BlogCardDirectionType, BlogCardImageProps} from '@ecars/uiKit/BlogCard/constants';
-import {BLOG_CARD_TEST_ID} from '@ecars/uiKit/BlogCard/constants';
 import type {ElementProps} from 'ecars-web-lib';
 import {cn} from 'ecars-web-lib';
 
@@ -12,9 +11,9 @@ export interface Props extends BlogCardContentProps, BlogCardImageProps, Element
 export const BlogCardComponent: FC<Props> = ({block, description, title, category, imageUrl, alt, direction}) => {
   const classNames = cn(block, 'blog-card', `blog-card--${direction}`);
   return (
-    <article
-      data-testid={BLOG_CARD_TEST_ID}
-      className={classNames}
+    <BlogCard.Wrapper
+      classNames={classNames}
+      block={block}
     >
       <BlogCard.Image
         imageUrl={imageUrl}
@@ -25,6 +24,6 @@ export const BlogCardComponent: FC<Props> = ({block, description, title, categor
         title={title}
         description={description}
       />
-    </article>
+    </BlogCard.Wrapper>
   );
 };
