@@ -161,7 +161,16 @@ exports[`Footer Component > render component correctly 1`] = `
               </li>
               <li
                 class="footer__item"
-              />
+              >
+                <a
+                  class="footer__link link link--gray"
+                  data-discover="true"
+                  data-testid="routerLinkTestId"
+                  href="/blog-catalog"
+                >
+                  Blog
+                </a>
+              </li>
               <li
                 class="footer__item"
               >
