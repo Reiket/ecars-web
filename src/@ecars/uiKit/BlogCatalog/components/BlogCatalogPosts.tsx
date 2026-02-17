@@ -4,7 +4,7 @@ import type {ArticlesDataType} from '@ecars/core/api/blog-query';
 import {BlogSkeleton} from '@ecars/uiKit/Skeletons/BlogSkeleton/BlogSkeleton';
 import type {ElementProps} from 'ecars-web-lib';
 
-interface Props extends ElementProps {
+export interface Props extends ElementProps {
   articlesData?: ArticlesDataType;
   isLoading: boolean;
   pageSize: number;

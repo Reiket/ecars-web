@@ -4,7 +4,7 @@ import type {ElementProps} from 'ecars-web-lib';
 import {Button} from 'ecars-web-lib';
 import type {BlogCatalogCategoriesProps} from '@ecars/uiKit/BlogCatalog/constants';
 
-interface Props extends BlogCatalogCategoriesProps, ElementProps {
+export interface Props extends BlogCatalogCategoriesProps, ElementProps {
   handleReset: () => void;
 }
 

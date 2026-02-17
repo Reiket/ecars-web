@@ -26,7 +26,7 @@ export interface FooterLink {
 
 export const companyLinks: FooterLink[] = [
   {label: 'About Us', to: PageUrls.ABOUT},
-  {label: 'Blog', to: PageUrls.Blog},
+  {label: 'Blog', to: PageUrls.BLOG_CATALOG},
   {label: 'FAQ', to: PageUrls.FAQ},
 ];
 

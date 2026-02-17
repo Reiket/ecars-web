@@ -5,7 +5,7 @@ import type {BlogCatalogCategoriesProps} from '@ecars/uiKit/BlogCatalog/constant
 import {BLOG_CATALOG_SKELETON_CATEGORIES_COUNT} from '@ecars/uiKit/BlogCatalog/constants';
 import {BlogCategorySkeleton} from '@ecars/uiKit/Skeletons/BlogSkeleton/BlogCategorySkeleton';
 
-interface Props extends BlogCatalogCategoriesProps, ElementProps {}
+export interface Props extends BlogCatalogCategoriesProps, ElementProps {}
 
 export const BlogCatalogList: FC<Props> = ({block, activeCategory, categories, onClick, isLoading}) => {
   if (isLoading) {

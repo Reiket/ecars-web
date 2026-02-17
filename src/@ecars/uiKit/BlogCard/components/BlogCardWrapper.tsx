@@ -1,7 +1,7 @@
 import type {FC, ReactNode} from 'react';
 import {BLOG_CARD_TEST_ID} from '@ecars/uiKit/BlogCard/constants';
 
-interface Props {
+export interface Props {
   children: ReactNode;
   classNames: string;
 }

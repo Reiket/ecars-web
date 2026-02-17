@@ -3,7 +3,7 @@ import {createSlice} from '@reduxjs/toolkit';
 
 type BlogCategoryType = string | null;
 
-interface BlogState {
+export interface BlogState {
   activeCategory: BlogCategoryType;
   currentPage: number;
   pageSize: number;
