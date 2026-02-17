@@ -23,7 +23,7 @@ const mockResponse = (data: BlogArticle[], total = 0): GetBlogArticlesResponse =
   },
 });
 
-describe('useBlogContent', () => {
+describe('useBlogContent hook', () => {
   const defaultProps = {activeCategory: null, currentPage: 1, pageSize: 6};
   const mock = vi.mocked(useBlog);
 

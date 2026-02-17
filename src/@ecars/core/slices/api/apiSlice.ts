@@ -9,7 +9,7 @@ const rawBaseQuery = fetchBaseQuery({
   credentials: 'include',
   baseUrl: process.env.NODE_ENV === 'test' ? 'http://localhost' : import.meta.env.VITE_API_BASE_URL,
   paramsSerializer: (params) => {
-    return String(qs.stringify(params, {encodeValuesOnly: true}));
+    return qs.stringify(params, {encodeValuesOnly: true}) satisfies string;
   },
 });
 

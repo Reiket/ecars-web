@@ -1,0 +1,3228 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BlogCatalog Component > displays featured posts in 'grid' layout 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <ul
+                  class="blog-catalog__list"
+                >
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      News
+                    </button>
+                  </li>
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      Reviews
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <article
+                  class="blog-catalog__blog-card blog-card blog-card--column"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                    <p
+                      class="blog-card__description"
+                    >
+                      Test description content
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+              </div>
+              <div
+                class="featured-posts__content"
+                data-testid="featuredContentTestId"
+              >
+                <article
+                  class="blog-card blog-card--row"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`BlogCatalog Component > displays featured posts in 'slider' layout 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <ul
+                  class="blog-catalog__list"
+                >
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      News
+                    </button>
+                  </li>
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      Reviews
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <article
+                  class="blog-catalog__blog-card blog-card blog-card--column"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                    <p
+                      class="blog-card__description"
+                    >
+                      Test description content
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+                <div
+                  class="featured-posts__slider-navigate slider-navigate"
+                  data-testid="sliderNavigateTestId"
+                >
+                  <button
+                    class="slider-navigate__button slider-navigate__button--left"
+                    data-testid="navigateButtonTestId"
+                    type="button"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="slider-navigate__button slider-navigate__button--right"
+                    data-testid="navigateButtonTestId"
+                    type="button"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="featured-posts__slider"
+                data-testid="featuredSliderTestId"
+              >
+                <div
+                  data-testid="slider"
+                >
+                  <div
+                    data-testid="slide"
+                  >
+                    <article
+                      class="blog-card blog-card--column"
+                      data-testid="blogCardTestId"
+                    >
+                      <img
+                        alt="Blog_Card_Image"
+                        class="blog-card__image"
+                      />
+                      <div
+                        class="blog-card__content"
+                      >
+                        <span
+                          class="blog-card__category category category--news"
+                          data-testid="categoryTestId"
+                        >
+                          News
+                        </span>
+                        <a
+                          class="blog-card__title title-blog-card"
+                          data-discover="true"
+                          href="/card"
+                        >
+                          Test Article Title
+                        </a>
+                        <p
+                          class="blog-card__description"
+                        >
+                          Test description content
+                        </p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`BlogCatalog Component > displays loading state when fetching data 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <div
+                  class="blog-category-skeleton"
+                />
+                <div
+                  class="blog-category-skeleton"
+                />
+                <div
+                  class="blog-category-skeleton"
+                />
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`BlogCatalogComponent > displays featured posts in 'grid layout' based on screen size 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <ul
+                  class="blog-catalog__list"
+                >
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      News
+                    </button>
+                  </li>
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      Reviews
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <article
+                  class="blog-catalog__blog-card blog-card blog-card--column"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                    <p
+                      class="blog-card__description"
+                    >
+                      Test description content
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+              </div>
+              <div
+                class="featured-posts__content"
+                data-testid="featuredContentTestId"
+              >
+                <article
+                  class="blog-card blog-card--row"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`BlogCatalogComponent > displays featured posts in 'grid' layout 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <ul
+                  class="blog-catalog__list"
+                >
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      News
+                    </button>
+                  </li>
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      Reviews
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <article
+                  class="blog-catalog__blog-card blog-card blog-card--column"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                    <p
+                      class="blog-card__description"
+                    >
+                      Test description content
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+              </div>
+              <div
+                class="featured-posts__content"
+                data-testid="featuredContentTestId"
+              >
+                <article
+                  class="blog-card blog-card--row"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`BlogCatalogComponent > displays featured posts in 'slider layout' based on screen size 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <ul
+                  class="blog-catalog__list"
+                >
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      News
+                    </button>
+                  </li>
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      Reviews
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <article
+                  class="blog-catalog__blog-card blog-card blog-card--column"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                    <p
+                      class="blog-card__description"
+                    >
+                      Test description content
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+                <div
+                  class="featured-posts__slider-navigate slider-navigate"
+                  data-testid="sliderNavigateTestId"
+                >
+                  <button
+                    class="slider-navigate__button slider-navigate__button--left"
+                    data-testid="navigateButtonTestId"
+                    type="button"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="slider-navigate__button slider-navigate__button--right"
+                    data-testid="navigateButtonTestId"
+                    type="button"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="featured-posts__slider"
+                data-testid="featuredSliderTestId"
+              >
+                <div
+                  data-testid="slider"
+                >
+                  <div
+                    data-testid="slide"
+                  >
+                    <article
+                      class="blog-card blog-card--column"
+                      data-testid="blogCardTestId"
+                    >
+                      <img
+                        alt="Blog_Card_Image"
+                        class="blog-card__image"
+                      />
+                      <div
+                        class="blog-card__content"
+                      >
+                        <span
+                          class="blog-card__category category category--news"
+                          data-testid="categoryTestId"
+                        >
+                          News
+                        </span>
+                        <a
+                          class="blog-card__title title-blog-card"
+                          data-discover="true"
+                          href="/card"
+                        >
+                          Test Article Title
+                        </a>
+                        <p
+                          class="blog-card__description"
+                        >
+                          Test description content
+                        </p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`BlogCatalogComponent > displays featured posts in 'slider' layout 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <ul
+                  class="blog-catalog__list"
+                >
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      News
+                    </button>
+                  </li>
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      Reviews
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <article
+                  class="blog-catalog__blog-card blog-card blog-card--column"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                    <p
+                      class="blog-card__description"
+                    >
+                      Test description content
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+                <div
+                  class="featured-posts__slider-navigate slider-navigate"
+                  data-testid="sliderNavigateTestId"
+                >
+                  <button
+                    class="slider-navigate__button slider-navigate__button--left"
+                    data-testid="navigateButtonTestId"
+                    type="button"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="slider-navigate__button slider-navigate__button--right"
+                    data-testid="navigateButtonTestId"
+                    type="button"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="featured-posts__slider"
+                data-testid="featuredSliderTestId"
+              >
+                <div
+                  data-testid="slider"
+                >
+                  <div
+                    data-testid="slide"
+                  >
+                    <article
+                      class="blog-card blog-card--column"
+                      data-testid="blogCardTestId"
+                    >
+                      <img
+                        alt="Blog_Card_Image"
+                        class="blog-card__image"
+                      />
+                      <div
+                        class="blog-card__content"
+                      >
+                        <span
+                          class="blog-card__category category category--news"
+                          data-testid="categoryTestId"
+                        >
+                          News
+                        </span>
+                        <a
+                          class="blog-card__title title-blog-card"
+                          data-discover="true"
+                          href="/card"
+                        >
+                          Test Article Title
+                        </a>
+                        <p
+                          class="blog-card__description"
+                        >
+                          Test description content
+                        </p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`BlogCatalogComponent > displays loading state when fetching data 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <div
+                  class="blog-category-skeleton"
+                />
+                <div
+                  class="blog-category-skeleton"
+                />
+                <div
+                  class="blog-category-skeleton"
+                />
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`BlogCatalogComponent > renders correctly and matches snapshot (Desktop) 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <ul
+                  class="blog-catalog__list"
+                >
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      News
+                    </button>
+                  </li>
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      Reviews
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <article
+                  class="blog-catalog__blog-card blog-card blog-card--column"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                    <p
+                      class="blog-card__description"
+                    >
+                      Test description content
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+              </div>
+              <div
+                class="featured-posts__content"
+                data-testid="featuredContentTestId"
+              >
+                <article
+                  class="blog-card blog-card--row"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`BlogCatalogComponent > renders correctly and matches snapshot (Mobile) 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <ul
+                  class="blog-catalog__list"
+                >
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      News
+                    </button>
+                  </li>
+                  <li
+                    class="blog-catalog__category"
+                  >
+                    <button
+                      class="blog-catalog__button-category button-category"
+                      data-testid="buttonCategoryTestId"
+                    >
+                      Reviews
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <article
+                  class="blog-catalog__blog-card blog-card blog-card--column"
+                  data-testid="blogCardTestId"
+                >
+                  <img
+                    alt="Blog_Card_Image"
+                    class="blog-card__image"
+                  />
+                  <div
+                    class="blog-card__content"
+                  >
+                    <span
+                      class="blog-card__category category category--news"
+                      data-testid="categoryTestId"
+                    >
+                      News
+                    </span>
+                    <a
+                      class="blog-card__title title-blog-card"
+                      data-discover="true"
+                      href="/card"
+                    >
+                      Test Article Title
+                    </a>
+                    <p
+                      class="blog-card__description"
+                    >
+                      Test description content
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+                <div
+                  class="featured-posts__slider-navigate slider-navigate"
+                  data-testid="sliderNavigateTestId"
+                >
+                  <button
+                    class="slider-navigate__button slider-navigate__button--left"
+                    data-testid="navigateButtonTestId"
+                    type="button"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="slider-navigate__button slider-navigate__button--right"
+                    data-testid="navigateButtonTestId"
+                    type="button"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="featured-posts__slider"
+              >
+                <div
+                  data-testid="slider"
+                >
+                  <div
+                    data-testid="slide"
+                  >
+                    <article
+                      class="blog-card blog-card--column"
+                      data-testid="blogCardTestId"
+                    >
+                      <img
+                        alt="Blog_Card_Image"
+                        class="blog-card__image"
+                      />
+                      <div
+                        class="blog-card__content"
+                      >
+                        <span
+                          class="blog-card__category category category--news"
+                          data-testid="categoryTestId"
+                        >
+                          News
+                        </span>
+                        <a
+                          class="blog-card__title title-blog-card"
+                          data-discover="true"
+                          href="/card"
+                        >
+                          Test Article Title
+                        </a>
+                        <p
+                          class="blog-card__description"
+                        >
+                          Test description content
+                        </p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`BlogCatalogComponent > renders loading skeletons matches snapshot 1`] = `
+<div>
+  <div
+    class="blog-catalog"
+  >
+    <section
+      class="blog-catalog__section section"
+    >
+      <div
+        class="blog-catalog__container container container--lg"
+      >
+        <div
+          class="blog-catalog__body"
+        >
+          <h1
+            class="blog-catalog__title section-title"
+          >
+            Blog & News
+          </h1>
+          <p
+            class="blog-catalog__text"
+          >
+            Company and car market news, as well as car selection guides and car reviews from our authors.
+          </p>
+          <div
+            class="blog-catalog__inner"
+          >
+            <div
+              class="blog-catalog__block"
+            >
+              <div
+                class="blog-catalog__categories"
+              >
+                <p
+                  class="blog-catalog__name"
+                >
+                  Categories:
+                </p>
+                <div
+                  class="blog-category-skeleton"
+                />
+                <div
+                  class="blog-category-skeleton"
+                />
+                <div
+                  class="blog-category-skeleton"
+                />
+                <button
+                  class="blog-catalog__button button button--small button--gray"
+                  data-testid="buttonTestId"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div
+                class="blog-catalog__posts"
+              >
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="blog-skeleton blog-skeleton--card"
+                >
+                  <div
+                    class="blog-skeleton__image"
+                  />
+                  <div
+                    class="blog-skeleton__content"
+                  >
+                    <div
+                      class="blog-skeleton__category"
+                    />
+                    <div
+                      class="blog-skeleton__title"
+                    />
+                    <div
+                      class="blog-skeleton__text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="blog-catalog__pagination pagination"
+                data-testid="paginationTestId"
+              >
+                <div
+                  class="pagination__body"
+                >
+                  <button
+                    class="pagination__button"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowLeftTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="pagination__button _current-page"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="pagination__button"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="pagination__button"
+                    type="button"
+                  >
+                    <svg
+                      class="pagination__arrow"
+                      data-testid="paginationArrowRightTestId"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0h24v24H0V0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="featured-posts__featured-posts featured-posts"
+            >
+              <div
+                class="featured-posts__top"
+              >
+                <h4
+                  class="featured-posts__title block-title"
+                >
+                  Featured posts
+                </h4>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+              <div
+                class="blog-skeleton blog-skeleton--featured"
+              >
+                <div
+                  class="blog-skeleton__image"
+                />
+                <div
+                  class="blog-skeleton__content"
+                >
+                  <div
+                    class="blog-skeleton__category"
+                  />
+                  <div
+                    class="blog-skeleton__title"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;

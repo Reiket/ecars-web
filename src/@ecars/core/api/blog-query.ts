@@ -30,7 +30,6 @@ export interface GetBlogArticlesResponse {
 export type ArticlesDataType = GetBlogArticlesResponse;
 
 export const getBlogArticlesQuery = (params?: GetBlogArticlesRequest): FetchArgs => {
-  console.log(params?.recommendedStatus);
   const queryParams = {
     [STRAPI_PARAMS.POPULATE]: params?.image,
     [STRAPI_PARAMS.FIELDS]: params?.fields,

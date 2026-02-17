@@ -27,7 +27,7 @@ vi.mock('ecars-web-lib', async (importOriginal) => {
   };
 });
 
-describe('BlogCatalogComponent', () => {
+describe('BlogCatalog Component', () => {
   const DEFAULT_REDUX_STATE = {
     activeCategory: null,
     currentPage: 1,

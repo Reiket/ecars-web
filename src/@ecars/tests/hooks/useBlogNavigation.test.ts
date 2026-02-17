@@ -12,7 +12,7 @@ vi.mock('react-router-dom', () => ({
   useSearchParams: vi.fn(),
 }));
 
-describe('useBlogNavigation', () => {
+describe('useBlogNavigation hook', () => {
   const scrollToSpy = vi.spyOn(window, 'scrollTo');
   beforeEach(() => {
     vi.mocked(useAppDispatch).mockReturnValue(dispatch);

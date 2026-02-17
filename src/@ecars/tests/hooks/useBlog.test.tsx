@@ -1,60 +1,49 @@
+import {describe, expect, test, vi, beforeEach} from 'vitest';
 import {renderHook} from '@testing-library/react';
+import {useGetBlogArticlesQuery} from '@ecars/core/slices/api/blogApiSlice';
+import {BLOG_QUERY_PARAMS} from '@ecars/uiKit/Blog/constants';
 import {useBlog} from '@ecars/core/hooks/useBlog';
-import {useBlogContent} from '@ecars/core/hooks/useBlogContent';
+import {defaultMutationState} from '@ecars/services/__mocks__/tests';
 
-vi.mock('@ecars/core/hooks/useBlog');
+vi.mock('@ecars/core/slices/api/blogApiSlice', () => ({
+  useGetBlogArticlesQuery: vi.fn(),
+}));
 
-const BASE_META = {pagination: {total: 0, page: 1, pageSize: 6, pageCount: 1}};
-
-// Хелпер для створення мок-об'єктів, щоб не повторювати id, title тощо
-const mockResponse = (data: any[], total = 0) => ({
-  data,
-  meta: {...BASE_META, pagination: {...BASE_META.pagination, total}},
-});
-
-describe('useBlogContent hook', () => {
-  const defaultProps = {activeCategory: null, currentPage: 1, pageSize: 6};
-  const mockedUseBlog = vi.mocked(useBlog);
-
-  beforeEach(() => vi.clearAllMocks());
-
-  test('calculates categories and pagination correctly', () => {
-    const categoriesData = [
-      {category: 'EV', id: 1, title: '', imageUrl: '', classnames: ''},
-      {category: 'Tech', id: 2, title: '', imageUrl: '', classnames: ''},
-      {category: 'EV', id: 3, title: '', imageUrl: '', classnames: ''},
-    ];
-
-    mockedUseBlog
-      .mockReturnValueOnce({data: mockResponse(categoriesData), isLoading: false})
-      .mockReturnValueOnce({data: mockResponse([], 15), isLoading: false});
-
-    const {result} = renderHook(() => useBlogContent(defaultProps));
-
-    expect(result.current.categories).toEqual(['EV', 'Tech']);
-    expect(result.current.pageCount).toBe(3);
-    expect(result.current.pagesArray).toEqual([1, 2, 3]);
+describe('useBlog hook', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
   });
 
-  test.each([
-    {cat: 'EV', expected: {filters: {category: {$eq: 'EV'}}}},
-    {cat: null, expected: {}},
-  ])('calls useBlog with filter: $cat', ({cat, expected}) => {
-    mockedUseBlog.mockReturnValue({data: undefined, isLoading: true} as any);
+  test('should call useGetBlogArticlesQuery with correct params and return data', () => {
+    const mockData = {
+      data: [{id: 1, title: 'Test', category: 'NEWS', imageUrl: {}, classnames: ''}],
+    };
+    vi.mocked(useGetBlogArticlesQuery).mockReturnValue({
+      ...defaultMutationState,
+      data: mockData,
+      isLoading: false,
+      isSuccess: true,
+    });
 
-    renderHook(() => useBlogContent({...defaultProps, activeCategory: cat}));
+    const {result} = renderHook(() => useBlog(BLOG_QUERY_PARAMS));
 
-    expect(useBlog).toHaveBeenLastCalledWith(expect.objectContaining(expected));
+    expect(useGetBlogArticlesQuery).toHaveBeenCalledWith(BLOG_QUERY_PARAMS);
+    expect(result.current).toEqual({
+      isLoading: false,
+      data: mockData,
+    });
   });
 
-  test('returns loading states', () => {
-    mockedUseBlog
-      .mockReturnValueOnce({data: undefined, isLoading: true})
-      .mockReturnValueOnce({data: undefined, isLoading: false});
+  test('should handle loading state', () => {
+    vi.mocked(useGetBlogArticlesQuery).mockReturnValue({
+      ...defaultMutationState,
+      data: undefined,
+      isLoading: true,
+    });
 
-    const {result} = renderHook(() => useBlogContent(defaultProps));
+    const {result} = renderHook(() => useBlog(BLOG_QUERY_PARAMS));
 
-    expect(result.current.isCategoriesLoading).toBe(true);
-    expect(result.current.isPostsLoading).toBe(false);
+    expect(result.current.isLoading).toBe(true);
+    expect(result.current.data).toBeUndefined();
   });
 });
