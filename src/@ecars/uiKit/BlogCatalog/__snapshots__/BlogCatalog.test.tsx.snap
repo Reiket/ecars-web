@@ -575,7 +575,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                 class="blog-catalog__posts"
               >
                 <div
-                  class="blog-skeleton blog-skeleton--card"
+                  class="blog-catalog__blog-skeleton blog-skeleton blog-skeleton--card"
                 >
                   <div
                     class="blog-skeleton__image"
@@ -595,7 +595,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                   </div>
                 </div>
                 <div
-                  class="blog-skeleton blog-skeleton--card"
+                  class="blog-catalog__blog-skeleton blog-skeleton blog-skeleton--card"
                 >
                   <div
                     class="blog-skeleton__image"
@@ -615,7 +615,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                   </div>
                 </div>
                 <div
-                  class="blog-skeleton blog-skeleton--card"
+                  class="blog-catalog__blog-skeleton blog-skeleton blog-skeleton--card"
                 >
                   <div
                     class="blog-skeleton__image"
@@ -635,7 +635,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                   </div>
                 </div>
                 <div
-                  class="blog-skeleton blog-skeleton--card"
+                  class="blog-catalog__blog-skeleton blog-skeleton blog-skeleton--card"
                 >
                   <div
                     class="blog-skeleton__image"
@@ -655,7 +655,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                   </div>
                 </div>
                 <div
-                  class="blog-skeleton blog-skeleton--card"
+                  class="blog-catalog__blog-skeleton blog-skeleton blog-skeleton--card"
                 >
                   <div
                     class="blog-skeleton__image"
@@ -675,7 +675,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                   </div>
                 </div>
                 <div
-                  class="blog-skeleton blog-skeleton--card"
+                  class="blog-catalog__blog-skeleton blog-skeleton blog-skeleton--card"
                 >
                   <div
                     class="blog-skeleton__image"
@@ -777,7 +777,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                 </h4>
               </div>
               <div
-                class="blog-skeleton blog-skeleton--featured"
+                class="featured-posts__blog-skeleton blog-skeleton blog-skeleton--featured"
               >
                 <div
                   class="blog-skeleton__image"
@@ -794,7 +794,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                 </div>
               </div>
               <div
-                class="blog-skeleton blog-skeleton--featured"
+                class="featured-posts__blog-skeleton blog-skeleton blog-skeleton--featured"
               >
                 <div
                   class="blog-skeleton__image"
@@ -811,7 +811,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                 </div>
               </div>
               <div
-                class="blog-skeleton blog-skeleton--featured"
+                class="featured-posts__blog-skeleton blog-skeleton blog-skeleton--featured"
               >
                 <div
                   class="blog-skeleton__image"
@@ -828,7 +828,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                 </div>
               </div>
               <div
-                class="blog-skeleton blog-skeleton--featured"
+                class="featured-posts__blog-skeleton blog-skeleton blog-skeleton--featured"
               >
                 <div
                   class="blog-skeleton__image"
@@ -845,7 +845,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                 </div>
               </div>
               <div
-                class="blog-skeleton blog-skeleton--featured"
+                class="featured-posts__blog-skeleton blog-skeleton blog-skeleton--featured"
               >
                 <div
                   class="blog-skeleton__image"
@@ -862,7 +862,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                 </div>
               </div>
               <div
-                class="blog-skeleton blog-skeleton--featured"
+                class="featured-posts__blog-skeleton blog-skeleton blog-skeleton--featured"
               >
                 <div
                   class="blog-skeleton__image"
@@ -879,7 +879,7 @@ exports[`BlogCatalog Component > displays loading state when fetching data 1`] =
                 </div>
               </div>
               <div
-                class="blog-skeleton blog-skeleton--featured"
+                class="featured-posts__blog-skeleton blog-skeleton blog-skeleton--featured"
               >
                 <div
                   class="blog-skeleton__image"
