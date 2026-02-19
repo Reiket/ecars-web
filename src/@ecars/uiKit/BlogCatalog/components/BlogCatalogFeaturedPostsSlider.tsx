@@ -11,11 +11,12 @@ import {SLIDER_NAVIGATION_PARAMS} from '@ecars/constants/slider-params';
 import {BlogSkeleton} from '@ecars/uiKit/Skeletons/BlogSkeleton/BlogSkeleton';
 import {BlogCard} from '@ecars/uiKit/BlogCard';
 
-export const BlogCatalogFeaturedPostsSlider: FC<FeaturedPostsContentProps> = ({isLoading, articlesData}) => {
+export const BlogCatalogFeaturedPostsSlider: FC<FeaturedPostsContentProps> = ({isLoading, articlesData, block}) => {
   const renderSkeletons = () =>
     [...Array(FEATURED_POSTS_SKELETONS_COUNT)].map((_, idx) => (
       <Slider.Slide key={idx}>
         <BlogSkeleton
+          block={block}
           hasSlider
           type="card"
         />
@@ -25,6 +26,7 @@ export const BlogCatalogFeaturedPostsSlider: FC<FeaturedPostsContentProps> = ({i
     articlesData?.data.map((item) => (
       <Slider.Slide key={item.id}>
         <BlogCard
+          block={block}
           direction="column"
           title={item.title}
           category={item.category}

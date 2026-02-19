@@ -40,11 +40,9 @@ export const getBlogArticlesQuery = (params?: GetBlogArticlesRequest): FetchArgs
     },
     filters: {
       ...params?.filters,
-      ...(params?.recommendedStatus !== undefined && {
-        [STRAPI_PARAMS.RECOMMENDED_STATUS]: {
-          $eq: params.recommendedStatus,
-        },
-      }),
+      [STRAPI_PARAMS.RECOMMENDED_STATUS]: {
+        $eq: params?.recommendedStatus,
+      },
     },
     sort: params?.sort,
   };

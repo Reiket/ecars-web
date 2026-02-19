@@ -6,13 +6,11 @@ export interface Props {
   classNames: string;
 }
 
-export const BlogCardWrapper: FC<Props> = ({children, classNames}) => {
-  return (
-    <article
-      data-testid={BLOG_CARD_TEST_ID}
-      className={classNames}
-    >
-      {children}
-    </article>
-  );
-};
+export const BlogCardWrapper: FC<Props> = ({children, classNames}) => (
+  <article
+    data-testid={BLOG_CARD_TEST_ID}
+    className={classNames}
+  >
+    {children}
+  </article>
+);

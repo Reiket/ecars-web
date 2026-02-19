@@ -16,6 +16,7 @@ export const BlogCatalogPosts: FC<Props> = ({block, articlesData, isLoading, pag
       <div className="blog-catalog__posts">
         {Array.from({length: pageSize}).map((_, index) => (
           <BlogSkeleton
+            block={block}
             key={index}
             isText
             type="card"

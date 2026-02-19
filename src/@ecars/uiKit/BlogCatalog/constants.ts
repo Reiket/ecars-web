@@ -1,3 +1,4 @@
+import type {ElementProps} from 'ecars-web-lib';
 import {withBlockClass} from 'ecars-web-lib';
 import {SectionWrapper} from '@ecars/uiKit/Section/components/SectionWrapper';
 import {BlogCatalogFeaturesPostsWrapper} from '@ecars/uiKit/BlogCatalog/components/BlogCatalogFeaturesPostsWrapper';
@@ -10,7 +11,7 @@ export interface BlogCatalogCategoriesProps {
   isLoading: boolean;
 }
 
-export interface FeaturedPostsContentProps {
+export interface FeaturedPostsContentProps extends ElementProps {
   isLoading: boolean;
   articlesData?: ArticlesDataType;
 }
