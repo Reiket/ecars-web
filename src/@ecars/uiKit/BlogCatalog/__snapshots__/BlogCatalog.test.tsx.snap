@@ -191,7 +191,7 @@ exports[`BlogCatalog Component > displays featured posts in 'grid' layout 1`] = 
                 data-testid="featuredContentTestId"
               >
                 <article
-                  class="blog-card blog-card--row"
+                  class="featured-posts__blog-card blog-card blog-card--row"
                   data-testid="blogCardTestId"
                 >
                   <img
@@ -474,7 +474,7 @@ exports[`BlogCatalog Component > displays featured posts in 'slider' layout 1`] 
                     data-testid="slide"
                   >
                     <article
-                      class="blog-card blog-card--column"
+                      class="featured-posts__blog-card blog-card blog-card--column"
                       data-testid="blogCardTestId"
                     >
                       <img
