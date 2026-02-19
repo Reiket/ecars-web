@@ -14,7 +14,7 @@ exports[`Blog Card Component > renders correctly with column direction, category
       class="blog-card__content"
     >
       <span
-        class="category category--news"
+        class="blog-card__category category category--news"
         data-testid="categoryTestId"
       >
         News
@@ -45,7 +45,7 @@ exports[`Blog Card Component > renders correctly with column direction, category
       class="blog-card__content"
     >
       <span
-        class="category category--news"
+        class="blog-card__category category category--news"
         data-testid="categoryTestId"
       >
         News
@@ -81,7 +81,7 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
       class="blog-card__content"
     >
       <span
-        class="category category--news"
+        class="blog-card__category category category--news"
         data-testid="categoryTestId"
       >
         News
@@ -112,7 +112,7 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
       class="blog-card__content"
     >
       <span
-        class="category category--news"
+        class="blog-card__category category category--news"
         data-testid="categoryTestId"
       >
         News

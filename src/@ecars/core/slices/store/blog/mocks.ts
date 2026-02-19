@@ -1,5 +1,6 @@
 import type {GetBlogArticlesRequest, GetBlogArticlesResponse} from '@ecars/core/api/blog-query';
 import type {BlogArticle} from '@ecars/core/types/types';
+import {metaResponseMock} from '@ecars/services/__mocks__/mocks';
 
 export const mockBlogRequest: GetBlogArticlesRequest = {
   pageSize: 10,
@@ -27,4 +28,5 @@ export const mockBlogCards: BlogArticle[] = [
 
 export const mockBlogResponse: GetBlogArticlesResponse = {
   data: mockBlogCards,
+  meta: metaResponseMock,
 };

@@ -29,7 +29,7 @@ export const navbarLinksConfig: NavbarLink[] = [
     label: 'About Us',
   },
   {
-    to: PageUrls.Blog,
+    to: PageUrls.BLOG_CATALOG,
     label: 'Blog',
   },
   {

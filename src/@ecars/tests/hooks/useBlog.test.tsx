@@ -25,7 +25,7 @@ describe('useBlog hook', () => {
       isSuccess: true,
     });
 
-    const {result} = renderHook(() => useBlog());
+    const {result} = renderHook(() => useBlog(BLOG_QUERY_PARAMS));
 
     expect(useGetBlogArticlesQuery).toHaveBeenCalledWith(BLOG_QUERY_PARAMS);
     expect(result.current).toEqual({
@@ -41,7 +41,7 @@ describe('useBlog hook', () => {
       isLoading: true,
     });
 
-    const {result} = renderHook(() => useBlog());
+    const {result} = renderHook(() => useBlog(BLOG_QUERY_PARAMS));
 
     expect(result.current.isLoading).toBe(true);
     expect(result.current.data).toBeUndefined();

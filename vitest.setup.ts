@@ -37,6 +37,16 @@ Object.defineProperty(window, 'scrollTo', {
 
 Object.defineProperty(window, 'scrollY', {value: 0, writable: true});
 
+const setWindowWidth = (width: number) => {
+  Object.defineProperty(window, 'innerWidth', {
+    writable: true,
+    configurable: true,
+    value: width,
+  });
+  window.dispatchEvent(new Event('resize'));
+};
+
+vi.stubGlobal('setWindowWidth', setWindowWidth);
 
 vi.mock('react-hook-form', async (importOriginal) => {
   const originalModule = await importOriginal();
@@ -73,10 +83,14 @@ vi.mock('react-router-dom', async (importOriginal) => {
   };
 });
 
+
+
+
 vi.mock('react-toastify', () => ({
   toast: {
     error: vi.fn(),
     success: vi.fn(),
   },
 }));
+
 

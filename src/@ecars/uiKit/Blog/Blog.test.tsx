@@ -5,6 +5,7 @@ import {useBlog} from '@ecars/core/hooks/useBlog';
 import {MemoryRouter} from 'react-router-dom';
 import {BLOG_CARD_SKELETON_TEST_ID, BLOG_CARD_TEST_ID, BLOG_SKELETON_ITEMS_COUNT} from '@ecars/uiKit/Blog/constants';
 import {mockBlogCards} from '@ecars/core/slices/store/blog/mocks';
+import {metaResponseMock} from '@ecars/services/__mocks__/mocks';
 
 vi.mock('@ecars/core/hooks/useBlog', () => ({
   useBlog: vi.fn(),
@@ -44,7 +45,7 @@ describe('Blog Component', () => {
   test('should render blog cards when data is loaded', () => {
     vi.mocked(useBlog).mockReturnValue({
       isLoading: false,
-      data: {data: mockBlogCards},
+      data: {data: mockBlogCards, meta: metaResponseMock},
     });
 
     const {container} = render(

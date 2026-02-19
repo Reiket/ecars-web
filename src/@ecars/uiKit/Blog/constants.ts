@@ -10,6 +10,7 @@ export const BLOG_QUERY_PARAMS = {
   pageSize: BLOG_PAGE_SIZE,
   sort: 'createdAt:desc',
   image: 'imageUrl',
+  recommendedStatus: false,
 };
 
 export const BLOG_CARD_TEST_ID = 'blogCardTestId';

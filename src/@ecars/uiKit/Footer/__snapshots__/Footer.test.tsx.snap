@@ -166,7 +166,7 @@ exports[`Footer Component > render component correctly 1`] = `
                   class="footer__link link link--gray"
                   data-discover="true"
                   data-testid="routerLinkTestId"
-                  href="/blog"
+                  href="/blog-catalog"
                 >
                   Blog
                 </a>

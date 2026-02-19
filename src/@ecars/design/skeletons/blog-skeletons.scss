@@ -1,9 +1,8 @@
 @use "sass:math";
 @use "../settings" as s;
 
-$blogQueryWidth: 840;
-
 .blog-skeleton {
+  width: 100%;
   &__category {
     width: s.rem(53);
     height: s.rem(20);
@@ -27,19 +26,60 @@ $blogQueryWidth: 840;
     animation: skeleton-loading 2s linear infinite alternate;
   }
   &--card {
+    &.has-slider {
+      .blog-skeleton__image {
+        @media (max-width: s.$blogCatalogMove) {
+          @include s.adaptiveValue("height", 309, 158, 1161, 600, 1);
+        }
+        @media (max-width: s.em(600)) {
+          @include s.adaptiveValue("height", 308, 155, 600, 320, 1);
+        }
+      }
+    }
+    &:not(&.has-slider) {
+      @media (max-width: s.$mobile) {
+        .blog-skeleton__image {
+          @include s.adaptiveValue("height", 491, 193, 767, 320, 1);
+        }
+      }
+    }
     .blog-skeleton {
       &__image {
         border-radius: s.rem(8);
         animation: skeleton-loading 2s linear infinite alternate;
-        @media (min-width: s.em($blogQueryWidth)) {
+        height: s.rem(250);
+        @media (min-width: s.$mobile) {
           height: s.rem(250);
         }
-        @media (max-width: s.em($blogQueryWidth)) {
-          @include s.adaptiveValue("height", 540, 193, $blogQueryWidth, 320, 1);
+        @media (min-width: s.$blogCatalogMove) {
+          height: s.rem(190);
         }
       }
     }
   }
+  &--featured {
+    display: flex;
+    .blog-skeleton {
+      &__image {
+        border-radius: s.rem(8) 0 0 s.rem(8);
+        animation: skeleton-loading 2s linear infinite alternate;
+        @media (min-width: s.$blogCatalogMove) {
+          flex: 0 0 s.rem(117);
+          height: s.rem(83);
+        }
+      }
+      &__title {
+        height: s.rem(32);
+      }
+    }
+  }
+}
+
+.blog-category-skeleton {
+  border-radius: s.rem(8);
+  animation: skeleton-loading 2s linear infinite alternate;
+  width: s.rem(71.55);
+  height: s.rem(33);
 }
 
 @keyframes skeleton-loading {

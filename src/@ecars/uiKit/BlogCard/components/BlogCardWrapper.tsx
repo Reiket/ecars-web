@@ -1,0 +1,16 @@
+import type {FC, ReactNode} from 'react';
+import {BLOG_CARD_TEST_ID} from '@ecars/uiKit/BlogCard/constants';
+
+export interface Props {
+  children: ReactNode;
+  classNames: string;
+}
+
+export const BlogCardWrapper: FC<Props> = ({children, classNames}) => (
+  <article
+    data-testid={BLOG_CARD_TEST_ID}
+    className={classNames}
+  >
+    {children}
+  </article>
+);

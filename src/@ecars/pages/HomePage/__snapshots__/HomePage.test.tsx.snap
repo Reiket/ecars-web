@@ -484,7 +484,7 @@ exports[`HomePage Component > render component correctly 1`] = `
               class="blog__content"
             >
               <div
-                class="blog-skeleton__blog-skeleton--card blog-skeleton--card"
+                class="blog__blog-skeleton blog-skeleton blog-skeleton--card"
               >
                 <div
                   class="blog-skeleton__image"
@@ -504,7 +504,7 @@ exports[`HomePage Component > render component correctly 1`] = `
                 </div>
               </div>
               <div
-                class="blog-skeleton__blog-skeleton--card blog-skeleton--card"
+                class="blog__blog-skeleton blog-skeleton blog-skeleton--card"
               >
                 <div
                   class="blog-skeleton__image"
@@ -524,7 +524,7 @@ exports[`HomePage Component > render component correctly 1`] = `
                 </div>
               </div>
               <div
-                class="blog-skeleton__blog-skeleton--card blog-skeleton--card"
+                class="blog__blog-skeleton blog-skeleton blog-skeleton--card"
               >
                 <div
                   class="blog-skeleton__image"

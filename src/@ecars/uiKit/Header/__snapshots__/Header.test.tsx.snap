@@ -62,7 +62,7 @@ exports[`Header Component > render component correctly 1`] = `
               <a
                 class="nav-link"
                 data-discover="true"
-                href="/blog"
+                href="/blog-catalog"
               >
                 Blog
               </a>

@@ -29,6 +29,9 @@
     @media (min-width: s.em(840)) {
       height: s.rem(250);
     }
+    @media (min-width: s.$blogCatalogMove) {
+      height: s.rem(190);
+    }
   }
   &__content {
     padding: s.rem(16);

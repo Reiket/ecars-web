@@ -5,6 +5,7 @@ export const mockMutationFunction = vi.fn();
 export const mockNavigate = vi.fn();
 export const mockHandleSubmit = vi.fn();
 export const mockSearchParamsGet = vi.fn();
+export const dispatch = vi.fn();
 export const mockFormEvent = {
   preventDefault: vi.fn(),
 } as unknown as FormEvent<HTMLFormElement>;
