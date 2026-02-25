@@ -39,11 +39,21 @@ interface FormatsImage {
   };
 }
 
-export interface BlogArticle {
+export interface BlogArticleType {
   id: number;
+  documentId: string;
+  added: string;
+  views: number;
   description?: string;
   category: CategoriesListType;
   title: string;
   imageUrl: Image;
+  content: BlogArticleContentType[];
   classnames: string;
+}
+
+export interface BlogArticleContentType {
+  id: number;
+  title: string;
+  text: string;
 }

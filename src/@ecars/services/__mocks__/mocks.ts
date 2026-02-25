@@ -1,4 +1,4 @@
-export const blogCardImageMock = 'assets/images/blogCard/10.webp';
+export const blogCardImageMock = '/public/assets/images/blogCard/10.webp';
 
 export const metaResponseMock = {
   pagination: {

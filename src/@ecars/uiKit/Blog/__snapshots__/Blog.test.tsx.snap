@@ -20,7 +20,7 @@ exports[`Blog Component > should render blog cards when data is loaded 1`] = `
             <h2
               class="blog__title section-title"
             >
-              Read our blog
+              Test Title
             </h2>
             <a
               class="link link--green link--icon"
@@ -85,7 +85,7 @@ exports[`Blog Component > should render skeletons when isLoading is true 1`] = `
             <h2
               class="blog__title section-title"
             >
-              Read our blog
+              Test Title
             </h2>
             <a
               class="link link--green link--icon"

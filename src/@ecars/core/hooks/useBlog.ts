@@ -14,9 +14,10 @@ interface BlogParams {
   fields?: string[];
   limit?: number;
   page?: number;
+  filters?: Record<string, unknown>;
 }
 
-export const useBlog = (params: BlogParams): UseBlogResult => {
-  const {data, isLoading} = useGetBlogArticlesQuery(params);
+export const useBlog = (params: BlogParams, options?: {skip: boolean}): UseBlogResult => {
+  const {data, isLoading} = useGetBlogArticlesQuery(params, options);
   return {data, isLoading};
 };

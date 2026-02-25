@@ -27,11 +27,25 @@ describe('useBlog hook', () => {
 
     const {result} = renderHook(() => useBlog(BLOG_QUERY_PARAMS));
 
-    expect(useGetBlogArticlesQuery).toHaveBeenCalledWith(BLOG_QUERY_PARAMS);
+    expect(useGetBlogArticlesQuery).toHaveBeenCalledWith(BLOG_QUERY_PARAMS, undefined);
     expect(result.current).toEqual({
       isLoading: false,
       data: mockData,
     });
+  });
+
+  test('should pass options to useGetBlogArticlesQuery when provided', () => {
+    vi.mocked(useGetBlogArticlesQuery).mockReturnValue({
+      ...defaultMutationState,
+      data: undefined,
+      isLoading: false,
+      isSuccess: true,
+    });
+
+    const options = {skip: true};
+    renderHook(() => useBlog(BLOG_QUERY_PARAMS, options));
+
+    expect(useGetBlogArticlesQuery).toHaveBeenCalledWith(BLOG_QUERY_PARAMS, options);
   });
 
   test('should handle loading state', () => {

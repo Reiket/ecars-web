@@ -5,6 +5,7 @@ import {capitalizeFirstLetter, CATEGORIES_LIST} from 'ecars-web-lib';
 import {MemoryRouter} from 'react-router-dom';
 
 const defaultProps = {
+  id: 1,
   title: 'title',
   imageUrl: '',
   category: CATEGORIES_LIST.NEWS,

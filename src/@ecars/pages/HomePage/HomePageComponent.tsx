@@ -13,7 +13,7 @@ export const HomePageComponent: FC = () => (
     <InquiryCTA />
     <WhyChoose />
     <Works />
-    <Blog />
+    <Blog title="Read our blog"/>
     <Send />
   </HomePage.Wrapper>
 );
