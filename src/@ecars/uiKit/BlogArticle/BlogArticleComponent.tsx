@@ -3,7 +3,7 @@ import {BlogArticle} from '@ecars/uiKit/BlogArticle';
 import type {ElementProps} from 'ecars-web-lib';
 import type {BlogArticleType} from '@ecars/core/types/types';
 
-interface Props extends ElementProps {
+export interface Props extends ElementProps {
   articleData?: BlogArticleType;
 }
 export const BlogArticleComponent: FC<Props> = ({block, articleData}) => {

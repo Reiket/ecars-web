@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 import type {BlogArticleContentType} from '@ecars/core/types/types';
 
-interface Props {
+export interface Props {
   content: BlogArticleContentType[];
 }
 

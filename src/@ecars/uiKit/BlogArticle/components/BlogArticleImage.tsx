@@ -1,6 +1,6 @@
 import type {FC} from 'react';
 
-interface Props {
+export interface Props {
   imageUrl?: string;
 }
 

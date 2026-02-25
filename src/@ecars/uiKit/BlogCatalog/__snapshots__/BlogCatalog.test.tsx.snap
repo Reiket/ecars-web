@@ -73,37 +73,11 @@ exports[`BlogCatalog Component > displays featured posts in 'grid' layout 1`] = 
               <div
                 class="blog-catalog__posts"
               >
-                <article
-                  class="blog-catalog__blog-card blog-card blog-card--column"
-                  data-testid="blogCardTestId"
+                <div
+                  data-testid="blog-card"
                 >
-                  <img
-                    alt="Blog_Card_Image"
-                    class="blog-card__image"
-                  />
-                  <div
-                    class="blog-card__content"
-                  >
-                    <span
-                      class="blog-card__category category category--news"
-                      data-testid="categoryTestId"
-                    >
-                      News
-                    </span>
-                    <a
-                      class="blog-card__title title-blog-card"
-                      data-discover="true"
-                      href="/card"
-                    >
-                      Test Article Title
-                    </a>
-                    <p
-                      class="blog-card__description"
-                    >
-                      Test description content
-                    </p>
-                  </div>
-                </article>
+                  BlogCard
+                </div>
               </div>
               <div
                 class="blog-catalog__pagination pagination"
@@ -190,32 +164,11 @@ exports[`BlogCatalog Component > displays featured posts in 'grid' layout 1`] = 
                 class="featured-posts__content"
                 data-testid="featuredContentTestId"
               >
-                <article
-                  class="featured-posts__blog-card blog-card blog-card--row"
-                  data-testid="blogCardTestId"
+                <div
+                  data-testid="blog-card"
                 >
-                  <img
-                    alt="Blog_Card_Image"
-                    class="blog-card__image"
-                  />
-                  <div
-                    class="blog-card__content"
-                  >
-                    <span
-                      class="blog-card__category category category--news"
-                      data-testid="categoryTestId"
-                    >
-                      News
-                    </span>
-                    <a
-                      class="blog-card__title title-blog-card"
-                      data-discover="true"
-                      href="/card"
-                    >
-                      Test Article Title
-                    </a>
-                  </div>
-                </article>
+                  BlogCard
+                </div>
               </div>
             </div>
           </div>
@@ -299,37 +252,11 @@ exports[`BlogCatalog Component > displays featured posts in 'slider' layout 1`] 
               <div
                 class="blog-catalog__posts"
               >
-                <article
-                  class="blog-catalog__blog-card blog-card blog-card--column"
-                  data-testid="blogCardTestId"
+                <div
+                  data-testid="blog-card"
                 >
-                  <img
-                    alt="Blog_Card_Image"
-                    class="blog-card__image"
-                  />
-                  <div
-                    class="blog-card__content"
-                  >
-                    <span
-                      class="blog-card__category category category--news"
-                      data-testid="categoryTestId"
-                    >
-                      News
-                    </span>
-                    <a
-                      class="blog-card__title title-blog-card"
-                      data-discover="true"
-                      href="/card"
-                    >
-                      Test Article Title
-                    </a>
-                    <p
-                      class="blog-card__description"
-                    >
-                      Test description content
-                    </p>
-                  </div>
-                </article>
+                  BlogCard
+                </div>
               </div>
               <div
                 class="blog-catalog__pagination pagination"
@@ -473,37 +400,11 @@ exports[`BlogCatalog Component > displays featured posts in 'slider' layout 1`] 
                   <div
                     data-testid="slide"
                   >
-                    <article
-                      class="featured-posts__blog-card blog-card blog-card--column"
-                      data-testid="blogCardTestId"
+                    <div
+                      data-testid="blog-card"
                     >
-                      <img
-                        alt="Blog_Card_Image"
-                        class="blog-card__image"
-                      />
-                      <div
-                        class="blog-card__content"
-                      >
-                        <span
-                          class="blog-card__category category category--news"
-                          data-testid="categoryTestId"
-                        >
-                          News
-                        </span>
-                        <a
-                          class="blog-card__title title-blog-card"
-                          data-discover="true"
-                          href="/card"
-                        >
-                          Test Article Title
-                        </a>
-                        <p
-                          class="blog-card__description"
-                        >
-                          Test description content
-                        </p>
-                      </div>
-                    </article>
+                      BlogCard
+                    </div>
                   </div>
                 </div>
               </div>

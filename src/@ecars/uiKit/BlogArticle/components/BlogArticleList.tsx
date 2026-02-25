@@ -3,7 +3,7 @@ import type {CategoriesListType} from 'ecars-web-lib';
 import {Category} from 'ecars-web-lib';
 import {blogArticleInfoList} from '@ecars/uiKit/BlogArticle/constants';
 
-interface Props {
+export interface Props {
   added: string;
   views: number;
   category: CategoriesListType;

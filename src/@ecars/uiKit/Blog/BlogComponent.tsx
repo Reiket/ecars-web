@@ -4,7 +4,7 @@ import type {CategoriesListType, ElementProps} from 'ecars-web-lib';
 import {useBlog} from '@ecars/core/hooks/useBlog';
 import {GET_BLOG_CATALOG_ITEMS_PARAMS} from '@ecars/uiKit/BlogCatalog/constants';
 
-interface Props extends ElementProps {
+export interface Props extends ElementProps {
   currentCategory?: CategoriesListType;
   currentArticleId?: string;
   title: string;

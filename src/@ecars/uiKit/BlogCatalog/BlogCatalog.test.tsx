@@ -10,12 +10,17 @@ import {mockBlogResponse} from '@ecars/core/slices/store/blog/mocks';
 import {FEATURED_CONTENT_TEST_ID, FEATURED_SLIDER_TEST_ID} from '@ecars/uiKit/BlogCatalog/constants';
 import type {ReactNode} from 'react';
 import type * as EcarsWebLib from 'ecars-web-lib';
+import {beforeEach, describe, expect, test, vi} from 'vitest';
 
 vi.mock('@ecars/core/hooks/useBlogContent');
 vi.mock('@ecars/core/hooks/useBlogNavigation');
 vi.mock('@ecars/core/hooks/hooks');
 vi.mock('@ecars/services/hooks/useWindowWidth');
 vi.mock('@ecars/core/hooks/useBlog');
+
+vi.mock('@ecars/uiKit/BlogCard', () => ({
+  BlogCard: () => <div data-testid="blog-card">BlogCard</div>,
+}));
 
 vi.mock('ecars-web-lib', async (importOriginal) => {
   const actual = await importOriginal<typeof EcarsWebLib>();
