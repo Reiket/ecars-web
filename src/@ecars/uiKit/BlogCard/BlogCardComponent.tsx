@@ -8,7 +8,7 @@ export interface Props extends BlogCardContentProps, BlogCardImageProps, Element
   direction: BlogCardDirectionType;
 }
 
-export const BlogCardComponent: FC<Props> = ({block, description, title, category, imageUrl, alt, direction}) => {
+export const BlogCardComponent: FC<Props> = ({block, description, title, category, imageUrl, alt, direction, id}) => {
   const classNames = cn(block, 'blog-card', `blog-card--${direction}`);
   return (
     <BlogCard.Wrapper
@@ -20,6 +20,7 @@ export const BlogCardComponent: FC<Props> = ({block, description, title, categor
         alt={alt}
       />
       <BlogCard.Content
+        id={id}
         category={category}
         title={title}
         description={description}

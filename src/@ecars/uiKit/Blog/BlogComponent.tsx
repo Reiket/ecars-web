@@ -1,11 +1,26 @@
 import type {FC} from 'react';
 import {Blog} from '@ecars/uiKit/Blog/index';
-import type {ElementProps} from 'ecars-web-lib';
+import type {CategoriesListType, ElementProps} from 'ecars-web-lib';
 import {useBlog} from '@ecars/core/hooks/useBlog';
-import {BLOG_QUERY_PARAMS} from '@ecars/uiKit/Blog/constants';
+import {GET_BLOG_CATALOG_ITEMS_PARAMS} from '@ecars/uiKit/BlogCatalog/constants';
 
-export const BlogComponent: FC<ElementProps> = ({block}) => {
-  const {data, isLoading} = useBlog(BLOG_QUERY_PARAMS);
+export interface Props extends ElementProps {
+  currentCategory?: CategoriesListType;
+  currentArticleId?: string;
+  title: string;
+}
+
+export const BlogComponent: FC<Props> = ({block, currentCategory, currentArticleId, title}) => {
+  const {data, isLoading} = useBlog(
+    {
+      ...GET_BLOG_CATALOG_ITEMS_PARAMS,
+      filters: {
+        ...(currentCategory && {category: {$eq: currentCategory}}),
+        ...(currentArticleId && {documentId: {$ne: currentArticleId}}),
+      },
+    },
+    {skip: !!currentArticleId && !currentCategory},
+  );
   return (
     <Blog.Wrapper
       name="blog"
@@ -13,7 +28,7 @@ export const BlogComponent: FC<ElementProps> = ({block}) => {
       block={block}
     >
       <div className="blog__body">
-        <Blog.TopPanel />
+        <Blog.TopPanel title={title} />
         <Blog.Content
           isLoading={isLoading}
           items={data?.data}

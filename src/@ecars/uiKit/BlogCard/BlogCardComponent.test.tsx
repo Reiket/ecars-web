@@ -3,10 +3,12 @@ import {BLOG_CARD_DIRECTION, BLOG_CARD_TEST_ID} from '@ecars/uiKit/BlogCard/cons
 import {BlogCard} from '@ecars/uiKit/BlogCard';
 import {capitalizeFirstLetter, CATEGORIES_LIST} from 'ecars-web-lib';
 import {MemoryRouter} from 'react-router-dom';
+import {blogCardImageMock} from '@ecars/services/__mocks__/mocks';
 
 const defaultProps = {
+  id: '1',
   title: 'title',
-  imageUrl: '',
+  imageUrl: blogCardImageMock,
   category: CATEGORIES_LIST.NEWS,
 };
 

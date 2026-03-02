@@ -1,13 +1,13 @@
 import {renderHook} from '@testing-library/react';
 import {useBlog} from '@ecars/core/hooks/useBlog';
 import {useBlogContent} from '@ecars/core/hooks/useBlogContent';
-import type {BlogArticle} from '@ecars/core/types/types';
+import type {BlogArticleType} from '@ecars/core/types/types';
 import type {GetBlogArticlesResponse} from '@ecars/core/api/blog-query';
 import type {CategoriesListType} from 'ecars-web-lib';
 
 vi.mock('@ecars/core/hooks/useBlog');
 
-const createArticle = (category: CategoriesListType): BlogArticle => ({
+const createArticle = (category: CategoriesListType): BlogArticleType => ({
   id: Math.random(),
   category,
   title: '',
@@ -16,7 +16,7 @@ const createArticle = (category: CategoriesListType): BlogArticle => ({
   imageUrl: {formats: {thumbnail: {name: '', url: ''}}},
 });
 
-const mockResponse = (data: BlogArticle[], total = 0): GetBlogArticlesResponse => ({
+const mockResponse = (data: BlogArticleType[], total = 0): GetBlogArticlesResponse => ({
   data,
   meta: {
     pagination: {total, page: 1, pageSize: 6, pageCount: Math.ceil(total / 6) || 1},

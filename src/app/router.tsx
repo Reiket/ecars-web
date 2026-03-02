@@ -11,6 +11,7 @@ import {CheckEmailPage} from '@ecars/pages/CheckEmailPage/CheckEmailPage';
 import {NewPasswordPage} from '@ecars/pages/NewPasswordPage/NewPasswordPage';
 import {SuccessRestPasswordPage} from '@ecars/pages/SuccessRestPasswordPage/SuccessRestPasswordPage';
 import {BlogCatalogPage} from '@ecars/pages/BlogCatalogPage';
+import {BlogArticlePage} from '@ecars/pages/BlogArticlePage';
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ export const router = createBrowserRouter([
       {path: PageUrls.SET_NEW_PASS, element: <NewPasswordPage />},
       {path: PageUrls.BLOG_CATALOG, element: <BlogCatalogPage />},
       {path: PageUrls.SUCCESS_REST_PASS, element: <SuccessRestPasswordPage />},
+      {path: PageUrls.BLOG_ARTICLE, element: <BlogArticlePage />},
     ],
   },
   {

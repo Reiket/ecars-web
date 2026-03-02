@@ -13,6 +13,7 @@ export type BlogCardDirectionType = (typeof BLOG_CARD_DIRECTION)[keyof typeof BL
 
 export interface BlogCardContentProps {
   title: string;
+  id: string;
   category: CategoriesListType;
   description?: string;
 }

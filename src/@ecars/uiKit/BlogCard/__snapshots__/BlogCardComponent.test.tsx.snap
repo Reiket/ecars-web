@@ -9,6 +9,7 @@ exports[`Blog Card Component > renders correctly with column direction, category
     <img
       alt="Blog_Card_Image"
       class="blog-card__image"
+      src="/public/assets/images/blogCard/10.webp"
     />
     <div
       class="blog-card__content"
@@ -22,7 +23,7 @@ exports[`Blog Card Component > renders correctly with column direction, category
       <a
         class="blog-card__title title-blog-card"
         data-discover="true"
-        href="/card"
+        href="/blog-article/1"
       >
         title
       </a>
@@ -40,6 +41,7 @@ exports[`Blog Card Component > renders correctly with column direction, category
     <img
       alt="Blog_Card_Image"
       class="blog-card__image"
+      src="/public/assets/images/blogCard/10.webp"
     />
     <div
       class="blog-card__content"
@@ -53,7 +55,7 @@ exports[`Blog Card Component > renders correctly with column direction, category
       <a
         class="blog-card__title title-blog-card"
         data-discover="true"
-        href="/card"
+        href="/blog-article/1"
       >
         title
       </a>
@@ -76,6 +78,7 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
     <img
       alt="Blog_Card_Image"
       class="blog-card__image"
+      src="/public/assets/images/blogCard/10.webp"
     />
     <div
       class="blog-card__content"
@@ -89,7 +92,7 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
       <a
         class="blog-card__title title-blog-card"
         data-discover="true"
-        href="/card"
+        href="/blog-article/1"
       >
         title
       </a>
@@ -107,6 +110,7 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
     <img
       alt="Blog_Card_Image"
       class="blog-card__image"
+      src="/public/assets/images/blogCard/10.webp"
     />
     <div
       class="blog-card__content"
@@ -120,7 +124,7 @@ exports[`Blog Card Component > renders correctly with row direction, category, t
       <a
         class="blog-card__title title-blog-card"
         data-discover="true"
-        href="/card"
+        href="/blog-article/1"
       >
         title
       </a>

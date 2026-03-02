@@ -1,0 +1,251 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BlogArticle Component > should render component correctly 1`] = `
+<div>
+  <article
+    class="blog-article"
+  >
+    <section
+      class="blog-article__section section"
+    >
+      <div
+        class="blog-article__container container container--sm"
+      >
+        <h1
+          class="blog-article__title section-title"
+        >
+          Test Article Title
+        </h1>
+        <ul
+          class="blog-article__list"
+        >
+          <li
+            class="blog-article__item"
+          >
+            <span
+              class="blog-article__category category category--news"
+              data-testid="categoryTestId"
+            >
+              News
+            </span>
+          </li>
+          <li
+            class="blog-article__item"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                id="Calendar"
+              >
+                <path
+                  d="M18.438,4.954H16.5c0-0.346,0-0.691,0-1.036c0-0.124,0-0.248,0-0.372c0-0.262-0.23-0.512-0.5-0.5
+            c-0.271,0.012-0.5,0.22-0.5,0.5c0,0.469,0,0.939,0,1.408h-7c0-0.346,0-0.691,0-1.036c0-0.124,0-0.248,0-0.372
+            c0-0.262-0.23-0.512-0.5-0.5c-0.271,0.012-0.5,0.22-0.5,0.5c0,0.469,0,0.939,0,1.408H5.562c-1.378,0-2.5,1.122-2.5,2.5v11
+            c0,1.379,1.122,2.5,2.5,2.5h12.875c1.379,0,2.5-1.121,2.5-2.5v-11C20.938,6.076,19.816,4.954,18.438,4.954z M5.562,5.954H7.5
+            c0,0.073,0,0.147,0,0.22c0,0.124,0,0.248,0,0.372c0,0.262,0.23,0.512,0.5,0.5c0.271-0.012,0.5-0.22,0.5-0.5c0-0.197,0-0.394,0-0.592
+            h7c0,0.073,0,0.147,0,0.22c0,0.124,0,0.248,0,0.372c0,0.262,0.23,0.512,0.5,0.5c0.271-0.012,0.5-0.22,0.5-0.5
+            c0-0.197,0-0.394,0-0.592h1.937c0.827,0,1.5,0.673,1.5,1.5v1.584H4.062V7.454C4.062,6.627,4.735,5.954,5.562,5.954z M18.438,19.954
+            H5.562c-0.827,0-1.5-0.673-1.5-1.5v-8.416h15.875v8.416C19.938,19.281,19.265,19.954,18.438,19.954z"
+                />
+              </g>
+            </svg>
+            Mar 1, 2024
+          </li>
+          <li
+            class="blog-article__item"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="256"
+                cy="256"
+                r="64"
+              />
+              <path
+                d="M490.84 238.6c-26.46-40.92-60.79-75.68-99.27-100.53C349 110.55 302 96 255.66 96c-42.52 0-84.33 12.15-124.27 36.11-40.73 24.43-77.63 60.12-109.68 106.07a31.92 31.92 0 0 0-.64 35.54c26.41 41.33 60.4 76.14 98.28 100.65C162 402 207.9 416 255.66 416c46.71 0 93.81-14.43 136.2-41.72 38.46-24.77 72.72-59.66 99.08-100.92a32.2 32.2 0 0 0-.1-34.76zM256 352a96 96 0 1 1 96-96 96.11 96.11 0 0 1-96 96z"
+              />
+            </svg>
+            1000 views
+          </li>
+          <li
+            class="blog-article__item"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.9042 2.10025L20.8037 3.51446L22.2179 13.414L13.0255 22.6063C12.635 22.9969 12.0019 22.9969 11.6113 22.6063L1.71184 12.7069C1.32131 12.3163 1.32131 11.6832 1.71184 11.2926L10.9042 2.10025ZM11.6113 4.22157L3.83316 11.9997L12.3184 20.485L20.0966 12.7069L19.036 5.28223L11.6113 4.22157ZM13.7327 10.5855C12.9516 9.80448 12.9516 8.53815 13.7327 7.7571C14.5137 6.97606 15.78 6.97606 16.5611 7.7571C17.3421 8.53815 17.3421 9.80448 16.5611 10.5855C15.78 11.3666 14.5137 11.3666 13.7327 10.5855Z"
+              />
+            </svg>
+            tips, new car, UAE, Dubai
+          </li>
+        </ul>
+        <img
+          alt="Blog_Article_Image"
+          class="blog-article__image"
+        />
+        <ul
+          class="blog-article__content"
+        >
+          <li
+            class="blog-article__block"
+          >
+            <h3
+              class="blog-article__section block-title"
+            >
+              test
+            </h3>
+            <p
+              class="blog-article__text"
+            >
+              test
+            </p>
+          </li>
+        </ul>
+        <div
+          class="blog-article__share"
+        >
+          <p
+            class="blog-article__share-text"
+          >
+            Share:
+          </p>
+          <ul
+            class="blog-article__socials"
+          >
+            <li
+              class="blog-article__social"
+            >
+              <a
+                class="blog-article__link link link--gray link--icon"
+                data-testid="routerLinkTestId"
+                href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  data-testid="leftIconLinkTestId"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 320 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                  />
+                </svg>
+                Facebook
+              </a>
+            </li>
+            <li
+              class="blog-article__social"
+            >
+              <a
+                class="blog-article__link link link--gray link--icon"
+                data-testid="routerLinkTestId"
+                href="https://twitter.com/intent/tweet?url=http://localhost:3000/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  data-testid="leftIconLinkTestId"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                  />
+                </svg>
+                Twitter
+              </a>
+            </li>
+            <li
+              class="blog-article__social"
+            >
+              <a
+                class="blog-article__link link link--gray link--icon"
+                data-testid="routerLinkTestId"
+                href="https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:3000/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  data-testid="leftIconLinkTestId"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                  />
+                </svg>
+                Linkedin
+              </a>
+            </li>
+            <li
+              class="blog-article__social"
+            >
+              <button
+                class="blog-article__button button button--small button--gray button--icon"
+                data-testid="buttonTestId"
+                type="button"
+              >
+                <svg
+                  data-testid="leftIconButtonTestId"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.222 19.778a4.983 4.983 0 0 0 3.535 1.462 4.986 4.986 0 0 0 3.536-1.462l2.828-2.829-1.414-1.414-2.828 2.829a3.007 3.007 0 0 1-4.243 0 3.005 3.005 0 0 1 0-4.243l2.829-2.828-1.414-1.414-2.829 2.828a5.006 5.006 0 0 0 0 7.071zm15.556-8.485a5.008 5.008 0 0 0 0-7.071 5.006 5.006 0 0 0-7.071 0L9.879 7.051l1.414 1.414 2.828-2.829a3.007 3.007 0 0 1 4.243 0 3.005 3.005 0 0 1 0 4.243l-2.829 2.828 1.414 1.414 2.829-2.828z"
+                  />
+                  <path
+                    d="m8.464 16.95-1.415-1.414 8.487-8.486 1.414 1.415z"
+                  />
+                </svg>
+                Copy link
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </article>
+</div>
+`;

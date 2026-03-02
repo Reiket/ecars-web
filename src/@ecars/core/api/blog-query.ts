@@ -1,6 +1,6 @@
 import {API_ENDPOINTS} from '@ecars/constants/api-urls';
 import type {FetchArgs} from '@reduxjs/toolkit/query/react';
-import type {BlogArticle} from '@ecars/core/types/types';
+import type {BlogArticleType} from '@ecars/core/types/types';
 import {STRAPI_PARAMS} from '@ecars/constants/strapi-params';
 
 export interface GetBlogArticlesRequest {
@@ -11,12 +11,21 @@ export interface GetBlogArticlesRequest {
   image?: string;
   fields?: string[];
   limit?: number;
-  filters?: Record<string, string>;
+  filters?: Record<string, unknown>;
   recommendedStatus?: boolean;
 }
 
+export interface GetBlogArticleResponse {
+  data: BlogArticleType;
+}
+
+export interface GetBlogArticleRequest {
+  id: string;
+  populate?: string;
+}
+
 export interface GetBlogArticlesResponse {
-  data: BlogArticle[];
+  data: BlogArticleType[];
   meta: {
     pagination: {
       page: number;
@@ -52,5 +61,17 @@ export const getBlogArticlesQuery = (params?: GetBlogArticlesRequest): FetchArgs
     url: API_ENDPOINTS.BLOG,
     method: 'GET',
     params: cleanParams,
+  };
+};
+
+export const getBlogArticleByIdQuery = (params: GetBlogArticleRequest): FetchArgs => {
+  const queryParams = {
+    [STRAPI_PARAMS.POPULATE]: params.populate,
+  };
+
+  return {
+    url: `${API_ENDPOINTS.BLOG}/${params.id}`,
+    method: 'GET',
+    params: queryParams,
   };
 };

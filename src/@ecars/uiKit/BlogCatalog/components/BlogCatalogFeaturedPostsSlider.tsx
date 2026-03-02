@@ -26,6 +26,7 @@ export const BlogCatalogFeaturedPostsSlider: FC<FeaturedPostsContentProps> = ({i
     articlesData?.data.map((item) => (
       <Slider.Slide key={item.id}>
         <BlogCard
+          id={item.documentId}
           block={block}
           direction="column"
           title={item.title}

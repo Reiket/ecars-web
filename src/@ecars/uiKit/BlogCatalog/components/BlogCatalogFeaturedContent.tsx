@@ -21,7 +21,8 @@ export const BlogCatalogFeaturedContent: FC<FeaturedPostsContentProps> = ({isLoa
     >
       {articlesData?.data.map((item) => (
         <BlogCard
-          key={item.id}
+          id={item.documentId}
+          key={item.documentId}
           block={block}
           direction="row"
           title={item.title}

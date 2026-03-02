@@ -12,8 +12,16 @@ body {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   > * {
     min-width: 0;
+  }
+}
+
+.page {
+  &__loader {
+    position: absolute;
+    inset: 0;
   }
 }

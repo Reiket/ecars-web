@@ -1,4 +1,3 @@
-import {describe, expect, test, vi, beforeEach} from 'vitest';
 import {renderHook} from '@testing-library/react';
 import {useGetBlogArticlesQuery} from '@ecars/core/slices/api/blogApiSlice';
 import {BLOG_QUERY_PARAMS} from '@ecars/uiKit/Blog/constants';
@@ -10,36 +9,43 @@ vi.mock('@ecars/core/slices/api/blogApiSlice', () => ({
 }));
 
 describe('useBlog hook', () => {
+  const mockBlogQuery = (overrides = {}) => {
+    vi.mocked(useGetBlogArticlesQuery).mockReturnValue({
+      ...defaultMutationState,
+      data: undefined,
+      isLoading: false,
+      isSuccess: true,
+      ...overrides,
+    });
+  };
+
   beforeEach(() => {
     vi.clearAllMocks();
   });
 
-  test('should call useGetBlogArticlesQuery with correct params and return data', () => {
-    const mockData = {
-      data: [{id: 1, title: 'Test', category: 'NEWS', imageUrl: {}, classnames: ''}],
-    };
-    vi.mocked(useGetBlogArticlesQuery).mockReturnValue({
-      ...defaultMutationState,
-      data: mockData,
-      isLoading: false,
-      isSuccess: true,
-    });
+  test('should call API with correct params and return data', () => {
+    const mockData = [{id: 1, title: 'Test Article'}];
+    mockBlogQuery({data: mockData});
 
     const {result} = renderHook(() => useBlog(BLOG_QUERY_PARAMS));
-
-    expect(useGetBlogArticlesQuery).toHaveBeenCalledWith(BLOG_QUERY_PARAMS);
+    expect(useGetBlogArticlesQuery).toHaveBeenCalledWith(BLOG_QUERY_PARAMS, undefined);
     expect(result.current).toEqual({
       isLoading: false,
       data: mockData,
     });
   });
 
-  test('should handle loading state', () => {
-    vi.mocked(useGetBlogArticlesQuery).mockReturnValue({
-      ...defaultMutationState,
-      data: undefined,
-      isLoading: true,
-    });
+  test('should pass options (like skip) to the API slice', () => {
+    mockBlogQuery();
+    const options = {skip: true};
+
+    renderHook(() => useBlog(BLOG_QUERY_PARAMS, options));
+
+    expect(useGetBlogArticlesQuery).toHaveBeenCalledWith(BLOG_QUERY_PARAMS, options);
+  });
+
+  test('should accurately reflect the loading state', () => {
+    mockBlogQuery({isLoading: true, isSuccess: false});
 
     const {result} = renderHook(() => useBlog(BLOG_QUERY_PARAMS));
 

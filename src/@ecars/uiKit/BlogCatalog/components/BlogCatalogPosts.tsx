@@ -30,8 +30,9 @@ export const BlogCatalogPosts: FC<Props> = ({block, articlesData, isLoading, pag
     <div className="blog-catalog__posts">
       {articlesData?.data.map((item) => (
         <BlogCard
+          id={item.documentId}
           block={block}
-          key={item.id}
+          key={item.documentId}
           direction="column"
           title={item.title}
           category={item.category}

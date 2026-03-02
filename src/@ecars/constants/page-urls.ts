@@ -17,6 +17,7 @@ export const PageUrls = Object.freeze({
   SUCCESS_REST_PASS: '/success-rest-pass',
   ACCOUNT: '/account',
   BLOG_CATALOG: '/blog-catalog',
+  BLOG_ARTICLE: '/blog-article/:id',
 });
 
 export type PageUrlType = (typeof PageUrls)[keyof typeof PageUrls];

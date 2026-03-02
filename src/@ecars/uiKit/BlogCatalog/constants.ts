@@ -42,6 +42,7 @@ export const GET_BLOG_FEATURED_ITEMS_PARAMS = {
 export const GET_BLOG_CATALOG_ITEMS_PARAMS = {
   image: 'imageUrl',
   recommendedStatus: false,
+  pageSize: 3,
 };
 
 export const FEATURED_POSTS_SLIDER_BREAKPOINTS = {

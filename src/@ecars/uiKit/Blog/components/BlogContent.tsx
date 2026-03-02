@@ -1,13 +1,13 @@
 import type {FC} from 'react';
 import {BlogCard} from '@ecars/uiKit/BlogCard';
-import type {BlogArticle} from '@ecars/core/types/types';
+import type {BlogArticleType} from '@ecars/core/types/types';
 import {BLOG_SKELETON_ITEMS_COUNT} from '@ecars/uiKit/Blog/constants';
 import {BlogSkeleton} from '@ecars/uiKit/Skeletons/BlogSkeleton/BlogSkeleton';
 import type {ElementProps} from 'ecars-web-lib';
 
 export interface Props extends ElementProps {
   isLoading: boolean;
-  items?: BlogArticle[];
+  items?: BlogArticleType[];
 }
 
 export const BlogContent: FC<Props> = ({isLoading, items, block}) => {
@@ -30,8 +30,9 @@ export const BlogContent: FC<Props> = ({isLoading, items, block}) => {
     <div className="blog__content">
       {items?.map((item) => (
         <BlogCard
+          id={item.documentId}
           block={block}
-          key={item.id}
+          key={item.documentId}
           direction="column"
           title={item.title}
           category={item.category}
