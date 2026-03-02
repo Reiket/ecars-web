@@ -19,7 +19,7 @@ export const BlogComponent: FC<Props> = ({block, currentCategory, currentArticle
         ...(currentArticleId && {documentId: {$ne: currentArticleId}}),
       },
     },
-    {skip: !currentCategory || !currentArticleId},
+    {skip: !!currentArticleId && !currentCategory},
   );
   return (
     <Blog.Wrapper

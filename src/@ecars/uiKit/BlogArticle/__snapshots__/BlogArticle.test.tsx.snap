@@ -23,7 +23,7 @@ exports[`BlogArticle Component > should render component correctly 1`] = `
             class="blog-article__item"
           >
             <span
-              class="category category--news"
+              class="blog-article__category category category--news"
               data-testid="categoryTestId"
             >
               News
@@ -137,7 +137,7 @@ exports[`BlogArticle Component > should render component correctly 1`] = `
               class="blog-article__social"
             >
               <a
-                class="link link--gray link--icon"
+                class="blog-article__link link link--gray link--icon"
                 data-testid="routerLinkTestId"
                 href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000/"
                 rel="noopener noreferrer"
@@ -164,7 +164,7 @@ exports[`BlogArticle Component > should render component correctly 1`] = `
               class="blog-article__social"
             >
               <a
-                class="link link--gray link--icon"
+                class="blog-article__link link link--gray link--icon"
                 data-testid="routerLinkTestId"
                 href="https://twitter.com/intent/tweet?url=http://localhost:3000/"
                 rel="noopener noreferrer"
@@ -191,7 +191,7 @@ exports[`BlogArticle Component > should render component correctly 1`] = `
               class="blog-article__social"
             >
               <a
-                class="link link--gray link--icon"
+                class="blog-article__link link link--gray link--icon"
                 data-testid="routerLinkTestId"
                 href="https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:3000/"
                 rel="noopener noreferrer"

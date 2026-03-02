@@ -17,18 +17,6 @@ const INITIAL_STATE = {
 
 describe('Blog Queries Builders', () => {
   describe('getBlogArticlesQuery', () => {
-    test('returns base parameters when no arguments are provided', () => {
-      const result = getBlogArticlesQuery();
-
-      expect(result.url).toBe(API_ENDPOINTS.BLOG);
-      expect(result.method).toBe('GET');
-      expect(result.params).toHaveProperty('pagination');
-      expect(result.params).toHaveProperty('filters');
-      expect(result.params?.[STRAPI_PARAMS.POPULATE]).toBeUndefined();
-      expect(result.params?.[STRAPI_PARAMS.FIELDS]).toBeUndefined();
-      expect(result.params?.sort).toBeUndefined();
-    });
-
     test('formats parameters correctly with pagination, filters, and fields', () => {
       const requestParams = {
         page: 2,

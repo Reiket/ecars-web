@@ -454,7 +454,7 @@ exports[`HomePage Component > render component correctly 1`] = `
                 Read our blog
               </h2>
               <a
-                class="link link--green link--icon"
+                class="blog__link link link--green link--icon"
                 data-discover="true"
                 data-testid="routerLinkTestId"
                 href="/blog-catalog"

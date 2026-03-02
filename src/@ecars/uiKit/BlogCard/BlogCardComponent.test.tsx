@@ -6,7 +6,7 @@ import {MemoryRouter} from 'react-router-dom';
 import {blogCardImageMock} from '@ecars/services/__mocks__/mocks';
 
 const defaultProps = {
-  id: 1,
+  id: '1',
   title: 'title',
   imageUrl: blogCardImageMock,
   category: CATEGORIES_LIST.NEWS,

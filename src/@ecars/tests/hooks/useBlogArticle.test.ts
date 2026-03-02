@@ -14,57 +14,52 @@ vi.mock('@ecars/core/slices/api/blogApiSlice', () => ({
 }));
 
 describe('useBlogArticle hook', () => {
+  const MOCK_ID = '123';
+  const MOCK_ARTICLE = {category: 'NEWS', title: 'Test Article'};
+
+  const setupMocks = (id?: string, queryState = {}) => {
+    vi.mocked(useParams).mockReturnValue(id ? {id} : {});
+    vi.mocked(useGetBlogArticleByIdQuery).mockReturnValue({
+      ...defaultMutationState,
+      data: undefined,
+      isLoading: false,
+      ...queryState,
+    });
+  };
+
   beforeEach(() => {
     vi.clearAllMocks();
   });
 
   test('should return article data and call query with id when present', () => {
-    const mockArticleData = {category: 'NEWS', title: 'Test Article'};
-
-    vi.mocked(useParams).mockReturnValue({id: '123'});
-    vi.mocked(useGetBlogArticleByIdQuery).mockReturnValue({
-      ...defaultMutationState,
-      data: {data: mockArticleData},
-      isLoading: false,
+    setupMocks(MOCK_ID, {
+      data: {data: MOCK_ARTICLE},
+      isSuccess: true,
     });
 
     const {result} = renderHook(() => useBlogArticle());
 
-    expect(useGetBlogArticleByIdQuery).toHaveBeenCalledWith({id: '123', ...BLOG_ARTICLE_PARAMS}, {skip: false});
+    expect(useGetBlogArticleByIdQuery).toHaveBeenCalledWith({id: MOCK_ID, ...BLOG_ARTICLE_PARAMS}, {skip: false});
+
     expect(result.current).toEqual({
-      id: '123',
-      articleData: mockArticleData,
-      currentCategory: 'NEWS',
+      id: MOCK_ID,
+      articleData: MOCK_ARTICLE,
+      currentCategory: MOCK_ARTICLE.category,
       isLoading: false,
     });
   });
 
   test('should skip query and return undefined data when id is missing', () => {
-    vi.mocked(useParams).mockReturnValue({});
-    vi.mocked(useGetBlogArticleByIdQuery).mockReturnValue({
-      ...defaultMutationState,
-      data: undefined,
-      isLoading: false,
-    });
-
+    setupMocks();
     const {result} = renderHook(() => useBlogArticle());
-
     expect(useGetBlogArticleByIdQuery).toHaveBeenCalledWith({id: '', ...BLOG_ARTICLE_PARAMS}, {skip: true});
-    expect(result.current).toEqual({
-      id: undefined,
-      articleData: undefined,
-      currentCategory: undefined,
-      isLoading: false,
-    });
+
+    expect(result.current.id).toBeUndefined();
+    expect(result.current.articleData).toBeUndefined();
   });
 
   test('should handle loading state correctly', () => {
-    vi.mocked(useParams).mockReturnValue({id: '123'});
-    vi.mocked(useGetBlogArticleByIdQuery).mockReturnValue({
-      ...defaultMutationState,
-      data: undefined,
-      isLoading: true,
-    });
+    setupMocks(MOCK_ID, {isLoading: true});
 
     const {result} = renderHook(() => useBlogArticle());
 

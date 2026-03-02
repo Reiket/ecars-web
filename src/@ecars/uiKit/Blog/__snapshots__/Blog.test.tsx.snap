@@ -20,10 +20,10 @@ exports[`Blog Component > should render blog cards when data is loaded 1`] = `
             <h2
               class="blog__title section-title"
             >
-              Test Title
+              Read our blog
             </h2>
             <a
-              class="link link--green link--icon"
+              class="blog__link link link--green link--icon"
               data-discover="true"
               data-testid="routerLinkTestId"
               href="/blog-catalog"
@@ -85,10 +85,10 @@ exports[`Blog Component > should render skeletons when isLoading is true 1`] = `
             <h2
               class="blog__title section-title"
             >
-              Test Title
+              Read our blog
             </h2>
             <a
-              class="link link--green link--icon"
+              class="blog__link link link--green link--icon"
               data-discover="true"
               data-testid="routerLinkTestId"
               href="/blog-catalog"

@@ -19,7 +19,7 @@ vi.mock('@ecars/uiKit/BlogCard', () => ({
   BlogCard: ({title}: {title: string}) => <div data-testid={BLOG_CARD_TEST_ID}>{title}</div>,
 }));
 
-const TEST_TITLE = 'Test Title';
+const TEST_TITLE = 'Read our blog';
 
 describe('Blog Component', () => {
   beforeEach(() => {

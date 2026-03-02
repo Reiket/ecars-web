@@ -15,6 +15,7 @@ export const BlogArticleShare: FC<ElementProps> = ({block}) => {
             className="blog-article__social"
           >
             <LinkWithIcon
+              block={block}
               color="gray"
               href={getBaseHref(currentUrl)}
               LeftIcon={icon}

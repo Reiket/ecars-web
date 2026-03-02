@@ -1,5 +1,6 @@
+import {shortMonths} from '@ecars/constants/date';
+
 export const formatDate = (date: string): string => {
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const [year, month, day] = date.split('T')[0].split('-');
-  return `${months[parseInt(month, 10) - 1]} ${String(parseInt(day, 10))}, ${year}`;
+  return `${shortMonths[parseInt(month, 10) - 1]} ${String(parseInt(day, 10))}, ${year}`;
 };
